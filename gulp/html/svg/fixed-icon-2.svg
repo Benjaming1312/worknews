@@ -1,0 +1,11 @@
+<svg id="fixed-icon-1" data-name="fixed-icon-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.02 21.22">
+  <defs>
+    <style>
+      .icon-cls-2 {
+        fill: #036eb8;
+      }
+    </style>
+  </defs>
+  <path class="icon-cls-2" d="M10.4,11.54l.49-3.77H7.15V5.36c0-1.09.3-1.84,1.87-1.84h2V.15A26.63,26.63,0,0,0,8.11,0C5.23,0,3.26,1.76,3.26,5V7.77H0v3.77H3.26v9.68H7.15V11.54Z"
+  />
+</svg>

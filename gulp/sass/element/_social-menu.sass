@@ -1,0 +1,211 @@
+$trPositon: 44%
+#message
+  position: relative
+.count
+  position: absolute
+  top: 1%
+  right: 4%
+  width: 2.5rem
+  height: 2.5rem
+  background: #e60012
+  border-radius: 50%
+  color: white
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  transform: scale(.5)
+.social-menu
+  position: fixed
+  z-index: 2
+  top: 0
+  right: 1.5rem
+  display: flex
+  flex-wrap: nowrap
+  border: 2px solid $deep-brown
+  border-top: 0
+  background-color: white
+  >div
+    padding: 0
+    width: 4rem
+    height: 4rem
+    >a
+      width: 100%
+      height: 100%
+      display: inline-flex
+      justify-content: center
+      align-items: center
+      transition: .4s ease-in-out
+    svg
+      width: auto
+      height: 1.8rem
+      path
+        transition: .4s .2s ease-in-out
+        stroke-width: 2px
+  >div
+    &:not(:first-child)
+      border-left: 2px solid $deep-brown
+    &:nth-of-type(2)
+      border-left: 0px solid $deep-brown
+      @media #{$mobile}
+        border-left: 2px solid $deep-brown
+    &.message-icon
+      >a:hover
+        background: #f39800
+        [class*="icon-"]
+          fill: white
+    &.facebook
+      >a:hover
+        background: #036eb8
+        [class*="icon-"]
+          fill: white
+    &.line
+      >a:hover
+        background: #00913a
+        [class*="icon-"]
+          fill: white
+    &.ig
+      >a:hover
+        background: #b28247
+        [class*="icon-"]
+          fill: white
+    &.visible-xs
+      transition: .3s ease-in-out
+      &:hover
+        .icon-bar
+          background: $light-brown
+      .navbar-toggle
+        cursor: pointer
+        margin: .25rem 0
+        display: inherit
+      .icon-bar
+        display: block
+        width: 100%
+        background: $deep-brown
+        margin-top: 0.5rem
+        transition: .6s ease-in-out
+        &:nth-of-type(2)
+          margin-top: 0
+      &.open
+        background: $light-brown 
+        .icon-bar
+          background: white
+          &:nth-of-type(2)
+            transform: rotate(45deg) translate(7px, 7px)
+          &:nth-of-type(3)
+            opacity: 0
+          &:nth-of-type(4)
+            transform: rotate(-45deg) translate(3px, -5px)
+.message
+  left: -46%
+  padding: .5rem
+  border: 2px solid $deep-brown
+  margin-top: 1.5rem
+  width: 260px
+  @media #{$mobile}
+    left: -30%
+    width: 300px
+  &::before
+    content: ''
+    +tr3($color-n, $color-n, $deep-brown, $color-n)
+    border-width: 1.2rem
+    position: absolute
+    left: $trPositon
+    top: -2.5rem
+  &::after
+    content: ''
+    +tr3($color-n, $color-n, white, $color-n)
+    border-width: 1.2rem
+    position: absolute
+    left: $trPositon
+    top: -2.2rem
+  li:not(:first-child)
+    padding: 0rem0
+    border-bottom: 2px solid $deep-brown
+    a
+      display: block
+      padding: 1rem .5rem
+      font-size: 12px
+      color: $deep-brown
+      text-overflow: ellipsis
+      overflow: hidden
+      font-weight: 300
+  li:last-child
+    border-bottom: 0
+    text-align: center
+    a
+      padding-bottom: .5rem
+  .dropdown-title
+    background: $light-brown
+    color: white
+    padding: .3rem 0
+    letter-spacing: .4rem
+    font-weight: 400
+    position: relative
+    z-index: 1
+    &::before
+      content: ''
+      +tr3($color-n, $color-n, $light-brown, $color-n)
+      border-width: 1.2rem
+      position: absolute
+      left: $trPositon
+      top: -2.2rem
+.menulist
+  padding: .5rem
+  border: 2px solid $deep-brown
+  margin-top: 1.5rem
+  width: 260px
+  @media #{$mobile}
+    left: -30%
+    width: 300px
+  &::before
+    content: ''
+    +tr3($color-n, $color-n, $deep-brown, $color-n)
+    border-width: 1.2rem
+    position: absolute
+    left: 26.5%
+    top: -2.5rem
+  &::after
+    content: ''
+    +tr3($color-n, $color-n, white, $color-n)
+    border-width: 1.2rem
+    position: absolute
+    left: 26.5%
+    top: -2.2rem
+  li:not(:first-child)
+    padding: 0rem0
+    border-bottom: 2px solid $deep-brown
+    a
+      display: flex
+      padding: 1rem .5rem
+      font-size: 12px
+      color: $deep-brown
+      text-overflow: ellipsis
+      overflow: hidden
+      font-weight: 300
+      align-items: center
+      &::before
+        content: ''
+        display: inline-block
+        width: 1rem
+        height: 1rem
+        margin-right: 0.5rem
+        background: $light-brown
+  li:last-child
+    border-bottom: 0
+    a
+      padding-bottom: .5rem
+.dropdown-title
+  background: $light-brown
+  color: white
+  padding: .3rem 0
+  letter-spacing: .4rem
+  font-weight: 400
+  position: relative
+  z-index: 1
+  &::before
+    content: ''
+    +tr3($color-n, $color-n, $light-brown, $color-n)
+    border-width: 1.2rem
+    position: absolute
+    left: 25.5%
+    top: -2.2rem

@@ -11,6 +11,8 @@ $color-menu: #f1efea
 $color-gray: #efefef
 $color-red: darken(red, 10%)
 $color-blue: #171c61
+$light-brown: #b28247
+$deep-brown: #231815
 
 /*RWD*/
 $mobile: "screen and (max-width:767px)"
@@ -84,14 +86,33 @@ a
         outline: none
 *
     font-family: $fm-google
-    font-size: 16px
+    font-size: 14px
     letter-spacing: .1em
 
-@mixin idx-h3-title
-	font-size: 26px
+.light-brown
+	background: $light-brown
+	color: white
+.deep-brown
+	background: $deep-brown
+	color: white
+.text-light-brown
+	color: $light-brown
+.text-deep-brown
+	color: $deep-brown
+body
+	background: url('/dist/images/background.png')
+	padding-top: 2rem
+	padding-left: 1.5rem
+	padding-right: 1.5rem
+.container-fluid
+	padding-left: 0
+	padding-right: 0
+	>.row
+		margin-left: 0
+		margin-right: 0
+.flex
+	display: flex
 	@media #{$mobile}
-		margin-top: 1em
-@mixin idx-h3-sub-title
-	font-size: 22px
-	margin-top: 0.5em
-	color: $color-blue
+		flex-wrap: wrap
+.justify-center
+	justify-content: center

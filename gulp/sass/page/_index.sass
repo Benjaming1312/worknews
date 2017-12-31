@@ -1,248 +1,182 @@
-.idx
-    background: $color-gray
-.header-title
+.flex-wrap
+  flex-wrap: wrap
+.banner
+  border-top: 2px solid $deep-brown
+  border-bottom: 13px solid $deep-brown
+  margin-bottom: 1rem
+  margin-top: 0.5rem
+  .row
+    margin-left: 0
+    margin-right: 0
+  [class*="col"]
+    padding: 0
+    overflow: hidden
+  img
+    width: 100%
+  .title
+    font-size: 13rem
     text-align: center
-    &::before,&::after
-        content: ''
-        display: block
-        width: calc(100% / 2 - 7em)
-        height: 1px
-        background: rgba($color-b, .3)
-        position: absolute
-        top: 35%
-        @media #{$mobile}
-            width: calc(100% / 2 - 5em)
-    &::before
-        left: 0
-    &::after
-        right: 0
-    h3.title
-        font-size: 32px
-        font-weight: normal
-        color: #050505
-        @media #{$mobile}
-            font-size: 26px
-    .sub_title
-        font-size: 20px
-        color: #3e3a39
-        font-weight: 300
-        letter-spacing: .1em
-        @media #{$mobile}
-            font-size: 18px
-        &::after
-            content: ''
-            display: block
-            width: 8px
-            height: 8px
-            border-radius: 50%
-            background: $color-b
-            margin: 0.5em auto
-.section_1
-    padding-top: 4em
-    .container
-        @media #{$mobile}
-            padding: 0
-        *
-            color: $color-b
-        article.col-sm-12
-            padding-bottom: 4em
-            margin-bottom: 4em
-            border-bottom: 1px solid rgba(#050505, .7)
-            @media #{$mobile}
-                padding-bottom: 2em
-                margin-bottom: 2em
-            &:nth-of-type(3)
-                border-bottom: 0
-                margin-bottom: 0
-                padding-bottom: 0
-            img
-                width: 100%
-                padding: 1em
-                background: #fff
-                @media #{$mobile}
-                    padding: 0.5em
-            .title
-                text-align: center
-                margin-top: 3em
-                font-weight: normal
-                letter-spacing: 0.1em
-                font-size: 18px
-                margin-bottom: 1em
-                @media #{$mobile}
-                    margin-top: 2em
-                    margin-bottom: 0
-            p:not(.title)
-                line-height: 3em
-                font-size: 14px
-                font-weight: lighter
-                text-align: center
-                @media #{$pad-pc}
-                    padding: 0 5em
-        footer.col-xs-12
-            padding: 0
-            background: none
-            a
-                font-size: 14px
-                color: $color-b
-                letter-spacing: 0em
-                @media #{$mobile}
-                    float: right!important
-
-.section_2
-    padding-top: 4em
-    .container
-        @media #{$mobile}
-            padding: 0
-    header.col-xs-12
-        *
-            color: $color-b
-        .title
-            font-size: 36px
-            font-weight: normal
-            letter-spacing: .1em
-            text-align: center
-            @media #{$mobile}
-                font-size: 26px
-                line-height: 1.5em
-        .sub_title
-            font-size: 22px
-            font-weight: normal
-            margin-top: 1em
-            text-align: center
-            &::after
-                content: ''
-                display: block
-                width: 8px
-                height: 8px
-                border-radius: 50%
-                background: $color-b
-                margin: 2em auto
-                @media #{$mobile}
-                    margin-top: 1em
-    .nav.nav-tabs
-        margin-bottom: 1em
-        border-bottom: 1px solid $color-b
-        @media #{$mobile}
-            display: flex
-            flex-wrap: wrap
-        li
-            margin: 0
-            border-bottom: 4px solid $color-n
-            @media #{$mobile}
-                width: calc(100% / 2 )
-                margin: 0 0em 2em
-                text-align: center
-            &.active
-                transition: .3s ease
-                border-bottom: 4px solid $color-b
-                padding-bottom: 0.5em
-                a
-                    transition: .3s ease
-                    background-color: $color-n
-                    box-shadow: none
-                    border: 0
-                    border-right: 1px solid $color-b
-                    @media #{$mobile}
-                        border-right: 0                        
-            &:first-child
-                a
-                    padding-left: 0
-            a
-                color: $color-b
-                border-right: 1px solid #050505
-                border-radius: 0
-                padding: 0 1em 0
-                line-height: 1em
-                font-size: 16px
-                letter-spacing: 0
-                font-weight: normal
-                @media #{$mobile}
-                        font-size: 14px
-                        border-right: 0
-    .tab-content
-        margin-top: 2em
-        .tab-pane
-            &.active
-            .grid
-                width: 100%
-                column-count: 3
-                @media #{$mobile}
-                    column-count: 1
-                .grid-item
-                    width: 100%
-                    margin: 0 0 2em
-                    border: 1px solid #ccc
-                    padding: 1em
-                    *
-                        color: $color-b
-                        text-align: center
-                    .title
-                        margin-top: 4em
-                        margin-bottom: 1em
-                        font-size: 14px
-                    hr
-                        border-color: $color-b
-                    p:not(.title)
-                        font-size: 12px
-                        line-height: 2em
-                        letter-spacing: 0.1em
-                        color: #666
-                a
-                    display: block
-                    img
-                        width: 100%
-.section_3.section_3
-    padding-top: 4em
-    padding-bottom: 4em
+    letter-spacing: 0
+    font-weight: bold
     @media #{$mobile}
-        padding-top: 2em
-        padding-bottom: 2em
-    .row
-        @media #{$pad-pc}
-            display: flex
-    .col-sm-push-6
-        @media #{$pad-pc}
-            display: flex
-            align-items: center
-            justify-content: center
-    .flex-pic
-        background: #fff
-        height: 100%
-        @media #{$pad-pc}
-            padding: 0 1em
-            display: flex
-            align-items: center
-        @media #{$mobile}
-            padding-top: 2em
-            padding-bottom: 2em
-    .col-sm-pull-6
-        @media #{$mobile}
-            margin-top: 1em
-    .title
-        +idx-h3-title
-    .sub_title
-        +idx-h3-sub-title
-    .mdate
-        display: block
-        width: 100%
-        color: $color-b
-        font-weight: normal
-    a
-        color: $color-blue
-        font-weight: normal
-    .mdetail
-        color: $color-b2
-        font-size: 14px
-        letter-spacing: 0.1em
-        line-height: 2em
-    .listBS
-        border-bottom: 1px solid rgba($color-b, .2)
-        padding-bottom: 2em
-        margin-bottom: 2em
-        @media #{$mobile}
-            margin-bottom: 1em
-            padding-bottom: 1em
-    .module-special
-        margin-top: 4em
-        @media #{$mobile}
-            margin-top: 2em
+      font-size: 5rem
+  p
+    font-size: 14px
+    font-weight: 400
+    margin-bottom: 0
+    letter-spacing: 0.1rem
+    line-height: 2.5rem
+    height: 27rem
+    text-overflow: ellipsis
+    overflow: hidden
+    padding: 2rem
+.section
+  padding-top: 2.5rem
+  padding-bottom: 2rem
+  border-top: 2px solid $deep-brown
+  h2.title
+    font-size: 5rem
+    letter-spacing: 0
+    margin-top: 0
+    margin-bottom: 0
+    font-weight: bold
+    @media #{$mobile}
+      font-size: 3rem
+  h3.sub-title
+    margin-top: 1rem
+    margin-bottom: 2.5rem
+    font-size: 3rem
+    letter-spacing: 0.5rem
+    font-weight: 500
+.aboutus
+  .col-sm-5
+    padding: 2rem
+  .title
+    font-size: 9rem
+    letter-spacing: 0
+    margin-top: 0
+  .sub-title
+    font-size: 3rem
+    letter-spacing: 1rem
+  .col-sm-7
+    padding-left: 2rem
+    @media #{$mobile}
+      background: $deep-brown
+      padding: 0
+    p
+      font-size: 14px
+      letter-spacing: 0.1rem
+      line-height: 2.5rem
+      @media #{$mobile}
+        color: white
+        padding: 2rem
+.characteristic
+  .col-xs-12
+    padding: 0
+  .col-sm-3
+    margin-top: 2rem
+    opacity: 0
+    @media #{$mobile}
+      opacity: 0
+      padding: 0 15%
+      margin-bottom: 4rem
+    &:nth-of-type(1)
+      @media #{$mobile}
+        animation-delay: .4s
+    &:nth-of-type(2)
+      animation-delay: .2s
+      @media #{$mobile}
+        animation-delay: .4s
+    &:nth-of-type(3)
+      animation-delay: .4s
+      @media #{$mobile}
+        animation-delay: .4s
+    &:nth-of-type(4)
+      animation-delay: .6s
+      @media #{$mobile}
+        animation-delay: .4s
+  .icon
+    margin: 0 .5rem
+    display: flex
+    align-items: center
+    justify-content: center
+    padding-top: 100%
+    position: relative
+    transition: .3s ease-in-out
+    svg
+      position: absolute
+      top: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      padding: 30%
+      height: 100%
+      path
+        stroke-width: 3px        
+  a:hover
+    .icon
+      background: $light-brown
+  h4.title
+    margin-top: 2rem
+    letter-spacing: 0.5rem
+    margin-bottom: 2rem
+  p
+    padding-left: 2rem
+    padding-right: 2rem
+    line-height: 3rem
+    letter-spacing: 0.1rem
+    font-weight: 400
+.services
+  .col-sm-6
+    padding: 0
+    margin-bottom: 2rem
+    margin-top: 3rem
+    opacity: 0
+    @media #{$mobile}
+      margin-top: 0
+      opacity: 0
+    &:nth-of-type(1)
+      @media #{$mobile}
+        animation-delay: .4s
+    &:nth-of-type(2)
+      animation-delay: .2s
+      @media #{$mobile}
+        animation-delay: .4s
+    &:nth-of-type(4)
+      animation-delay: .4s
+      @media #{$mobile}
+        animation-delay: .4s
+    &:nth-of-type(5)
+      animation-delay: .6s
+      @media #{$mobile}
+        animation-delay: .4s
+  .row
+    margin-left: 0
+    margin-right: 0
+  img
+    width: 100%
+  .title
+    margin-top: 0
+    margin-bottom: 0
+    font-size: 4rem
+    letter-spacing: 0
+  .sub-title
+    margin-top: 1rem
+    font-size: 2rem
+    letter-spacing: 0.5rem
+    margin-bottom: 3rem
+  p
+    line-height: 3rem
+    font-size: 14px
+    letter-spacing: 0.1rem
+  .more
+    display: inline-block
+    padding: .5rem 15%
+    margin-top: 3rem
+    letter-spacing: 0
+    transition: .3s ease-in-out
+    border: 2px solid $color-n
+    &:hover
+      background: none
+      border: 2px solid $deep-brown
+      color: $deep-brown
