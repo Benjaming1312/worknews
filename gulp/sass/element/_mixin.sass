@@ -19,7 +19,8 @@ $deep-brown: #231815
 $mobile: "screen and (max-width:767px)"
 $pad: "(min-width:768px) and (max-width:991px)"
 $mini-pc: "(min-width: 992px) and (max-width: 1199px)"
-$pad-pc: "(min-width:768px)"
+$pad-pc: "(min-width:768px) and (max-width: 1560px)"
+$big-pc: "(min-width:1561px)"
 
 // 字體
 // -宋體組
@@ -101,13 +102,17 @@ a
 .text-deep-brown
 	color: $deep-brown
 body
-	background: url('/worknews/dist/images/background.png')
+	background: url('../../dist/images/background.png')
 	padding-top: 2rem
 	padding-left: 1.5rem
 	padding-right: 1.5rem
 .container-fluid
 	padding-left: 0
 	padding-right: 0
+	@media #{$pad-pc}
+		max-width: 1280px
+	@media #{$big-pc}
+		max-width: 1560px
 	>.row
 		margin-left: 0
 		margin-right: 0
