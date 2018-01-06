@@ -1,4 +1,36 @@
 //- Tabs
+mixin tab-list-worknews-site(tabs,active,options)
+	- options = options || {};
+	- var style = options.style || '';
+	- style = style.replace(/\bnav-tabs\b/, '')
+	- style = style.replace(/\bnav\b/, '')
+	ul.nav.nav-tabs.site(role="tablist", class=style, id=options._id || false)
+		each item,index in tabs
+			if (index === active)
+				li.active
+					a(href=`#tab${item._id}`,role="tab",data-toggle="tab")= item.title
+			else
+				li
+					a(href=`#tab${item._id}`,role="tab",data-toggle="tab")= item.title
+	.tab-content
+		block
+mixin tab-list-worknews-server(tabs,active,options)
+	- options = options || {};
+	- var style = options.style || '';
+	- style = style.replace(/\bnav-tabs\b/, '')
+	- style = style.replace(/\bnav\b/, '')
+	ul.nav.nav-tabs.server(role="tablist", class=style, id=options._id || false)
+		each item,index in tabs
+			if (index === active)
+				li.active
+					a(href=`#tab${item._id}`,role="tab",data-toggle="tab")= item.title
+			else
+				li
+					a(href=`#tab${item._id}`,role="tab",data-toggle="tab")= item.title
+	.tab-content
+		block
+
+//- Tabs
 mixin tab-list(tabs,active,options)
 	- options = options || {};
 	- var style = options.style || '';

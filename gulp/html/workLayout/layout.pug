@@ -1,0 +1,32 @@
+include ./layout-1.pug
+include ./layout-2.pug
+include ./layout-3.pug
+include ./layout-4.pug
+include ./layout-5.pug
+include ./layout-6.pug
+include ./layout-7.pug
+include ./layout-8.pug
+include ./layout-9.pug
+include ./layout-10.pug
+
+mixin layout(info)
+  if (info.layout === 1)
+    +layout-1(info)
+  else if (info.layout === 2)
+    +layout-2(info)
+  else if (info.layout === 3)
+    +layout-3(info)
+  else if (info.layout === 4)
+    +layout-4(info)
+  else if (info.layout === 5)
+    +layout-5(info)
+  else if (info.layout === 6)
+    +layout-6(info)
+  else if (info.layout === 7)
+    +layout-7(info)
+  else if (info.layout === 8)
+    +layout-8(info)
+  else if (info.layout === 9)
+    +layout-9(info)
+  else if (info.layout === 10)
+    +layout-10(info)

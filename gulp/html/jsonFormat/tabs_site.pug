@@ -1,0 +1,311 @@
+-
+  var tabs_site = [
+    { title: '基隆', _id: 'site0' },
+    { title: '台北', _id: 'site1' },
+    { title: '新北', _id: 'site2' },
+    { title: '桃園', _id: 'site3' },
+    { title: '新竹', _id: 'site4' },
+    { title: '苗栗', _id: 'site5' },
+    { title: '臺中', _id: 'site6' },
+    { title: '彰化', _id: 'site7' },
+    { title: '南投', _id: 'site8' },
+    { title: '雲林', _id: 'site9' },
+    { title: '嘉義', _id: 'site10' },
+    { title: '臺南', _id: 'site11' },
+    { title: '高雄', _id: 'site12' },
+    { title: '屏東', _id: 'site13' },
+    { title: '臺東', _id: 'site14' },
+    { title: '花蓮', _id: 'site15' },
+    { title: '宜蘭', _id: 'site16' },
+    { title: '美國', _id: 'site17' }
+  ]
+-
+  var server = [
+    { title: '全部', _id: 'server0'},
+    { title: '一般', _id: 'server1'},
+    { title: '餐飲', _id: 'server2'},
+    { title: '服務', _id: 'server3'},
+    { title: '銷售', _id: 'server4'},
+    { title: '辦公', _id: 'server5'},
+    { title: '活動', _id: 'server6'},
+    { title: '作業員', _id: 'server7'},
+    { title: '勞力', _id: 'server8'},
+    { title: '問卷調查', _id: 'server9'},
+    { title: '補教', _id: 'server10'}
+  ]
+-
+  var contentCol = [
+    //- {
+    //-   layout: 0, // 版型
+    //-   already: false, // 是否已應徵
+    //-   vip: false, // 是否為頭條
+    //-   href: '', // 連結
+    //-   title: '', // 工作名稱
+    //-   company: '', // 公司名稱
+    //-   address: '', // 公司地址
+    //-   workAddress: '', // 工作地點
+    //-   workTime: '', // 工作時間
+    //-   postTime: '', // 發佈時間
+    //-   money: '' // 薪水
+    //- }
+    {
+      layout: 1, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: 'SPA按摩小姐', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路一段２０號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 2, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '趴車小弟', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 3, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '洗碗阿姨', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: 'NT300 / hr' // 薪水
+    },
+    {
+      layout: 1, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: 'SPA按摩小姐', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路一段２０號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 4, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '水電冷氣', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 5, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '加工出口區', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 6, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '加工出口區', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 7, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '水電冷氣', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 8, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '作 業 員', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址ㄗㄨㄛ
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 9, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '加工出口區', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 1, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: 'SPA按摩小姐', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路一段２０號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 2, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '趴車小弟', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 3, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '洗碗阿姨', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: 'NT300 / hr' // 薪水
+    },
+    {
+      layout: 1, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: 'SPA按摩小姐', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路一段２０號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 4, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '水電冷氣', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 5, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '加工出口區', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 6, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '加工出口區', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 7, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '水電冷氣', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 8, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '作 業 員', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址ㄗㄨㄛ
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    },
+    {
+      layout: 9, // 版型
+      already: false, // 是否已應徵
+      vip: false, // 是否為頭條
+      href: '', // 連結
+      title: '加工出口區', // 工作名稱
+      company: 'ＯＯＯ有限公司', // 公司名稱
+      address: '台北市大安區信義路２號', // 公司地址
+      workAddress: '台北市', // 工作地點
+      workTime: '2017-12-24', // 工作時間
+      postTime: '2017-12-10', // 發佈時間
+      money: '30000' // 薪水
+    }
+  ]

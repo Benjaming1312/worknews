@@ -1,0 +1,33 @@
+mixin layout-1(info)
+  // theme-1
+  .col-sm-3.col-xs-6.layout-1
+    if (info.already)
+      .already
+        img(src="./dist/images/already.png", alt="")
+    if (info.vip)
+      .vip
+        img(src="./dist/images/vip.png", alt="")
+    h2.info-title 急徵
+    .info-content
+      h4.title.text-center=info.title
+      p.row.info-row
+        span.col-sm-4.col-xs-12 公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司：
+        span.col-sm-8.col-xs-12=info.company
+      p.row.info-row
+        span.col-sm-4.col-xs-12 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;區：
+        span.col-sm-8.col-xs-12=info.address
+      p.row.info-row
+        span.col-sm-4.col-xs-12 工作地點：
+        span.col-sm-8.col-xs-12=info.workAddress
+      p.row.info-row
+        span.col-sm-4.col-xs-12 工作時間：
+        span.col-sm-8.col-xs-12=info.workTime
+      p.row.info-row
+        span.col-sm-4.col-xs-12 發佈時間：
+        span.col-sm-8.col-xs-12=info.postTime
+      .content-footer
+        h4.title.text-center
+          span 月薪
+          span.text-light-brown=info.money
+          small 起
+    .info-footer

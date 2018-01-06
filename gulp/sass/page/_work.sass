@@ -1,0 +1,120 @@
+body
+	.wrapper.work
+    background: none
+    .navbar
+      margin-bottom: -2px
+.worktabs
+  .nav.site
+    display: flex
+    flex-wrap: nowrap
+    justify-content: space-around
+    li
+      width: 100%
+      text-align: center
+      border-top: 1px solid $color-b-deep
+      &.active
+        a
+          background: $color-b-deep
+          color: white
+          &:hover
+            background: $color-b-deep
+            color: white
+      a
+        padding: 1.5rem 1rem
+        color: $color-b
+        border-radius: 0
+        border: 0
+        margin: 0
+        transition: .3s ease-in-out
+        &:hover
+          background: $light-brown
+          color: white
+.worktabs
+  .nav.server
+    background: $light-brown
+    border: 2px solid $color-b
+    border-bottom: 0
+    a
+      color: white
+      border-radius: 0
+      padding: 1.5rem 1.65rem
+      border: 0
+      transition: .3s ease-in-out
+      margin: 0
+      &:hover
+        background: $deep-brown
+        color: white
+    li.active
+      a
+        background: white
+        color: $color-b
+        border: 0
+        border-bottom: .25px solid $color-b
+.tab-content.server
+  border: 2px solid $color-b
+  padding: 2rem 1rem
+  background-image: url('/dist/images/work-background.png')
+  .row
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    >[class*="layout"]
+      padding: 0
+      margin: 0 .5rem 1rem
+      width: calc(100% / 4 - 2rem)
+      h2.info-title
+        text-align: center
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        letter-spacing: .5rem
+        color: white
+        font-weight: normal
+        margin-top: 1rem
+        &::before,
+        &::after
+          content: ''
+          display: inline-flex
+          width: .7rem
+          height: .7rem
+          background: white
+          border-radius: 50%
+          letter-spacing: 0
+          margin: 0 1rem
+      .info-content
+        background: white
+        padding: 2rem 2rem 0
+        display: flex
+        flex-wrap: wrap
+        .row.info-row
+          margin: 0 0 1rem
+          width: 100%
+          display: flex
+          .col-sm-4
+            font-size: 12px
+            padding: 0
+            width: 5rem
+            color: $light-brown
+            letter-spacing: 0
+            font-weight: 400
+          .col-sm-8
+            font-size: 12px
+            padding: 0
+            width: calc(100% - 5rem)
+            letter-spacing: 0
+            text-overflow: ellipsis
+            word-break: keep-all
+            overflow: hidden
+            font-weight: 400
+      h4.title
+        font-size: 26px
+        small
+          color: $color-b
+          font-size: 16px
+      .content-footer,
+      .info-footer
+        h4.title
+          span
+            font-size: 26px
+            letter-spacing: 0.5rem
