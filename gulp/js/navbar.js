@@ -14,9 +14,21 @@ function appendNav () {
   }
 }
 
+function focusNav () {
+  $('.menu .nav.navbar-nav a').each(function () {
+    var target = $(this).attr('href').split('.')[0]
+    if (window.location.href.indexOf(target) > 0) {
+      $(this).addClass('active')
+    }
+  })
+}
+
 $(function () {
   appendNav()
   $(window).on('resize', function () {
     appendNav()
   })
+
+  // focus nav link
+  focusNav()
 })

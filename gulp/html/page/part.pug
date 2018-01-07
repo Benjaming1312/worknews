@@ -1,0 +1,123 @@
+include ../jsonFormat/tabs_site
+include ../workLayout/layout
+include ../components/accordion
+<!DOCTYPE html>
+html(lang="zh-hant")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="./dist/css/owl.carousel.min.css")
+    link(rel="stylesheet", href="./dist/css/animate.min.css")
+    link(rel="stylesheet", href="./dist/css/usercss.css")
+    script(src="./dist/js/jquery.min.js")
+    script(src="./dist/js/bootstrap.min.js")
+    script(src="./dist/js/owl.carousel.min.js")
+    script(src="./dist/js/vivus.min.js")
+    script(src="./dist/js/userjs.js")
+    title 臨時報
+  body
+    .wrapper.work
+      include ../custom_module/social-menu
+      include ../custom_module/header
+
+      // mobile tabs
+      // left menu
+      .visible-xs.toggle-left-menu
+        p
+          a(href="javascript: void(0)") 
+            span.glyphicon.glyphicon-search
+            | 快速檢索
+      .container-fluid.visible-xs.left-menu
+        +accordion('mobile-tabs-menu')
+          <button type="button" class="close"><span>&times;</span></button>
+          each site in tabs_site
+            +accordion-item('first-item', site.title, 'mobile-tabs-menu', '', site._id)
+              ul.nav.nav-tabs.server
+                each server_tab, index in server
+                  if (index === 0)
+                    li.active
+                      a(data-toggle="tab", href=`#${site._id}${server_tab._id}`)=server_tab.title
+                  else
+                    li
+                      a(data-toggle="tab", href=`#${site._id}${server_tab._id}`)=server_tab.title
+      .container-fluid.worktabs
+        // tabs
+        // desktop only
+        ul.nav.nav-tabs.site.hidden-xs
+          each tab,index in tabs_site
+            if (index === 1)
+              li.active
+                a(data-toggle="tab", href=`#${tab._id}`)=tab.title
+            else
+              li
+                a(data-toggle="tab", href=`#${tab._id}`)=tab.title
+        // tab-pane
+        .tab-content.col-12.site
+          each tab_pane, index in tabs_site
+            if (index === 1)
+              .tab-pane.fade.in.active(id=`${tab_pane._id}`)
+                // tabs
+                // desktop only
+                ul.nav.nav-tabs.server.hidden-xs
+                  each server_tab, index in server
+                    if (index === 2)
+                      li.active
+                        a(data-toggle="tab", href=`#${tab_pane._id}${server_tab._id}`)=server_tab.title
+                    else
+                      li
+                        a(data-toggle="tab", href=`#${tab_pane._id}${server_tab._id}`)=server_tab.title
+                .tab-content.container-fluid.server
+                  each server_tab_pane, index in server
+                    if (index === 2)
+                      .tab-pane.fade.in.active(id=`${tab_pane._id}${server_tab_pane._id}`)
+                        .row
+                          each info in contentCol
+                            +layout(info)
+                    else
+                      .tab-pane.fade(id=`${tab_pane._id}${server_tab_pane._id}`)
+                        .row
+                          each info in contentCol
+                            +layout(info)
+            else
+              .tab-pane.fade(id=`${tab_pane._id}`)
+                // tabs
+                // desktop only
+                ul.nav.nav-tabs.server.hidden-xs
+                  each server_tab, index in server
+                    if (index === 0)
+                      li.active
+                        a(data-toggle="tab", href=`#${tab_pane._id}${server_tab._id}`)=server_tab.title
+                    else
+                      li
+                        a(data-toggle="tab", href=`#${tab_pane._id}${server_tab._id}`)=server_tab.title
+                .tab-content.container-fluid.server
+                  each server_tab_pane, index in server
+                    if (index === 0)
+                      .tab-pane.fade.in.active(id=`${tab_pane._id}${server_tab_pane._id}`)
+                        .row
+                          each info in contentCol
+                            +layout(info)
+                    else
+                      .tab-pane.fade(id=`${tab_pane._id}${server_tab_pane._id}`)
+                        .row
+                          each info in contentCol
+                            +layout(info)
+          .page.col-12
+            ul.pagination
+              li
+                a(href="#") &laquo;
+              li.active
+                a(href="#") 1
+              li
+                a(href="#") 2
+              li
+                a(href="#") 3
+              li
+                a(href="#") 4
+              li
+                a(href="#") 5
+              li
+                a(href="#") &raquo;
+      include ../custom_module/footer

@@ -36,7 +36,8 @@ header.container-fluid
         transition: .3s ease-in
         background: none
         display: inline-block
-        &:hover
+        &:hover,
+        &.active
           color: $light-brown
         &::before
           content: ''
@@ -45,3 +46,7 @@ header.container-fluid
           display: inline-flex
           background: $light-brown
           margin-right: 0.5rem
+          transition: .3s ease-in-out
+        &.active
+          &::before
+            transform: rotate(-45deg)
