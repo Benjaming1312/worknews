@@ -190,6 +190,10 @@ $trPositon: 44%
         height: 1rem
         margin-right: 0.5rem
         background: $light-brown
+        transition: .3s ease-in-out
+      &.active
+        &::before
+          transform: rotate(-45deg)
   li:last-child
     border-bottom: 0
     a

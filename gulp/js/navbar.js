@@ -13,11 +13,18 @@ function appendNav () {
     })
   }
 }
-
+// focus nav link
 function focusNav () {
   $('.menu .nav.navbar-nav a').each(function () {
     var target = $(this).attr('href').split('.')[0]
     if (window.location.href.indexOf(target) > 0) {
+      $(this).addClass('active')
+    }
+  })
+  $('.menulist a').each(function () {
+    var mobileTarget = $(this).attr('href').split('.')[0]
+    console.log(mobileTarget)
+    if (window.location.href.indexOf(mobileTarget) > 0) {
       $(this).addClass('active')
     }
   })
@@ -27,8 +34,8 @@ $(function () {
   appendNav()
   $(window).on('resize', function () {
     appendNav()
+    focusNav()
   })
-
-  // focus nav link
   focusNav()
+
 })
