@@ -1,5 +1,6 @@
 include ../jsonFormat/tabs_site
 include ../workLayout/layout
+include ../components/accordion
 <!DOCTYPE html>
 html(lang="zh-hant")
   head
@@ -20,8 +21,31 @@ html(lang="zh-hant")
     .wrapper.work
       include ../custom_module/social-menu
       include ../custom_module/header
+
+      // mobile tabs
+      // left menu
+      .visible-xs.toggle-left-menu
+        p
+          a(href="javascript: void(0)") 
+            span.glyphicon.glyphicon-search
+            | 快速檢索
+      .container-fluid.visible-xs.left-menu
+        +accordion('mobile-tabs-menu')
+          <button type="button" class="close"><span>&times;</span></button>
+          each site in tabs_site
+            +accordion-item('first-item', site.title, 'mobile-tabs-menu', '', site._id)
+              ul.nav.nav-tabs.server
+                each server_tab, index in server
+                  if (index === 0)
+                    li.active
+                      a(data-toggle="tab", href=`#${site._id}${server_tab._id}`)=server_tab.title
+                  else
+                    li
+                      a(data-toggle="tab", href=`#${site._id}${server_tab._id}`)=server_tab.title
       .container-fluid.worktabs
-        ul.nav.nav-tabs.site
+        // tabs
+        // desktop only
+        ul.nav.nav-tabs.site.hidden-xs
           each tab,index in tabs_site
             if (index === 1)
               li.active
@@ -29,11 +53,14 @@ html(lang="zh-hant")
             else
               li
                 a(data-toggle="tab", href=`#${tab._id}`)=tab.title
+        // tab-pane
         .tab-content.col-12.site
           each tab_pane, index in tabs_site
             if (index === 1)
               .tab-pane.fade.in.active(id=`${tab_pane._id}`)
-                ul.nav.nav-tabs.server
+                // tabs
+                // desktop only
+                ul.nav.nav-tabs.server.hidden-xs
                   each server_tab, index in server
                     if (index === 2)
                       li.active
@@ -55,7 +82,9 @@ html(lang="zh-hant")
                             +layout(info)
             else
               .tab-pane.fade(id=`${tab_pane._id}`)
-                ul.nav.nav-tabs.server
+                // tabs
+                // desktop only
+                ul.nav.nav-tabs.server.hidden-xs
                   each server_tab, index in server
                     if (index === 0)
                       li.active
@@ -75,4 +104,20 @@ html(lang="zh-hant")
                         .row
                           each info in contentCol
                             +layout(info)
+          .page.col-12
+            ul.pagination
+              li
+                a(href="#") &laquo;
+              li.active
+                a(href="#") 1
+              li
+                a(href="#") 2
+              li
+                a(href="#") 3
+              li
+                a(href="#") 4
+              li
+                a(href="#") 5
+              li
+                a(href="#") &raquo;
       include ../custom_module/footer
