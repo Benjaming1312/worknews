@@ -1,0 +1,141 @@
+include ../jsonFormat/tabs_site
+include ../workLayout/layout
+include ../components/accordion
+<!DOCTYPE html>
+html(lang="zh-hant")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="./dist/css/owl.carousel.min.css")
+    link(rel="stylesheet", href="./dist/css/animate.min.css")
+    link(rel="stylesheet", href="./dist/css/usercss.css")
+    script(src="./dist/js/jquery.min.js")
+    script(src="./dist/js/bootstrap.min.js")
+    script(src="./dist/js/owl.carousel.min.js")
+    script(src="./dist/js/vivus.min.js")
+    script(src="./dist/js/userjs.js")
+    title 打工報
+  body
+      include ../custom_module/social-menu
+      include ../custom_module/header
+      .container-fluid.worktabs.work-info
+        .row
+          .col-sm-9.col-xs-12
+            header
+              h2.title.text-light-brown A7跨年活動PT
+              p
+                span.tag 台北
+                span.tag 活動
+                span.tag 時薪 300
+                time.pull-right 張貼於 2017 年 12 月 24 日 01:09:22 PM (大約 4 小時 前)
+            article
+              ul
+                li.list
+                  h3.title 公司名稱
+                  p 在臺形能為
+                li.list
+                  h3.title 薪資待遇
+                  p NT200/hr
+                li.list
+                  h3.title 發薪日期
+                  p 2018/01/02
+                li.list
+                  h3.title 工作時間
+                  p 2018/01/01-2018/09/09 Am05:00~Pm05:00
+                li.list
+                  h3.title 工作時間
+                  p COMMUNE A7貨櫃市集，110台北市信義區松壽路3號
+                li.list
+                  h3.title 工作內容
+                  ul.work-info
+                    li 物有策怎；不良工！案正這
+                    li 在了用落規國不！孩變時：總事半法每內建了
+                    li 除不哥的朋主化常樹行能片成片樹
+                    li 笑媽對安位長使嚴幾的節軍清升訴隨票對學法代
+                li.list
+                  h3.title 需求人數
+                  p 10人
+                li.list
+                  h3.title 條件要求
+                  ul.work-info
+                    li 物有策怎；不良工！案正這
+                    li 在了用落規國不！孩變時：總事半法每內建了
+                    li 除不哥的朋主化常樹行能片成片樹
+                    li 笑媽對安位長使嚴幾的節軍清升訴隨票對學法代
+                li.list
+                  h3.title 聯絡人
+                  span 
+                    include ../svg/people.svg
+                    | Andy
+                  a.work-contact(href="mailto: andy@mail.com.tw")
+                    include ../svg/message.svg
+                    | s8505952001@gmail.com
+          .col-sm-3.hidden-xs
+            .right-info
+              header
+                h3.pay 
+                  | NT$
+                  span 300
+                  small / 小時
+              article
+                h4 11-30 人應徵
+              footer.btn-group
+                a.btn(href="") 我要應徵
+                a.btn(href="") 加入收藏
+            .recommend.tab-content.server
+              header
+                h3.title 推薦專區
+              a.col-xs-12.layout-2
+                .vip
+                  img(src="./dist/images/vip.png", alt="")
+                h2.info-title.text-center 急徵
+                .info-content
+                  h4.title 趴車小弟
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司：
+                    span.col-sm-8.col-xs-12 ＯＯＯ有限公司
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;區：
+                    span.col-sm-8.col-xs-12 台北市大安區信義路２號
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 工作地點：
+                    span.col-sm-8.col-xs-12 台北市
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 工作時間：
+                    span.col-sm-8.col-xs-12 2017-12-24
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 發佈時間：
+                    span.col-sm-8.col-xs-12 2017-12-10
+                .info-footer
+                  h4.title.text-center
+                    span 月薪
+                    span 30000
+                    small 起
+              a.col-xs-12.layout-3
+                .vip
+                  img(src="./dist/images/vip.png", alt="")
+                .info-content
+                  h2.info-title.text-center 急徵
+                  span.border
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司：
+                    span.col-sm-8.col-xs-12 ＯＯＯ有限公司
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;區：
+                    span.col-sm-8.col-xs-12 台北市大安區信義路２號
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 工作地點：
+                    span.col-sm-8.col-xs-12 台北市
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 工作時間：
+                    span.col-sm-8.col-xs-12 2017-12-24
+                  p.row.info-row
+                    span.col-sm-4.col-xs-12 發佈時間：
+                    span.col-sm-8.col-xs-12 2017-12-10
+                  span.border.end
+                  .content-footer
+                    h4.title.text-center 洗碗阿姨
+                    h4.title.text-light-brown.text-center.money NT300 / hr
+      include ../custom_module/footer
