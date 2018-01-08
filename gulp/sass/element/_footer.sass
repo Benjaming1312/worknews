@@ -1,10 +1,14 @@
 .foot
-  border-top: 13px solid $deep-brown
+  // border-top: 13px solid $deep-brown
   background: white
   .row
+    display: flex
     margin-top: 0.5rem
-    border-top: 2px solid $deep-brown
-    padding: 2rem 1rem 0
+    // border-top: 2px solid $deep-brown
+    // padding: 2rem 1rem 0
+    ul
+      @media #{$pad-pc}
+        left: 0
     li
       padding: 0
       a

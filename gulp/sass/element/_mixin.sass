@@ -104,11 +104,16 @@ a
 	color: $deep-brown
 body
 	font-family: $fm-google
+	padding-top: 2rem
 	.wrapper
-		background: url('../../dist/images/background.png')
-		padding-top: 2rem
 		padding-left: 1.5rem
 		padding-right: 1.5rem
+		background: url('../../dist/images/background.png')
+		&::after
+			content: ''
+			width: 100%
+			height: 2rem
+			background: $color-b
 .container-fluid
 	padding-left: 0
 	padding-right: 0
