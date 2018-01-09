@@ -13,6 +13,8 @@
       padding-top: 1rem
       h2.info-title
         font-size: 42px
+        @media #{$dsk}
+          font-size: 2.5vw
       .info-row
         padding: 0 0 0 1rem
       h4.title
@@ -39,7 +41,11 @@
           font-size: 36px
           letter-spacing: 0.7rem
           width: 100%
+          @media #{$dsk}
+            font-size: 2.6vw
           &.money
             font-weight: 400
             font-size: 32px
             letter-spacing: .2rem
+            @media #{$dsk}
+              font-size: 2vw

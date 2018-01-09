@@ -10,11 +10,15 @@
       font-size: 32px
       font-weight: normal
       margin-bottom: 0
+      @media #{$dsk}
+        font-size: 2.5vw
     h2.info-title
       font-size: 42px
       margin-top: 0.5rem
       margin-bottom: 0.5rem
       width: 100%
+      @media #{$dsk}
+        font-size: 3vw
       &::before,
       &::after
         display: none
@@ -22,6 +26,9 @@
       border-radius: 0 0 1rem 1rem
       padding-top: 1rem
       padding-bottom: 2rem
+      @media #{$dsk}
+        padding-top: 1vw
+        padding-bottom: 2vw
     .info-footer
       h4.title
         padding-top: 0
@@ -30,6 +37,10 @@
         span
           font-size: 36px
           letter-spacing: 0.5rem
+          @media #{$dsk}
+            font-size: 2.5vw
         small
           font-size: 16px
           color: white
+          @media #{$dsk}
+            font-size: 1.1vw

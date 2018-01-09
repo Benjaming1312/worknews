@@ -31,6 +31,8 @@ body
         @media #{$pad}
           padding-left: .5rem
           padding-right: .5rem
+        @media #{$dsk}
+          font-size: .9vw
         &:hover
           background: $light-brown
           color: white
@@ -47,6 +49,9 @@ body
       border: 0
       transition: .3s ease-in-out
       margin: 0
+      @media #{$dsk}
+        font-size: 0.9vw
+        padding: 1vw 1.6vw
       @media #{$pad}
         padding-left: .5rem
         padding-right: .5rem
@@ -136,6 +141,8 @@ body
       color: inherit
       padding: 0
       margin: 0 .5rem 1rem
+      @media #{$dsk}
+        margin: 0 .5vw 1vw
       width: calc(100% / 4 - 2rem)
       transition: .3s ease-in-out
       @media #{$mini-pc}
@@ -159,6 +166,9 @@ body
         color: white
         font-weight: normal
         margin-top: 1rem
+        @media #{$dsk}
+          margin-top: 1vw
+          font-size: 2.5vw
         &::before,
         &::after
           content: ''
@@ -174,10 +184,14 @@ body
         padding: 2rem 2rem 0
         display: flex
         flex-wrap: wrap
+        @media #{$dsk}
+          padding: 2vw 2vw 0
         .row.info-row
           margin: 0 0 1rem
           width: 100%
           display: flex
+          @media #{$dsk}
+            margin-bottom: 1.2vw
           .col-sm-4
             font-size: 12px
             padding: 0
@@ -185,6 +199,9 @@ body
             color: $light-brown
             letter-spacing: 0
             font-weight: 400
+            @media #{$dsk}
+              font-size: 1vw
+              width: 5vw
           .col-sm-8
             font-size: 12px
             padding: 0
@@ -194,8 +211,13 @@ body
             word-break: keep-all
             overflow: hidden
             font-weight: 400
+            @media #{$dsk}
+              font-size: 1vw
+              width: calc(100% - 5vw)
       h4.title
         font-size: 26px
+        @media #{$dsk}
+          font-size: 2vw
         small
           color: $color-b
           font-size: 16px
@@ -205,6 +227,8 @@ body
           span
             font-size: 26px
             letter-spacing: 0.5rem
+            @media #{$dsk}
+              font-size: 2vw
 .toggle-left-menu
   position: fixed
   bottom: 0

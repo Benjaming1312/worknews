@@ -11,71 +11,128 @@
   [class*="col"]
     padding: 0
     overflow: hidden
+  .col-sm-5
+    width: 40%
+    @media #{$mobile}
+      width: 100%
+  .col-sm-7
+    width: calc(100% - 40%)
+    @media #{$mobile}
+      width: 100%
   img
     width: 100%
+  .info
+    display: flex
+    align-items: center
+    justify-content: center
   .title
-    font-size: 13rem
     text-align: center
     letter-spacing: 0
     font-weight: bold
+    margin-top: 0
     @media #{$mobile}
       font-size: 5rem
+    @media #{$dsk}
+      font-size: 10vw
   p
     font-size: 14px
     font-weight: 400
     margin-bottom: 0
     letter-spacing: 0.1rem
-    line-height: 2.5rem
-    height: 27rem
+    line-height: 2rem
+    width: 85%
     text-overflow: ellipsis
     overflow: hidden
-    padding: 2rem
+    padding: 1rem
+    @media #{$mobile}
+      padding: 2rem
+      width: 100%
+    @media #{$dsk}
+      font-size: 1.1vw
+      line-height: 2.2vw
+      padding: 2vw 0
+    @media #{$pad}
+      line-height: 2rem
+    
 .section
   padding-top: 2.5rem
   padding-bottom: 2rem
   border-top: 2px solid $deep-brown
   h2.title
-    font-size: 5rem
+    font-size: 4rem
     letter-spacing: 0
-    margin-top: 0
+    margin-top: 2rem
     margin-bottom: 0
     font-weight: bold
-    @media #{$mobile}
-      font-size: 3rem
+    @media #{$dsk}
+      font-size: 5vw
   h3.sub-title
     margin-top: 1rem
     margin-bottom: 2.5rem
-    font-size: 3rem
-    letter-spacing: 0.5rem
-    font-weight: 500
+    font-size: 2.5rem
+    letter-spacing: 1rem
+    font-weight: 400
+    @media #{$dsk}
+      font-size: 2.5vw
 .aboutus
   .col-sm-5
-    padding: 2rem
-  .title
-    font-size: 9rem
+    width: 45%
+    // padding: 4rem 4rem 0rem 7rem
+    @media #{$mobile}
+      width: 100%
+      padding: 1rem
+    @media #{$dsk}
+      padding: 3vw 2vw
+  h2.title
+    font-size: 5rem
     letter-spacing: 0
     margin-top: 0
-  .sub-title
-    font-size: 3rem
-    letter-spacing: 1rem
-  .col-sm-7
-    padding-left: 2rem
+    @media #{$dsk}
+      font-size: 6vw
     @media #{$mobile}
+      text-align: center
+  h3.sub-title
+    font-size: 2.5rem
+    letter-spacing: 1rem
+    font-weight: 400
+    min-width: 2rem
+    @media #{$mobile}
+      text-align: center
+      margin-bottom: 0
+    @media #{$dsk}
+      font-size: 3vw
+  .col-sm-7
+    padding: 1rem
+    width: calc(100% - 45%)
+    @media #{$dsk}
+      padding: 3vw 0vw 3vw 2vw
+    @media #{$pad}
+      padding: 2rem 0 2rem 1rem
+    @media #{$mobile}
+      width: 100%
       background: $deep-brown
       padding: 0
     p
       font-size: 14px
       letter-spacing: 0.1rem
-      line-height: 2.5rem
+      line-height: 2rem
       @media #{$mobile}
         color: white
         padding: 2rem
+      @media #{$dsk}
+        font-size: 1.1vw
+        line-height: 2.2vw
+      @media #{$pad}
+        line-height: 2rem
 .characteristic
   .col-xs-12
     padding: 0
   .col-sm-3
     margin-top: 2rem
+    margin-bottom: 4rem
     opacity: 0
+    @media #{$dsk}
+      margin-bottom: 3vw
     @media #{$mobile}
       opacity: 0
       padding: 0 15%
@@ -117,15 +174,22 @@
     .icon
       background: $light-brown
   h4.title
+    font-size: 2rem
     margin-top: 2rem
     letter-spacing: 0.5rem
     margin-bottom: 2rem
+    @media #{$dsk}
+      font-size: 2vw
   p
-    padding-left: 2rem
-    padding-right: 2rem
-    line-height: 3rem
+    font-size: 14px
+    padding-left: 15%
+    padding-right: 15%
+    line-height: 2rem
     letter-spacing: 0.1rem
     font-weight: 400
+    @media #{$dsk}
+      font-size: 1.1vw
+      line-height: 2.2vw
 .services
   .col-sm-6
     padding: 0
@@ -153,22 +217,31 @@
   .row
     margin-left: 0
     margin-right: 0
+    height: 100%
+    display: flex
   img
     width: 100%
   .title
     margin-top: 0
     margin-bottom: 0
-    font-size: 4rem
+    font-size: 3rem
     letter-spacing: 0
+    @media #{$dsk}
+      font-size: 3vw
   .sub-title
-    margin-top: 1rem
+    margin-top: .5rem
     font-size: 2rem
     letter-spacing: 0.5rem
     margin-bottom: 3rem
+    @media #{$dsk}
+      font-size: 2vw
   p
-    line-height: 3rem
+    line-height: 2rem
     font-size: 14px
     letter-spacing: 0.1rem
+    @media #{$dsk}
+      font-size: 1.1vw
+      line-height: 2.2vw
   .more
     display: inline-block
     padding: .5rem 15%

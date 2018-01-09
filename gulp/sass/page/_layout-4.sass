@@ -14,11 +14,15 @@
     h4.title
       padding-top: 1rem
       font-size: 32px
+      @media #{$dsk}
+          font-size: 2.5vw
     h2.info-title
       color: $color-b
       font-size: 46px
       font-weight: 500
       letter-spacing: 1rem
+      @media #{$dsk}
+        font-size: 3vw
     .info-content
       border-top: 2px solid $light-brown
       padding-left: 0
@@ -37,3 +41,5 @@
         span
           font-size: 36px
           letter-spacing: 1rem
+          @media #{$dsk}
+            font-size: 2.6vw

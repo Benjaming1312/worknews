@@ -3,10 +3,17 @@ header.container-fluid
 .logo
   border-top: 2px solid $deep-brown
   border-bottom: 13px solid $deep-brown
-  padding-top: 0rem
+  padding: 2rem 0
+  @media #{$mobile}
+    padding: 0 2rem
   svg
-    width: 80%
-    max-width: 700px
+    width: 50%
+    @media #{$pad}
+      width: 100%
+      max-width: 700px
+    @media #{$mobile}
+      width: 100%
+      max-width: 700px
 .navbar
   margin-bottom: 0
   .container-fluid
@@ -32,11 +39,13 @@ header.container-fluid
       @media #{$mobile}
         width: 50%
       a
-        font-size: 14px
+        font-size: 1rem
         color: #3e3a39
         transition: .3s ease-in
         background: none
         display: inline-block
+        @media #{$dsk}
+          font-size: 1.1vw
         &:hover,
         &.active
           color: $light-brown
