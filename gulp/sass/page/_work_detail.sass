@@ -1,0 +1,167 @@
+$width: 65%
+$border: 1px solid rgba(#231815, .9)
+=border_bottom
+  border-bottom: $border
+=list_padding
+  padding-left: 2vw
+  padding-right: 0vw
+=list_padding_top
+  padding-top: 3vw
+  padding-bottom: 1.5vw
+=fz12
+  font-size: .6vw
+=fz14
+  font-size: .8vw
+=fz16
+  font-size: 1.1vw
+=fz21
+  font-size: 1.3vw
+=fz23
+  font-size: 1.4vw
+=fz33
+  font-size: 2.4vw
+=fz_title
+  font-size: 2.5vw
+  
+.worktabs.work-info
+  padding: 2vw 10vw
+  >.row
+    border: 2px solid $color-b
+    padding: 4vw 0 3vw 3vw
+    background-image: url('../../dist/images/work-background.png')
+    display: flex
+    position: relative
+  .col-sm-3
+    width: calc(100% - #{$width})
+  .col-sm-9
+    width: $width
+    @media #{$mobile}
+      width: 100%
+    h2.title
+      +fz_title
+      margin-top: 0
+      margin-bottom: 1.5vw
+    ul
+      padding-left: 0
+      list-style: none
+      .list
+        +list_padding
+        +border_bottom
+        +list_padding_top
+        display: flex
+        align-items: flex-end
+        svg
+            width: .8vw
+            height: .8vw
+            margin-right: 0.5vw
+        .icon_text
+          display: inline-flex
+          align-items: flex-center
+          margin-right: 1.2vw
+          font-weight: 500
+          &.work-contact
+            color: $color-b
+            font-weight: 400
+        .work-info-list
+          li
+            +fz14
+            margin-bottom: 0.8vw
+        &.items-start
+          align-items: flex-start
+        h3.title
+          +fz23
+          margin-top: 0
+          margin-bottom: 0
+          margin-right: 0.8vw
+          display: flex
+          align-items: center
+          font-weight: 400
+          &::before
+            content: ''
+            display: inline-flex
+            width: 0.5vw
+            height: 0.5vw
+            margin-right: 0.8vw
+            background: $light-brown
+            border-radius: 50%
+            margin-left: -1.5vw
+        p
+          +fz14
+          margin-bottom: 0
+    header
+      +border_bottom
+      +list_padding
+      padding-right: 1vw
+      margin-bottom: 0vw
+      p
+        margin-bottom: .5vw
+      .tag
+        +fz14
+        margin: 0 .4vw
+        font-weight: 400
+        &:first-child
+          margin-left: 0
+      time
+        position: relative
+        top: 0.25vw
+        font-size: 0.5vw
+  .tab-content.server 
+    padding: 0 1vw
+    .row>[class*="layout"]
+      width: 100%
+      min-height: 29vw
+      &:last-child
+        margin-bottom: 0
+      .info-content .row.info-row
+        margin-bottom: 1vw
+        .col-sm-4,
+        .col-sm-8
+          +fz14
+  .work-info-side
+    padding-left: 10%
+    padding-top: 3vw
+    .right-info
+      h3.pay,
+      h3.pay span
+        +fz33
+      small
+        +fz23
+      h4
+        margin-top: 1.2vw
+        +fz23
+        font-weight: 300
+      .btn-group
+        margin-top: 4vw
+        ul
+          list-style: none
+          padding-left: 0
+        .btn
+          +fz21
+          letter-spacing: 0.3vw
+          font-weight: 300
+          color: white
+          padding: .8vw 1.6vw
+          border-radius: .5vw
+          margin-bottom: 1vw
+    .recommend
+      padding-left: 10%
+      position: absolute
+      bottom: 0
+      right: 0
+      header
+        .title
+          +fz23
+          +border_bottom
+          display: flex
+          align-items: center
+          font-weight: 300
+          margin-bottom: 2vw
+          padding-bottom: 2vw
+          &::before
+            content: ''
+            display: inline-flex
+            width: 0.5vw
+            height: 0.5vw
+            margin-right: 0.8vw
+            background: $light-brown
+            border-radius: 50%
