@@ -59,7 +59,6 @@ $border: 1px solid rgba(#231815, .9)
     width: calc(100% - #{$width})
     @media #{$mobile}
       width: 100%
-      padding: 0 .5rem
   .col-sm-9
     width: $width
     @media #{$mobile}
@@ -163,6 +162,7 @@ $border: 1px solid rgba(#231815, .9)
         @media #{$mobile}
           display: block
           float: inherit!important
+          font-size: 13px
   .tab-content.server 
     padding: 0 1vw
     .row>[class*="layout"]
@@ -181,6 +181,8 @@ $border: 1px solid rgba(#231815, .9)
         margin-bottom: 0
       .info-content .row.info-row
         margin-bottom: 1vw
+        @media #{$mobile}
+          flex-wrap: nowrap
         .col-sm-4,
         .col-sm-8
           +fz14
@@ -244,6 +246,8 @@ $border: 1px solid rgba(#231815, .9)
           font-weight: 300
           margin-bottom: 2vw
           padding-bottom: 2vw
+          @media #{$mobile}
+            font-weight: normal
           &::before
             content: ''
             display: inline-flex
