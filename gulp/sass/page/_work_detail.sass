@@ -175,8 +175,9 @@ $border: 1px solid rgba(#231815, .9)
         @media (max-width: 1366px - $i * 144)
           min-height: 34vw + $i * 3
       @media #{$mobile}
-        min-height: 450px
+        min-height: 420px
         max-width: 300px
+        margin-bottom: 2rem
       &:last-child
         margin-bottom: 0
       .info-content .row.info-row
@@ -191,10 +192,10 @@ $border: 1px solid rgba(#231815, .9)
             margin-bottom: .5rem
         .col-sm-4
           @media #{$mobile}
-            width: 6rem
+            width: 8rem
         .col-sm-8
           @media #{$mobile}
-            width: calc(100% - 6rem)
+            width: calc(100% - 8rem)
   .work-info-side
     padding-left: 10%
     padding-top: 3vw
@@ -227,8 +228,13 @@ $border: 1px solid rgba(#231815, .9)
           padding: .8vw 1.6vw
           border-radius: .5vw
           margin-bottom: 1vw
+          transition: .3s ease-in
+          &:hover
+            opacity: 0.7
           @media #{$mobile}
             margin-bottom: 1rem
+            padding: 1rem 3.5rem
+            font-weight: 400
     .recommend
       padding-left: 10%
       position: absolute
@@ -263,3 +269,11 @@ $border: 1px solid rgba(#231815, .9)
               top: .5rem
               margin-right: .5rem
               margin-bottom: 1rem
+.work-detail-footer
+  p 
+    margin-bottom: 1vw
+    span
+      font-size: 1vw
+      @media #{$mobile}
+        font-size: 12px
+        display: block
