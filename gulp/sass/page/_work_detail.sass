@@ -8,6 +8,9 @@ $border: 1px solid rgba(#231815, .9)
 =list_padding_top
   padding-top: 3vw
   padding-bottom: 1.5vw
+  @media #{$mobile}
+    padding-top: 2rem
+    padding-bottom: 1rem
 =fz12
   @media (min-width: 768px)
     font-size: .6vw
@@ -21,6 +24,7 @@ $border: 1px solid rgba(#231815, .9)
   @media (min-width: 768px)
     font-size: 1.3vw
 =fz23
+  font-size: 2rem
   @media (min-width: 768px)
     font-size: 1.4vw
 =fz33
@@ -39,7 +43,7 @@ $border: 1px solid rgba(#231815, .9)
     padding: 2vw
     width: 100%
   @media #{$mobile}
-    padding: 2vw
+    padding: 1rem
     width: 100%
   >.row
     border: 2px solid $color-b
@@ -47,12 +51,20 @@ $border: 1px solid rgba(#231815, .9)
     background-image: url('../../dist/images/work-background.png')
     display: flex
     position: relative
+    @media #{$mobile}
+      flex-wrap: wrap
+      padding: 1rem
+      margin: 0
   .col-sm-3
     width: calc(100% - #{$width})
+    @media #{$mobile}
+      width: 100%
+      padding: 0 .5rem
   .col-sm-9
     width: $width
     @media #{$mobile}
       width: 100%
+      // padding: 0
     h2.title
       +fz_title
       margin-top: 0
@@ -66,6 +78,8 @@ $border: 1px solid rgba(#231815, .9)
         +list_padding_top
         display: flex
         align-items: flex-end
+        @media #{$mobile}
+          flex-wrap: wrap
         svg
             width: 1rem
             height: 1rem
@@ -77,6 +91,10 @@ $border: 1px solid rgba(#231815, .9)
           align-items: flex-center
           margin-right: 1.2vw
           font-weight: 500
+          @media #{$mobile}
+            display: block
+            width: 100%
+            margin: .5rem 0
           &.work-contact
             color: $color-b
             font-weight: 400
@@ -84,6 +102,9 @@ $border: 1px solid rgba(#231815, .9)
           li
             +fz14
             margin-bottom: 0.8vw
+            @media #{$mobile}
+              letter-spacing: 0.1rem
+              line-height: 2rem
         &.items-start
           align-items: flex-start
         h3.title
@@ -94,6 +115,10 @@ $border: 1px solid rgba(#231815, .9)
           display: flex
           align-items: center
           font-weight: 400
+          @media #{$mobile}
+            display: block
+            width: 100%
+            letter-spacing: 0.2rem
           &::before
             content: ''
             display: inline-flex
@@ -103,14 +128,26 @@ $border: 1px solid rgba(#231815, .9)
             background: $light-brown
             border-radius: 50%
             margin-left: -1.5vw
+            @media #{$mobile}
+              width: .5rem
+              height: .5rem
+              position: relative
+              top: -.5rem
+              margin-right: .5rem
+              margin-bottom: 1rem
         p
           +fz14
           margin-bottom: 0
+          @media #{$mobile}
+            letter-spacing: 0.1rem
+            line-height: 2rem
     header
       +border_bottom
       +list_padding
       padding-right: 1vw
       margin-bottom: 0vw
+      @media #{$mobile}
+        padding-bottom: 1rem
       p
         margin-bottom: .5vw
       .tag
@@ -123,6 +160,9 @@ $border: 1px solid rgba(#231815, .9)
         position: relative
         top: 0.25vw
         font-size: 0.5vw
+        @media #{$mobile}
+          display: block
+          float: inherit!important
   .tab-content.server 
     padding: 0 1vw
     .row>[class*="layout"]
@@ -134,6 +174,9 @@ $border: 1px solid rgba(#231815, .9)
       @for $i from 1 through 3
         @media (max-width: 1366px - $i * 144)
           min-height: 34vw + $i * 3
+      @media #{$mobile}
+        min-height: 450px
+        max-width: 300px
       &:last-child
         margin-bottom: 0
       .info-content .row.info-row
@@ -141,15 +184,30 @@ $border: 1px solid rgba(#231815, .9)
         .col-sm-4,
         .col-sm-8
           +fz14
+          @media #{$mobile}
+            font-size: 14px
+            margin-bottom: .5rem
+        .col-sm-4
+          @media #{$mobile}
+            width: 6rem
+        .col-sm-8
+          @media #{$mobile}
+            width: calc(100% - 6rem)
   .work-info-side
     padding-left: 10%
     padding-top: 3vw
+    @media #{$mobile}
+      padding: 0
     .right-info
       h3.pay,
       h3.pay span
         +fz33
       small
         +fz23
+      h3.pay
+        span
+          @media #{$mobile}
+            font-size: 24px
       h4
         margin-top: 1.2vw
         +fz23
@@ -167,11 +225,16 @@ $border: 1px solid rgba(#231815, .9)
           padding: .8vw 1.6vw
           border-radius: .5vw
           margin-bottom: 1vw
+          @media #{$mobile}
+            margin-bottom: 1rem
     .recommend
       padding-left: 10%
       position: absolute
       bottom: 0
       right: 0
+      @media #{$mobile}
+        position: static
+        padding-left: 0
       header
         .title
           +fz23
@@ -189,3 +252,10 @@ $border: 1px solid rgba(#231815, .9)
             margin-right: 0.8vw
             background: $light-brown
             border-radius: 50%
+            @media #{$mobile}
+              width: .5rem
+              height: .5rem
+              position: relative
+              top: .5rem
+              margin-right: .5rem
+              margin-bottom: 1rem
