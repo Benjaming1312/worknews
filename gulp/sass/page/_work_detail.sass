@@ -9,22 +9,38 @@ $border: 1px solid rgba(#231815, .9)
   padding-top: 3vw
   padding-bottom: 1.5vw
 =fz12
-  font-size: .6vw
+  @media (min-width: 768px)
+    font-size: .6vw
 =fz14
-  font-size: .8vw
+  @media (min-width: 768px)
+    font-size: .8vw
 =fz16
-  font-size: 1.1vw
+  @media (min-width: 768px)
+    font-size: 1.1vw
 =fz21
-  font-size: 1.3vw
+  @media (min-width: 768px)
+    font-size: 1.3vw
 =fz23
-  font-size: 1.4vw
+  @media (min-width: 768px)
+    font-size: 1.4vw
 =fz33
-  font-size: 2.4vw
+  @media (min-width: 768px)
+    font-size: 2.4vw
 =fz_title
-  font-size: 2.5vw
+  @media (min-width: 768px)
+    font-size: 2.5vw
   
 .worktabs.work-info
   padding: 2vw 10vw
+  @media #{$mini-pc}
+    padding: 2vw 5vw
+    width: 100%
+  @media #{$pad}
+    padding: 2vw
+    width: 100%
+  @media #{$mobile}
+    padding: 2vw
+    width: 100%
   >.row
     border: 2px solid $color-b
     padding: 4vw 0 3vw 3vw
@@ -51,9 +67,11 @@ $border: 1px solid rgba(#231815, .9)
         display: flex
         align-items: flex-end
         svg
-            width: .8vw
-            height: .8vw
+            width: 1rem
+            height: 1rem
             margin-right: 0.5vw
+            position: relative
+            top: -3px
         .icon_text
           display: inline-flex
           align-items: flex-center
@@ -109,7 +127,13 @@ $border: 1px solid rgba(#231815, .9)
     padding: 0 1vw
     .row>[class*="layout"]
       width: 100%
-      min-height: 29vw
+      min-height: 29.5vw
+      @for $i from 1 through 3
+        @media (max-width: 1644px - $i * 144)
+          min-height: 31vw + $i * 1
+      @for $i from 1 through 3
+        @media (max-width: 1366px - $i * 144)
+          min-height: 34vw + $i * 3
       &:last-child
         margin-bottom: 0
       .info-content .row.info-row
