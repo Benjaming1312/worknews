@@ -1,0 +1,81 @@
+.wrapper.contact
+  background-image: none
+  .container-fluid
+    width: 100%
+    >.row
+      background: none
+      padding: 2vw 10vw 0vw 10vw
+      @media #{$mobile}
+        padding-left: 1.5rem  
+        padding-right: 1.5rem 
+      .contact-content
+        background: url('../../dist/images/background.png')
+        border: 2px solid $color-b
+        padding: 2vw
+        max-width: 750px
+        margin-left: auto
+        margin-right: auto
+        header
+          margin-bottom: 2vw
+          @media #{$pad-pc}
+            margin-bottom: 2rem
+          @media #{$mobile}
+            margin-bottom: 2rem
+          .title
+            font-size: 2vw
+            border-left: 5px solid $light-brown
+            padding-left: 1vw
+            @media #{$pad-pc}
+              font-size: 3rem
+              padding-left: 0.5rem
+            @media #{$mobile}
+              font-size: 2rem
+              padding-left: 0.5rem
+        .content
+          .form-group
+            span,input,textarea
+              font-size: 1.1vw
+              @media #{$pad-pc}
+                font-size: 1.5rem
+              @media #{$mobile}
+                font-size: 1.5rem
+            span
+              display: block
+              margin-bottom: 1vw
+              @media #{$pad-pc}
+                margin-bottom: 1rem
+              @media #{$mobile}
+                margin-bottom: 1rem
+            textarea
+              width: 100%
+              display: block
+              border: 2px solid $light-brown
+              border-radius: .5vw
+            input
+              display: inline-block
+              width: 100%
+              border: 2px solid $light-brown
+              border-radius: .5vw
+              height: 2vw
+              @media #{$pad-pc}
+                border-radius: .5rem
+                height: 2.5rem
+              @media #{$mobile}
+                border-radius: .5rem
+                height: 2.5rem
+        footer
+          background: none
+          a.btn
+            padding: .5vw 4vw
+            background: $light-brown
+            color: white
+            transition: .3s ease-in
+            font-size: 1vw
+            &:hover
+              background: $deep-brown
+            @media #{$pad-pc}
+              padding: .5rem 3rem
+              font-size: 1.5rem
+            @media #{$mobile}
+              padding: .5rem 3rem
+              font-size: 1.5rem

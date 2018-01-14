@@ -1,0 +1,44 @@
+include ../jsonFormat/tabs_site
+include ../workLayout/layout
+include ../components/accordion
+<!DOCTYPE html>
+html(lang="zh-hant")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="./dist/css/owl.carousel.min.css")
+    link(rel="stylesheet", href="./dist/css/animate.min.css")
+    link(rel="stylesheet", href="./dist/css/usercss.css")
+    script(src="./dist/js/jquery.min.js")
+    script(src="./dist/js/bootstrap.min.js")
+    script(src="./dist/js/owl.carousel.min.js")
+    script(src="./dist/js/vivus.min.js")
+    script(src="./dist/js/userjs.js")
+    title 聯絡我們
+  body
+    .wrapper.contact
+      include ../custom_module/social-menu
+      include ../custom_module/header
+      .container-fluid
+        .row
+          .contact-content.col-12
+            header.head
+              h2.title.text-light-brown 聯絡我們
+            article.content
+              .form-group
+                span.col 姓&nbsp;&nbsp;&nbsp;名：
+                input.form-control(type="text", value="")
+              .form-group
+                span.col 電&nbsp;&nbsp;&nbsp;話：
+                input.form-control(type="tel", value="")
+              .form-group
+                span.col email：
+                input.form-control(type="mail", value="")
+              .form-group
+                span.col 詢問內容：
+                textarea.form-control(cols="30", rows="5")
+            footer.foot.text-center
+              a.btn(href="#") 送出
+      include ../custom_module/footer

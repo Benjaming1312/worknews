@@ -1,0 +1,156 @@
+extends ../custom_module/resumeTemplate
+
+block main
+  .work-info-content
+    header
+      h2.title.text-light-brown 
+        | 我的履歷表
+        //- a(href="")
+        //-   include ../svg/pen.svg
+        //-   | 修改
+    article
+      ul.form-inline
+        li.list
+          ul.sub-list
+            li.title 
+              h3.title 基本資料
+            li.form-group
+              span.col 中文姓名：
+              input.form-control(type="text", value="郭子榕")
+            li.form-group
+              span.col 英文名字：
+              input.form-control(type="text", value="GUO，ZI－RONG")
+            li.form-group
+              span.col 性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別：
+              div.radio-inline
+                input.hidden(type="radio", name="gender", value="male", id="male")
+                label(for="male") 男
+              div.radio-inline
+                input.hidden(type="radio", name="gender", value="female", id="female")
+                label(for="female") 女
+            li.form-group
+              span.col 出生日期： 
+              input.form-control(type="text", value="1993年06月01日 ")
+            li.form-group
+              span.col 婚姻狀況： 
+              div.radio-inline
+                input.hidden(type="radio", name="married", value="true", id="married")
+                label(for="married") 已婚
+              div.radio-inline
+                input.hidden(type="radio", name="married", value="false", id="nonmarried")
+                label(for="nonmarried") 未婚
+            li.form-group.weight
+              span.col 身高體重： 
+              input.form-control(type="text", value="164")
+              label 公分
+              input.form-control(type="text", value="53")
+              label 公斤
+        li.list
+          ul.sub-list
+            li.title 
+              h3.title 聯絡資料 
+            li.form-group
+              span.col 信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱： 
+              input.form-control(type="mail", value="leonaguo820601@gmail.com ")
+            li.form-group
+              span.col 聯絡電話：
+              input.form-control(type="text", value="0982327851")
+            li.form-group
+              span.col 住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家：
+              input.form-control(type="text", value="(04)25243667")
+            li.form-group.address
+              span.col 通訊地址：
+              input.form-control(type="text", value="台北市大安區信義路四段279號7F")
+        li.list
+          ul.sub-list
+            li.title 
+              h3.title 求職資料  
+            li.form-group
+              span.col 就業狀態：
+              span 
+              div.radio-inline
+                input.hidden(type="radio", name="jobStatus", value="true", id="nonJobStatus")
+                label(for="nonJobStatus") 待業中
+              label.radio-inline
+                input.hidden(type="radio", name="jobStatus", value="false", id="JobStatus")
+                label(for="JobStatus") 就業中
+            li.form-group
+              span.col 特殊身份：
+              input.form-control(type="text", value="")
+            li.form-group
+              span.col 具備駕駛執照：
+              input.form-control(type="text", value="普通重型機車駕照")
+            li.form-group
+              span.col 具備交通工具：
+              input.form-control(type="text", value="普通重型機車")
+        li.list
+          ul.sub-list
+            li.title 
+              h3.title 自傳
+            li.form-group
+              textarea.form-control(rows="6")
+                | 傳業回又四古、路論低屋怕出和！我創成行無整開蘭就然及效些果道道成臉收學美生沒期心然候小日以：對快長！也有傳早獨星交下一分教燈，景男人主：期土謝機施也關幾？對是家。十才提羅書服且無食表這已政把，花這時義他能大病間要己發回先鄉益只動家樓景。筆望樓雨。
+      p.text-center
+        a.btn.submit-modified(href="#") 送出
+block side
+  .work-info-side
+    .personal-images
+      img.img-responsive(src="./dist/images/personal.png", alt="")
+      p
+        label.btn.submit-modified.upload(for="upload") 上傳圖片
+        input#upload.hidden(type="file")
+    .recommend.tab-content.server
+      header
+        h3.title 推薦專區
+      .row
+        a.col-xs-12.layout-2(href="#")
+          .vip
+            img(src="./dist/images/vip.png", alt="")
+          h2.info-title.text-center 急徵
+          .info-content
+            h4.title 趴車小弟
+            p.row.info-row
+              span.col-sm-4.col-xs-12 公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司：
+              span.col-sm-8.col-xs-12 ＯＯＯ有限公司
+            p.row.info-row
+              span.col-sm-4.col-xs-12 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;區：
+              span.col-sm-8.col-xs-12 台北市大安區信義路２號
+            p.row.info-row
+              span.col-sm-4.col-xs-12 工作地點：
+              span.col-sm-8.col-xs-12 台北市
+            p.row.info-row
+              span.col-sm-4.col-xs-12 工作時間：
+              span.col-sm-8.col-xs-12 2017-12-24
+            p.row.info-row
+              span.col-sm-4.col-xs-12 發佈時間：
+              span.col-sm-8.col-xs-12 2017-12-10
+          .info-footer
+            h4.title.text-center
+              span 月薪
+              span 30000
+              small 起
+        a.col-xs-12.layout-3(href="#")
+          .vip
+            img(src="./dist/images/vip.png", alt="")
+          .info-content
+            h2.info-title.text-center 急徵
+            span.border
+            p.row.info-row
+              span.col-sm-4.col-xs-12 公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司：
+              span.col-sm-8.col-xs-12 ＯＯＯ有限公司
+            p.row.info-row
+              span.col-sm-4.col-xs-12 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;區：
+              span.col-sm-8.col-xs-12 台北市大安區信義路２號
+            p.row.info-row
+              span.col-sm-4.col-xs-12 工作地點：
+              span.col-sm-8.col-xs-12 台北市
+            p.row.info-row
+              span.col-sm-4.col-xs-12 工作時間：
+              span.col-sm-8.col-xs-12 2017-12-24
+            p.row.info-row
+              span.col-sm-4.col-xs-12 發佈時間：
+              span.col-sm-8.col-xs-12 2017-12-10
+            span.border.end
+            .content-footer
+              h4.title.text-center 洗碗阿姨
+              h4.title.text-light-brown.text-center.money NT300 / hr

@@ -1,0 +1,41 @@
+include ../jsonFormat/tabs_site
+include ../workLayout/layout
+include ../components/accordion
+<!DOCTYPE html>
+html(lang="zh-hant")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="./dist/css/owl.carousel.min.css")
+    link(rel="stylesheet", href="./dist/css/animate.min.css")
+    link(rel="stylesheet", href="./dist/css/usercss.css")
+    script(src="./dist/js/jquery.min.js")
+    script(src="./dist/js/bootstrap.min.js")
+    script(src="./dist/js/owl.carousel.min.js")
+    script(src="./dist/js/vivus.min.js")
+    script(src="./dist/js/userjs.js")
+    title 會員登入
+  body
+    .wrapper.contact.login
+      include ../custom_module/social-menu
+      include ../custom_module/header
+      .container-fluid
+        .row
+          .contact-content.col-12
+            header.head
+              h2.title.text-light-brown 會員登入
+            article.content
+              .form-group
+                span.col 帳&nbsp;&nbsp;&nbsp;號：
+                input.form-control(type="text", value="")
+              .form-group
+                span.col 密&nbsp;&nbsp;&nbsp;碼：
+                input.form-control(type="tel", value="")
+            footer.foot.text-center
+              a.btn(href="resume.html") 送出
+            footer.foot.text-center.otherLogin
+              a.text-deep-brown.register(href="#") 註冊會員
+              a.text-deep-brown.forget(href="#") 忘記密碼？
+      include ../custom_module/footer

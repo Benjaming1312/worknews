@@ -41,7 +41,7 @@ gulp.task('scripts',function(){
 gulp.task('styles',function(){
     gulp.src('gulp/sass/usercss.sass') //轉換的檔案
         .pipe(sourceMap.init()) //sourcemap
-        .pipe(sass({outputStyle: 'compressed',errLogToConsole: true}).on('error',sass.logError)) //編譯
+        .pipe(sass({outputStyle: 'expanded',errLogToConsole: true}).on('error',sass.logError)) //編譯
         .pipe(autoprefixer("last 1 version"," > 1%" , "ie 8", "ie 7")
             ) //autoPrefix
         .pipe(sourceMap.write('.',{

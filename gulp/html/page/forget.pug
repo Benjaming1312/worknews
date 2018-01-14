@@ -1,0 +1,39 @@
+include ../jsonFormat/tabs_site
+include ../workLayout/layout
+include ../components/accordion
+<!DOCTYPE html>
+html(lang="zh-hant")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./dist/css/bootstrap.min.css")
+    link(rel="stylesheet", href="./dist/css/owl.carousel.min.css")
+    link(rel="stylesheet", href="./dist/css/animate.min.css")
+    link(rel="stylesheet", href="./dist/css/usercss.css")
+    script(src="./dist/js/jquery.min.js")
+    script(src="./dist/js/bootstrap.min.js")
+    script(src="./dist/js/owl.carousel.min.js")
+    script(src="./dist/js/vivus.min.js")
+    script(src="./dist/js/userjs.js")
+    title 重置密碼
+  body
+    .wrapper.contact.register
+      include ../custom_module/social-menu
+      include ../custom_module/header
+      .container-fluid
+        .row
+          .contact-content.col-12
+            header.head
+              h2.title.text-light-brown 重置密碼
+            article.content
+              .form-group
+                span.col 註冊信箱：
+                input.form-control(type="text", value="")
+                small.text-red 請填寫註冊時的信箱，系統將重置密碼，並將密碼寄至註冊信箱
+            footer.foot.text-center
+              a.btn(href="#") 送出
+            footer.foot.text-center.otherLogin
+              a.text-deep-brown.register(href="login.html") 登入會員
+              a.text-deep-brown.register(href="register.html") 註冊會員
+      include ../custom_module/footer

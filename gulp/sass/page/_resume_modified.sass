@@ -1,0 +1,140 @@
+.worktabs.resume.resume
+  .worktabs.work-info
+    padding: 0
+    width: 100%
+  >.row
+    .form-control
+      border: 2px solid $light-brown
+      padding-top: 0.3vw
+      height: 2.2vw
+      border-radius: .5vw
+      width: 10vw
+      box-shadow: 1px 1px 10px -3px $color-b
+      @media #{$mobile}
+        height: 3rem
+        padding: .5rem
+        width: 100%
+        margin-top: .5rem
+    .form-group
+      display: block
+      width: 100%
+      input
+        font-size: .8vw
+        line-height: 2vw
+        min-width: 15rem
+        @media #{$pad-pc}
+          font-size: 1.5rem
+          line-height: 2rem
+        @media #{$mobile}
+          font-size: 1.5rem
+          line-height: 2rem
+      textarea
+        font-size: .8vw
+        line-height: 2vw
+        width: 100%
+        height: auto
+        @media #{$pad-pc}
+          font-size: 1.5rem
+          line-height: 3rem
+        @media #{$mobile}
+          font-size: 1.5rem
+          line-height: 3rem
+      .radio-inline
+        display: inline-flex
+        align-items: center
+        label
+          font-size: 1vw
+          font-weight: 400
+          padding-left: .5vw
+          @media #{$pad-pc}
+            font-size: 1.5rem
+          @media #{$mobile}
+            font-size: 1.5rem
+          &::before,&::after
+            content: ''
+            display: inline-block
+            width: 1.1vw
+            height: 1.1vw
+            position: absolute
+            left: 0
+            top: .75vw
+            background: $color-n
+            border-radius: 50%
+            border: 3px solid $light-brown
+            @media #{$mobile}
+              width: 1.5rem
+              height: 1.5rem
+              top: .7rem
+          &::after
+            z-index: 4
+            background: $color-b
+            width: 0.35vw
+            height: 0.35vw
+            top: 1.15vw
+            left: 0.35vw
+            border: 0
+            opacity: 0
+            transition: .3s ease-in
+            @media #{$mobile}
+              width: 0.5rem
+              height: 0.5rem
+              top: 1.2rem
+              left: .5rem
+        input[type="radio"]
+          width: 1.1vw
+          height: 1.1vw
+          background: $color-n
+          &:checked+label
+            &::after
+              opacity: 1
+      &.weight
+        >span
+          @media #{$mobile}
+            display: block
+            width: 100%
+            margin-bottom: .5rem
+        label
+          @media #{$mobile}
+            font-weight: 400
+        input
+          width: 3vw
+          min-width: 5rem
+          @media #{$mobile}
+            width: 5rem
+            display: inline-block
+      input[type="mail"]
+        width: 25vw
+        @media #{$mobile}
+          width: 100%
+      &.address
+        input
+          width: 25vw
+          @media #{$mobile}
+            width: 100%
+  .col-sm-9 
+    .work-info-content 
+      article 
+        .sub-list 
+          width: 100%
+          li
+            margin-bottom: 1vw
+            @media #{$mobile}
+              margin-bottom: 1rem
+      .form-inline
+        .list:last-child
+          padding-bottom: 1vw
+.submit-modified
+  padding: .3vw 3vw
+  background: $color-b
+  font-size: .8vw
+  color: white
+  transition: .3s ease-in
+  @media #{$mobile}
+    padding: .5rem 3rem
+    font-size: 1.5rem
+  &:hover
+    background: $light-brown
+    color: white
+  &.upload
+    background: $color-n
+    color: $light-brown

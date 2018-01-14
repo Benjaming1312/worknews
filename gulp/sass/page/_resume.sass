@@ -1,0 +1,158 @@
+.worktabs.resume
+  padding-top: 0
+  padding-left: 0
+  padding-right: 0
+  @media #{$pad}
+    width: 95%
+  .tab-content
+    padding: 2vw 10vw 0vw 10vw
+    width: 100%
+    margin-bottom: 0rem
+    @media (min-width: 768px) and (max-width: 1280px)
+      padding: 1.5rem 1rem
+    @media #{$mobile}
+      padding: 1.5rem 1rem
+  >.row
+    margin-bottom: 0vw
+  .nav-tabs.site
+    justify-content: center
+    border-bottom: 2px solid $color-b
+    @media #{$mobile}
+      position: fixed
+      bottom: 0
+      width: 100%
+      z-index: 5
+      background-image: url('../../dist/images/work-background.png')
+      background: white
+      border-top: 2px solid $color-b
+    li
+      margin-top: -1px
+      border: 0
+      width: auto
+      @media #{$mobile}
+        width: 25%
+        text-align: center
+      a
+        padding-left: 3rem
+        padding-right: 3rem
+        padding-left: 3.7vw
+        padding-right: 3.7vw
+        border-left: 2px solid $color-b
+        @media #{$mobile}
+          padding: 0
+          padding: 1rem
+        span
+          font-size: 1vw
+          @media #{$mobile}
+            font-size: 2rem
+            display: none
+        
+        &:hover
+          background: $color-b
+      &:first-child
+        a
+          border-left: 0
+      &:last-child
+        a
+          border-right: 2px solid $color-b
+          @media #{$mobile}
+            border-right: 0
+      &.active
+        a
+          background: $light-brown
+          border-bottom: 1px solid $color-b
+          &:hover
+            background: $light-brown!important
+  &.work-info
+    >.row
+      padding: 3vw 0vw 2vw 3vw
+      @media (min-width: 768px) and (max-width: 1280px)
+        padding-right: 0
+      @media #{$pad}
+        flex-wrap: wrap
+    // .col-sm-3
+    //   @media #{$pad}  
+    //     width: 100%
+    //   @media #{$pad-pc}
+    //     min-height: 150vh
+    .col-sm-9
+      .work-info-content
+        header
+          margin-bottom: 4vw
+          border-bottom: 0
+          padding-left: 0
+          h2.title
+            border-left: 10px solid $light-brown
+            padding-left: 1vw
+            margin-right: 1vw
+            margin-bottom: 0
+            a
+              color: $color-b
+              font-size: 1vw
+              font-weight: 400
+              margin-left: 1.5vw
+              @media #{$mobile}
+                font-size: 1.5rem
+                margin-left: 1rem
+              svg
+                width: 1vw
+                height: 1vw
+                margin-right: 0.5vw
+                @media #{$mobile}
+                  width: 1.5rem
+                  height: 1.5rem
+                  margin-right: .5rem
+        article
+          >ul
+            >li:first-child
+              padding-top: 0
+            >li:last-child
+              border-bottom: 0
+          .sub-list
+            li.title
+              margin-bottom: 2vw
+            li
+              margin-bottom: 1.5vw
+              line-height: 2.5vw
+              font-size: .9vw
+              @media #{$pad-pc}
+                font-size: 1.5rem
+                line-height: 3rem
+                letter-spacing: 0.2rem
+              @media #{$mobile}
+                font-size: 1.5rem
+                line-height: 3rem
+                letter-spacing: 0.2rem
+              span
+                font-size: 1.1vw
+                letter-spacing: 0.1vw
+                @media #{$pad-pc}
+                  font-size: 1.5rem
+                  letter-spacing: 0.2rem
+                @media #{$mobile}
+                  font-size: 1.5rem
+                  letter-spacing: 0.2rem
+    .col-sm-3
+      .work-info-side
+        padding-top: 6vw
+        // padding-right: 2vw
+        @media (min-width: 768px) and (max-width: 1280px)
+          padding-right: 0rem
+        .personal-images
+          img
+            width: 10vw
+            @media #{$mobile}
+              width: auto
+              max-width: 250px
+              margin-left: auto
+              margin-right: auto
+          p
+            @media #{$mobile}
+              text-align: center
+              label
+                font-size: 1.5rem
+                letter-spacing: 0.2rem
+      .recommend
+        bottom: 0rem
+        @media #{$mobile}
+          transform: scale(1)
