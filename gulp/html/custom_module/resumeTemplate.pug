@@ -20,7 +20,7 @@ html(lang="zh-hant")
   body
       include ../custom_module/social-menu
       include ../custom_module/header
-      .container-fluid.worktabs.work-info.resume
+      .container-fluid.worktabs.resume
         // tabs
         // desktop only
         ul.nav.nav-tabs.site
@@ -35,7 +35,7 @@ html(lang="zh-hant")
                 a(data-toggle="tab", href=`#${item._id}`)
                   span.visible-xs(class=item.icon)
                   span=item.title
-        .tab-content
+        .tab-content.server
           each item, index in resume
               if (index === 0)
                 .tab-pane.fade.in.active(id=`${item._id}`)
@@ -45,6 +45,16 @@ html(lang="zh-hant")
                         block main
                       .col-sm-3
                         block side
+              else if (item._id === 'resume02')
+                .tab-pane.fade.work-list(id=`${item._id}`)
+                  .row
+                    each info in contentCol
+                      +layout(info)
+              else if (item._id === 'resume03')
+                .tab-pane.fade.work-list(id=`${item._id}`)
+                  .row
+                    each info in contentCol
+                      +layout(info)
               else
                 .tab-pane.fade(id=`${item._id}`)
       footer.work-detail-footer.container-fluid

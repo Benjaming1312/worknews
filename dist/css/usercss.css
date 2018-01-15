@@ -3169,7 +3169,13 @@ body .wrapper.work .navbar {
 }
 
 .worktabs.resume .nav-tabs.site li:first-child a {
-  border-left: 0;
+  border-left: 2px solid #3e3a39;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume .nav-tabs.site li:first-child a {
+    border-left: 0;
+  }
 }
 
 .worktabs.resume .nav-tabs.site li:last-child a {
@@ -3737,6 +3743,136 @@ body .wrapper.work .navbar {
   }
 }
 
+.login.login.login.login.login .form-group,
+.register.register.register.register.register .form-group,
+.forget.forget.forget.forget.forget .form-group {
+  display: -webkit-box;
+  display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .login.login.login.login.login .form-group,
+  .register.register.register.register.register .form-group,
+  .forget.forget.forget.forget.forget .form-group {
+    flex-wrap: wrap;
+  }
+}
+
+.login.login.login.login.login .form-group .col,
+.register.register.register.register.register .form-group .col,
+.forget.forget.forget.forget.forget .form-group .col {
+  width: 7vw;
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .login.login.login.login.login .form-group .col,
+  .register.register.register.register.register .form-group .col,
+  .forget.forget.forget.forget.forget .form-group .col {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login.login.login.login.login .form-group .col,
+  .register.register.register.register.register .form-group .col,
+  .forget.forget.forget.forget.forget .form-group .col {
+    width: 100%;
+  }
+}
+
+.login.login.login.login.login .form-group .col + input,
+.login.login.login.login.login .form-group .col + div,
+.register.register.register.register.register .form-group .col + input,
+.register.register.register.register.register .form-group .col + div,
+.forget.forget.forget.forget.forget .form-group .col + input,
+.forget.forget.forget.forget.forget .form-group .col + div {
+  width: calc(100% - 7vw);
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .login.login.login.login.login .form-group .col + input,
+  .login.login.login.login.login .form-group .col + div,
+  .register.register.register.register.register .form-group .col + input,
+  .register.register.register.register.register .form-group .col + div,
+  .forget.forget.forget.forget.forget .form-group .col + input,
+  .forget.forget.forget.forget.forget .form-group .col + div {
+    width: calc(100% - 10rem);
+  }
+}
+
+.login.login.login.login.login .form-group .verification,
+.register.register.register.register.register .form-group .verification,
+.forget.forget.forget.forget.forget .form-group .verification {
+  width: 8vw !important;
+  margin-right: 1vw;
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .login.login.login.login.login .form-group .verification,
+  .register.register.register.register.register .form-group .verification,
+  .forget.forget.forget.forget.forget .form-group .verification {
+    width: 12rem !important;
+    margin-right: .5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login.login.login.login.login .form-group .verification,
+  .register.register.register.register.register .form-group .verification,
+  .forget.forget.forget.forget.forget .form-group .verification {
+    width: 12rem !important;
+  }
+}
+
+.login.login.login.login.login .form-group .verification + img,
+.register.register.register.register.register .form-group .verification + img,
+.forget.forget.forget.forget.forget .form-group .verification + img {
+  width: 100px;
+  height: 40px;
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .login.login.login.login.login .male.col,
+  .register.register.register.register.register .male.col,
+  .forget.forget.forget.forget.forget .male.col {
+    width: 10rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login.login.login.login.login .male.col,
+  .register.register.register.register.register .male.col,
+  .forget.forget.forget.forget.forget .male.col {
+    width: 100%;
+  }
+}
+
+.login.login.login.login.login .radio-inline,
+.register.register.register.register.register .radio-inline,
+.forget.forget.forget.forget.forget .radio-inline {
+  margin-left: 0;
+}
+
+.login.login.login.login.login .radio-inline label::before,
+.register.register.register.register.register .radio-inline label::before,
+.forget.forget.forget.forget.forget .radio-inline label::before {
+  top: 0.2vw !important;
+}
+
+.login.login.login.login.login .radio-inline label::after,
+.register.register.register.register.register .radio-inline label::after,
+.forget.forget.forget.forget.forget .radio-inline label::after {
+  top: 0.55vw !important;
+}
+
+@media screen and (max-width: 767px) {
+  .login.login.login.login.login .radio-inline label::after,
+  .register.register.register.register.register .radio-inline label::after,
+  .forget.forget.forget.forget.forget .radio-inline label::after {
+    top: 0.6rem !important;
+  }
+}
+
 .otherLogin {
   display: block;
   margin-top: .5vw;
@@ -3780,6 +3916,83 @@ body .wrapper.work .navbar {
   .text-red {
     font-size: 1rem;
   }
+}
+
+.register .radio-inline {
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: cente;
+          align-items: cente;
+}
+
+.register .radio-inline label {
+  font-size: 1vw;
+  font-weight: 400;
+  padding-left: .5vw;
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .register .radio-inline label {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .register .radio-inline label {
+    font-size: 1.5rem;
+  }
+}
+
+.register .radio-inline label::before, .register .radio-inline label::after {
+  content: '';
+  display: inline-block;
+  width: 1.1vw;
+  height: 1.1vw;
+  position: absolute;
+  left: 0;
+  top: .75vw;
+  background: transparent;
+  border-radius: 50%;
+  border: 3px solid #b28247;
+}
+
+@media screen and (max-width: 767px) {
+  .register .radio-inline label::before, .register .radio-inline label::after {
+    width: 1.5rem;
+    height: 1.5rem;
+    top: .7rem;
+  }
+}
+
+.register .radio-inline label::after {
+  z-index: 4;
+  background: #3e3a39;
+  width: 0.35vw;
+  height: 0.35vw;
+  top: 1.15vw;
+  left: 0.35vw;
+  border: 0;
+  opacity: 0;
+  transition: .3s ease-in;
+}
+
+@media screen and (max-width: 767px) {
+  .register .radio-inline label::after {
+    width: 0.5rem;
+    height: 0.5rem;
+    top: 1.2rem;
+    left: .5rem;
+  }
+}
+
+.register .radio-inline input[type="radio"] {
+  width: 1.1vw;
+  height: 1.1vw;
+  background: transparent;
+}
+
+.register .radio-inline input[type="radio"]:checked + label::after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=usercss.css.map */

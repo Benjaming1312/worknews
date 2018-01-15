@@ -1,3 +1,47 @@
+.login.login.login.login.login,
+.register.register.register.register.register,
+.forget.forget.forget.forget.forget
+  .form-group
+    display: flex
+    @media #{$mobile}
+      flex-wrap: wrap
+    .col
+      width: 7vw
+      @media #{$pad-pc}
+        width: 10rem
+      @media #{$mobile}
+        width: 100%
+      &+input,
+      &+div
+        width: calc(100% - 7vw)
+        @media #{$pad-pc}
+          width: calc(100% - 10rem)
+    .verification
+      width: 8vw!important
+      margin-right: 1vw
+      @media #{$pad-pc}
+        width: 12rem!important
+        margin-right: .5rem
+      @media #{$mobile}
+        width: 12rem!important
+      &+img
+        width: 100px
+        height: 40px
+  .male.col
+    @media #{$pad-pc}
+      width: 10rem
+    @media #{$mobile}
+      width: 100%
+  .radio-inline
+    margin-left: 0
+    label
+      &::before
+        top: .2vw!important
+      &::after
+        top: .55vw!important
+        @media #{$mobile}
+          top: .6rem!important
+
 .otherLogin
   display: block
   margin-top: .5vw
@@ -17,3 +61,53 @@
     font-size: 1rem
   @media #{$mobile}
     font-size: 1rem
+
+.register
+  .radio-inline
+    display: inline-flex
+    align-items: cente
+    label
+      font-size: 1vw
+      font-weight: 400
+      padding-left: .5vw
+      @media #{$pad-pc}
+        font-size: 1.5rem
+      @media #{$mobile}
+        font-size: 1.5rem
+      &::before,&::after
+        content: ''
+        display: inline-block
+        width: 1.1vw
+        height: 1.1vw
+        position: absolute
+        left: 0
+        top: .75vw
+        background: $color-n
+        border-radius: 50%
+        border: 3px solid $light-brown
+        @media #{$mobile}
+          width: 1.5rem
+          height: 1.5rem
+          top: .7rem
+      &::after
+        z-index: 4
+        background: $color-b
+        width: 0.35vw
+        height: 0.35vw
+        top: 1.15vw
+        left: 0.35vw
+        border: 0
+        opacity: 0
+        transition: .3s ease-in
+        @media #{$mobile}
+          width: 0.5rem
+          height: 0.5rem
+          top: 1.2rem
+          left: .5rem
+    input[type="radio"]
+      width: 1.1vw
+      height: 1.1vw
+      background: $color-n
+      &:checked+label
+        &::after
+          opacity: 1

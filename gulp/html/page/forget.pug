@@ -18,7 +18,7 @@ html(lang="zh-hant")
     script(src="./dist/js/userjs.js")
     title 重置密碼
   body
-    .wrapper.contact.register
+    .wrapper.contact.forget
       include ../custom_module/social-menu
       include ../custom_module/header
       .container-fluid
@@ -29,8 +29,9 @@ html(lang="zh-hant")
             article.content
               .form-group
                 span.col 註冊信箱：
-                input.form-control(type="text", value="")
-                small.text-red 請填寫註冊時的信箱，系統將重置密碼，並將密碼寄至註冊信箱
+                div.input-group
+                  input.form-control(type="text", value="")
+                  small.text-red 請填寫註冊時的信箱，系統將重置密碼，並將密碼寄至註冊信箱
             footer.foot.text-center
               a.btn(href="#") 送出
             footer.foot.text-center.otherLogin

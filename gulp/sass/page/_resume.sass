@@ -46,12 +46,13 @@
           @media #{$mobile}
             font-size: 2rem
             display: none
-        
         &:hover
           background: $color-b
       &:first-child
         a
-          border-left: 0
+          border-left: 2px solid $color-b
+          @media #{$mobile}
+            border-left: 0
       &:last-child
         a
           border-right: 2px solid $color-b
@@ -156,3 +157,7 @@
         bottom: 0rem
         @media #{$mobile}
           transform: scale(1)
+.tab-content.server 
+  .work-list
+    .row 
+      >[class*="layout"]

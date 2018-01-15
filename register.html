@@ -155,21 +155,39 @@
               <h2 class="title text-light-brown">註冊會員</h2>
             </header>
             <article class="content">
-              <div class="form-group"><span class="col">帳&nbsp;&nbsp;&nbsp;號：</span>
+              <div class="form-group"><span class="col">帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：</span>
                 <input class="form-control" type="text" value=""/>
               </div>
-              <div class="form-group"><span class="col">密&nbsp;&nbsp;&nbsp;碼：</span>
+              <div class="form-group"><span class="col">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：</span>
+                <input class="form-control" type="password" value=""/>
+              </div>
+              <div class="form-group"><span class="col">確認密碼：</span>
+                <input class="form-control" type="password" value=""/>
+              </div>
+              <div class="form-group"><span class="col">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機：</span>
                 <input class="form-control" type="tel" value=""/>
               </div>
-              <div class="form-group"><span class="col">手&nbsp;&nbsp;&nbsp;機：</span>
-                <input class="form-control" type="text" value=""/>
+              <div class="form-group"><span class="col male">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別：</span>
+                <div class="radio-group">
+                  <div class="radio-inline">
+                    <input class="hidden" type="radio" name="gender" value="male" id="male"/>
+                    <label for="male">男</label>
+                  </div>
+                  <div class="radio-inline">
+                    <input class="hidden" type="radio" name="gender" value="female" id="female"/>
+                    <label for="female">女</label>
+                  </div>
+                </div>
               </div>
               <div class="form-group"><span class="col">聯絡信箱：</span>
                 <input class="form-control" type="text" value=""/>
               </div>
+              <div class="form-group"><span class="col">&nbsp;&nbsp;&nbsp;驗證碼：</span>
+                <input class="form-control verification" type="text" value=""/><img src="./dist/images/verification.png" alt=""/>
+              </div>
             </article>
             <footer class="foot text-center"><a class="btn" href="#">註冊</a></footer>
-            <footer class="foot text-center otherLogin"><a class="text-deep-brown register" href="login.html">登入會員</a><a class="text-deep-brown forget" href="#">忘記密碼？</a></footer>
+            <footer class="foot text-center otherLogin"><a class="text-deep-brown register" href="login.html">登入會員</a><a class="text-deep-brown forget" href="forget.html">忘記密碼？</a></footer>
           </div>
         </div>
       </div>

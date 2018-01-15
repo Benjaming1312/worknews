@@ -28,20 +28,36 @@ html(lang="zh-hant")
               h2.title.text-light-brown 註冊會員
             article.content
               .form-group
-                span.col 帳&nbsp;&nbsp;&nbsp;號：
+                span.col 帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：
                 input.form-control(type="text", value="")
               .form-group
-                span.col 密&nbsp;&nbsp;&nbsp;碼：
+                span.col 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：
+                input.form-control(type="password", value="")
+              .form-group
+                span.col 確認密碼：
+                input.form-control(type="password", value="")
+              .form-group
+                span.col 手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機：
                 input.form-control(type="tel", value="")
               .form-group
-                span.col 手&nbsp;&nbsp;&nbsp;機：
-                input.form-control(type="text", value="")
+                span.col.male 性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別：
+                .radio-group
+                  div.radio-inline
+                    input.hidden(type="radio", name="gender", value="male", id="male")
+                    label(for="male") 男
+                  div.radio-inline
+                    input.hidden(type="radio", name="gender", value="female", id="female")
+                    label(for="female") 女
               .form-group
                 span.col 聯絡信箱：
                 input.form-control(type="text", value="")
+              .form-group
+                span.col &nbsp;&nbsp;&nbsp;驗證碼：
+                input.form-control.verification(type="text", value="")
+                img(src="./dist/images/verification.png", alt="")
             footer.foot.text-center
               a.btn(href="#") 註冊
             footer.foot.text-center.otherLogin
               a.text-deep-brown.register(href="login.html") 登入會員
-              a.text-deep-brown.forget(href="#") 忘記密碼？
+              a.text-deep-brown.forget(href="forget.html") 忘記密碼？
       include ../custom_module/footer
