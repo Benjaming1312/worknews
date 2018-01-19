@@ -46,15 +46,22 @@ html(lang="zh-hant")
                       .col-sm-3
                         block side
               else if (item._id === 'resume02')
+                // 會員應徵紀錄
                 .tab-pane.fade.work-list(id=`${item._id}`)
                   .row
                     each info in contentCol
                       +layout(info)
               else if (item._id === 'resume03')
+                // 我的收藏
                 .tab-pane.fade.work-list(id=`${item._id}`)
                   .row
                     each info in contentCol
                       +layout(info)
+              else if (item._id === 'resume05')
+                // 訊息記錄
+                .tab-pane.fade.work-list(id=`${item._id}`)
+                  .row.message-page
+                    include ../page/message
               else
                 .tab-pane.fade(id=`${item._id}`)
       footer.work-detail-footer.container-fluid

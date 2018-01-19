@@ -161,3 +161,15 @@
   .work-list
     .row 
       >[class*="layout"]
+        @media #{$dsk}
+          width: calc(100% / 3 - 2rem)
+          transition: .3s ease-in-out
+        @media #{$mini-pc}
+          width: calc(100% / 3 - 2rem)
+        @media #{$pad}
+          width: calc(100% / 3 - 2rem)
+        @media #{$mobile}
+          width: calc(100% / 2 - 2rem)
+        @media (max-width: 540px)
+          width: calc(100% - 2rem)
+          min-height: 420px
