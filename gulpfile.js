@@ -14,6 +14,11 @@ var gulp = require('gulp'), //gulp主程式
 gulp.task('watch',function(){
     gulp.watch('gulp/**/**',['scripts','styles','views']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
 })
+// live sass
+gulp.task('watch-sass',function(){
+    gulp.watch('gulp/**/**',['styles']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
+})
+
 
 //connect hotreload
 gulp.task('connect',function(){
@@ -26,6 +31,7 @@ gulp.task('connect',function(){
 })
 
 gulp.task('default',['watch','connect']) //gulp 直接執行
+gulp.task('sass',['watch-sass','connect']) //gulp 直接執行
 
 
 // 執行轉換JS

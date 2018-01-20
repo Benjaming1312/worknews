@@ -15,15 +15,15 @@ article.col-xs-12
           ul.list-group
             li.list-group-item.active
               a(href="#") 店家名稱1
-            li.list-group-item.active
+            li.list-group-item
               a(href="#") 店家名稱2
-            li.list-group-item.active
+            li.list-group-item
               a(href="#") 店家名稱3
-            li.list-group-item.active
+            li.list-group-item
               a(href="#") 店家名稱4
-            li.list-group-item.active
+            li.list-group-item
               a(href="#") 店家名稱5
-            li.list-group-item.active
+            li.list-group-item
               a(href="#") 店家名稱6
     .col-sm-9.col-xs-12
       .row.chat
@@ -34,56 +34,62 @@ article.col-xs-12
               a(href="#") 110
             span )
           h6.on-time 2分鐘前上線
-        header.chat-header.col-xs-12
-          span.glyphicon.glyphicon-flag
-          | 提醒您！請勿上當
-          button.close.pull-right
-            span &times;
-        article.chat-content.col-xs-12
-          .row
-            .col-xs-12
-              p.pull-right.flex
-                small 已讀
-                small.time 下午9:52
-                span.text 直接應徵訊息打在這裡
-            .col-xs-12
-              .pull-left.flex.flex-reverse
-                small 已讀
-                small.time 下午9:52
-                span.text 是的
-            .col-xs-12
-              p.pull-right.flex
-                small 已讀
-                small.time 下午9:52
-                span.text 直接應徵訊息打在這裡
-            .col-xs-12
-              .pull-left.flex.flex-reverse
-                small 已讀
-                small.time 下午9:52
-                span.text 是的
-            .col-xs-12
-              a.pull-right.link-info
-                h5.title
-                  | 公司名稱：
-                  small 在臺形能為
-                h5
-                  | 薪資待遇：
-                  small NT200/hr
-                h5
-                  | 發薪日期：
-                  small 2018/01/02
-                h5
-                  | 工作時間：
-                  small 2018/01/01-2018/09/09 Am05:00~Pm05:00
-                h5
-                  | 工作地點：
-                  small COMMUNE A7貨櫃市集，110台北市信義區松壽路3號
-        footer.chat-footer.col-xs-12
-          .row
-            .col-xs-9
-              textarea(class="form-control", rows="2", placeholder="請勿隨意提供個人相關資訊")
-            .col-sm-3
-              button.btn.submit 送出
-              label.btn(for="upload")
-                span.glyphicon.glyphicon-picture
-              input#upload.hidden(type="file", name="upload")
+        .chat-content
+          header.chat-header.col-xs-12
+            span.glyphicon.glyphicon-flag
+            | 提醒您！請勿上當
+            button.close.pull-right
+              span &times;
+          article.chat-content.col-xs-12
+            .row
+              .col-xs-12
+                p.pull-right.flex
+                  span.info
+                    small 已讀
+                    small.time 下午9:52
+                  span.text 直接應徵訊息打在這裡
+              .col-xs-12
+                .pull-left.flex.flex-reverse
+                  span.info
+                    small 已讀
+                    small.time 下午9:52
+                  span.text 是的
+              .col-xs-12
+                p.pull-right.flex
+                  span.info
+                    small 已讀
+                    small.time 下午9:52
+                  span.text 直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡直接應徵訊息打在這裡
+              .col-xs-12
+                .pull-left.flex.flex-reverse
+                  span.info
+                    //- small 已讀
+                    small.time 下午9:52
+                  span.text 是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的
+              .col-xs-12
+                a.pull-right.link-info(href="#")
+                  .content
+                    h5.title
+                      | 公司名稱：
+                      small 在臺形能為
+                    h5
+                      | 薪資待遇：
+                      small NT200/hr
+                    h5
+                      | 發薪日期：
+                      small 2018/01/02
+                    h5
+                      | 工作時間：
+                      small 2018/01/01-2018/09/09 Am05:00~Pm05:00
+                    h5
+                      | 工作地點：
+                      small COMMUNE A7貨櫃市集，110台北市信義區松壽路3號
+          footer.chat-footer.col-xs-12
+            .row
+              .col-xs-9
+                textarea(class="form-control", rows="2", placeholder="請勿隨意提供個人相關資訊")
+              .col-sm-3
+                button.btn.submit 送出
+                label.btn(for="upload")
+                  span.glyphicon.glyphicon-picture
+                input#upload.hidden(type="file", name="upload")

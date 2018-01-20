@@ -1,0 +1,188 @@
+.message-page
+  article.col-xs-12
+    >.flex
+      display: flex
+  .person-menu
+    background-image: url('../../dist/images/work-background.png')
+    background-color: white
+  .head
+    background: darken($light-brown, 2%)
+    padding: 1vw
+    height: 4vw
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    @media #{$pad-pc}
+      height: 5em
+    .input-group // 搜尋
+      display: flex
+      flex-wrap: nowrap
+      width: 100%
+      .form-control
+        border: 5px double darken($light-brown, 3%)
+        border-radius: .5vw
+    .input-group-btn
+      position: absolute
+      right: .5rem
+      top: .3rem
+      z-index: 3
+      border: 0
+      background: none
+      display: inline-flex
+      align-items: center
+      justify-content: center
+      span
+        color: #aaa
+    .title
+      color: white
+      font-size: 1vw
+      margin-bottom: 0
+      margin-top: 0
+      width: 100%
+      @media #{$pad-pc}
+        font-size: 1.2rem
+      span
+        font-size: 0.8vw
+        @media #{$pad-pc}
+          font-size: 1rem
+        a
+          color: lightgray
+          font-size: inherit
+    .on-time
+      color: rgba(white, .5)
+      margin-top: .3vw
+      @media #{$pad-pc}
+        margin-top: 0.5rem
+  .chat
+    .head
+      background: lighten($light-brown, 5%)
+.col-sm-3
+  .head+.col-xs-12
+    padding: 0
+.list-group
+  .list-group-item
+    background: none
+    border: none
+    padding: 1vw 1vw
+    @media #{$pad-pc}
+      padding: .5rem 1rem
+    a
+      color: $color-b
+    &.active
+      background: rgba(#ccc, .5)
+.chat-content
+  .chat-
+    &header
+      background: lighten($light-brown, 20%)
+      padding: .2vw 1vw
+      color: white
+      font-size: 0.6vw
+      @media #{$pad-pc}
+        padeidng: .5rem 1rem
+        font-size: 10px
+      span,button
+        color: white
+      >span
+        margin-right: 0.5vw
+        @media #{$pad-pc}
+          margin-right: 0.5rem
+      .close
+        opacity: 1
+        display: inline-flex
+        align-items: center
+        justify-content: center
+    &content
+      padding: 1vw
+      max-height: 60vh
+      overflow: auto
+      border: 2px solid #efefef
+      border-bottom: 0
+      &::-webkit-scrollbar
+        background: rgba($light-brown, .3)
+      &::-webkit-scrollbar-thumb
+        background: rgba($deep-brown, .2)
+      >.row .col-xs-12
+        padding: 0
+      .flex
+        padding: .5vw 1vw
+        display: flex
+        justify-content: flex-end
+        width: 60%
+        &-reverse
+          flex-flow: row-reverse
+        .text
+          min-height: 2vw
+          background: #ececec
+          padding: .5vw 1vw
+          border-radius: .6vw .6vw .6vw 0
+          max-width: calc(85% - 3.5vw)
+          @media #{$pad-pc}
+            max-width: calc(85% - 3.5rem)
+            border-radius: .5rem .5rem 0 .5rem
+        .info
+          width: 3.5vw
+          margin-left: 0.5vw
+          @media #{$mobile}
+            width: 3.5rem
+          small
+            display: flex
+            width: 100%
+            color: #ccc
+            font-size: 0.6vw
+            @media #{$pad-pc}
+              font-size: 10px
+      .pull-right
+        .info
+          margin-right: .5vw
+          margin-left: 0vw
+          small
+            float: right
+            justify-content: flex-end
+        .text
+          background: lighten($light-brown, 10%)
+          color: white
+          border-radius: .6vw .6vw 0 .6vw
+          @media #{$pad-pc}
+            border-radius: .5rem .5rem 0 .5rem
+      .link-info
+        padding: .5vw 1vw
+        @media #{$pad-pc}
+          padding: .5rem 1rem
+        .content
+          padding: 0 .5vw
+          border: .5vw solid lighten($light-brown, 10%)
+          background: rgba($light-brown, .6)
+          border-radius: .6vw .6vw 0 .6vw
+          @media #{$pad-pc}
+            border-radius: .5rem .5rem 0 .5rem
+            padding: 0 .5rem
+          h5
+            color: gray
+            small
+              color: #efefef
+    &footer
+      border: 1px solid #efefef
+      padding: 1vw
+      @media #{$pad-pc}
+        padding: .5rem 1rem
+      .row
+        margin-left: 0
+        margin-right: 0
+      .col-xs-9
+        width: calc(100% - 6.5vw)
+        padding: 0
+      .col-sm-3
+        width: 6.5vw
+        padding: 0 1vw
+        display: flex
+        flex-wrap: nowrap
+        align-items: center
+        @media #{$pad-pc}
+          padding: 0 1rem
+        .btn
+          border: 1px solid #ccc
+          margin-right: 0.5vw
+          transition: .3s ease-in-out
+          &:hover
+            background: $light-brown
+            color: white
