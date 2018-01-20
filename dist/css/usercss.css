@@ -4027,6 +4027,13 @@ body .wrapper.work .navbar {
   opacity: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .message-page {
+    margin-left: -.5rem;
+    margin-right: -.5rem;
+  }
+}
+
 .message-page article.col-xs-12 > .flex {
   display: -webkit-box;
   display: flex;
@@ -4035,6 +4042,59 @@ body .wrapper.work .navbar {
 .message-page .person-menu {
   background-image: url("../../dist/images/work-background.png");
   background-color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .message-page .person-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    transition: .3s ease-in-out;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    padding-top: 4rem;
+    padding-left: 23%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .message-page .person-menu.active {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .message-page .person-menu .visible-xs:not(.close) {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    right: -4rem;
+    top: 10%;
+    display: inline-block !important;
+    background-image: url("../../dist/images/work-background.png");
+    background-color: white;
+  }
+}
+
+.message-page .person-menu .visible-xs:not(.close) span {
+  font-size: 2rem;
+  color: #231815;
+}
+
+.message-page .person-menu .close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  color: #3e3a39;
+  opacity: 1;
+}
+
+.message-page .person-menu .close span {
+  font-size: 22px;
 }
 
 .message-page .head {
@@ -4051,6 +4111,13 @@ body .wrapper.work .navbar {
 @media (min-width: 768px) and (max-width: 1560px) {
   .message-page .head {
     height: 5em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .message-page .head {
+    height: auto;
+    padding: 1rem;
   }
 }
 
@@ -4099,6 +4166,12 @@ body .wrapper.work .navbar {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .message-page .head .title {
+    font-size: 2rem;
+  }
+}
+
 .message-page .head .title span {
   font-size: 0.8vw;
 }
@@ -4106,6 +4179,12 @@ body .wrapper.work .navbar {
 @media (min-width: 768px) and (max-width: 1560px) {
   .message-page .head .title span {
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .message-page .head .title span {
+    font-size: 1.5rem;
   }
 }
 
@@ -4125,6 +4204,14 @@ body .wrapper.work .navbar {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .message-page .head .on-time {
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+}
+
 .message-page .chat .head {
   background: #bc8e57;
 }
@@ -4133,20 +4220,53 @@ body .wrapper.work .navbar {
   padding: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .col-sm-3 .head + .col-xs-12 {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .col-sm-9 {
+    padding: 0 .5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .col-sm-9 > .row {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .list-group {
+    height: 100%;
+    overflow: auto;
+  }
+}
+
 .list-group .list-group-item {
   background: none;
   border: none;
+  padding: 0;
+}
+
+.list-group .list-group-item a {
   padding: 1vw 1vw;
+  color: #3e3a39;
+  display: block;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
-  .list-group .list-group-item {
+  .list-group .list-group-item a {
     padding: .5rem 1rem;
   }
 }
 
-.list-group .list-group-item a {
-  color: #3e3a39;
+@media screen and (max-width: 767px) {
+  .list-group .list-group-item a {
+    padding: 1.5rem 2rem;
+  }
 }
 
 .list-group .list-group-item.active {
@@ -4164,6 +4284,13 @@ body .wrapper.work .navbar {
   .chat-content .chat-header {
     padeidng: .5rem 1rem;
     font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-header {
+    font-size: 14px;
+    padding: .5rem 1rem;
   }
 }
 
@@ -4207,6 +4334,18 @@ body .wrapper.work .navbar {
   background: rgba(35, 24, 21, 0.2);
 }
 
+@media (min-width: 768px) and (max-width: 1560px) {
+  .chat-content .chat-content {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content {
+    padding: 2rem;
+  }
+}
+
 .chat-content .chat-content > .row .col-xs-12 {
   padding: 0;
 }
@@ -4218,6 +4357,12 @@ body .wrapper.work .navbar {
   -webkit-box-pack: end;
           justify-content: flex-end;
   width: 60%;
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content .flex {
+    width: 80%;
+  }
 }
 
 .chat-content .chat-content .flex-reverse {
@@ -4237,7 +4382,17 @@ body .wrapper.work .navbar {
 @media (min-width: 768px) and (max-width: 1560px) {
   .chat-content .chat-content .flex .text {
     max-width: calc(85% - 3.5rem);
-    border-radius: .5rem .5rem 0 .5rem;
+    border-radius: 1rem 1rem 1rem 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content .flex .text {
+    max-width: calc(90% - 5rem);
+    border-radius: 1rem 1rem 1rem 0;
+    padding: .5rem 1rem;
+    line-height: 2rem;
+    letter-spacing: 0.1rem;
   }
 }
 
@@ -4246,9 +4401,15 @@ body .wrapper.work .navbar {
   margin-left: 0.5vw;
 }
 
-@media screen and (max-width: 767px) {
+@media (min-width: 768px) and (max-width: 1560px) {
   .chat-content .chat-content .flex .info {
     width: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content .flex .info {
+    width: 5rem;
   }
 }
 
@@ -4285,15 +4446,29 @@ body .wrapper.work .navbar {
 
 @media (min-width: 768px) and (max-width: 1560px) {
   .chat-content .chat-content .pull-right .text {
-    border-radius: .5rem .5rem 0 .5rem;
+    border-radius: 1rem 1rem 0 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content .pull-right .text {
+    border-radius: 1rem 1rem 0 1rem;
+    padding: .5rem 1rem;
   }
 }
 
 .chat-content .chat-content .link-info {
   padding: .5vw 1vw;
+  width: 80%;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
+  .chat-content .chat-content .link-info {
+    padding: .5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .chat-content .chat-content .link-info {
     padding: .5rem 1rem;
   }
@@ -4308,8 +4483,16 @@ body .wrapper.work .navbar {
 
 @media (min-width: 768px) and (max-width: 1560px) {
   .chat-content .chat-content .link-info .content {
-    border-radius: .5rem .5rem 0 .5rem;
-    padding: 0 .5rem;
+    border-radius: 1rem 1rem 0 1rem;
+    padding: .5rem 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content .link-info .content {
+    padding: .5rem 1rem;
+    border-radius: 1rem 1rem 0 1rem;
+    border-width: .5rem;
   }
 }
 
@@ -4319,6 +4502,13 @@ body .wrapper.work .navbar {
 
 .chat-content .chat-content .link-info .content h5 small {
   color: #efefef;
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content .link-info .content h5 small {
+    display: block;
+    margin-top: 0.5rem;
+  }
 }
 
 .chat-content .chat-footer {
@@ -4337,9 +4527,29 @@ body .wrapper.work .navbar {
   margin-right: 0;
 }
 
+@media screen and (max-width: 767px) {
+  .chat-content .chat-footer .row {
+    -webkit-box-align: end;
+            align-items: flex-end;
+  }
+}
+
 .chat-content .chat-footer .col-xs-9 {
   width: calc(100% - 6.5vw);
   padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-footer .col-xs-9 {
+    width: calc(100% - 9rem);
+    padding: .5rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-footer .col-xs-9 textarea {
+    height: 10rem;
+  }
 }
 
 .chat-content .chat-footer .col-sm-3 {
@@ -4358,6 +4568,12 @@ body .wrapper.work .navbar {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .chat-content .chat-footer .col-sm-3 {
+    width: 9rem;
+  }
+}
+
 .chat-content .chat-footer .col-sm-3 .btn {
   border: 1px solid #ccc;
   margin-right: 0.5vw;
@@ -4367,6 +4583,19 @@ body .wrapper.work .navbar {
 .chat-content .chat-footer .col-sm-3 .btn:hover {
   background: #b28247;
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .person-menu > .row {
+    height: 100%;
+    display: block !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .person-menu .head {
+    padding: 2rem;
+  }
 }
 
 /*# sourceMappingURL=usercss.css.map */

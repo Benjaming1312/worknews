@@ -1,10 +1,48 @@
 .message-page
+  @media #{$mobile}
+    margin-left: -.5rem
+    margin-right: -.5rem
   article.col-xs-12
     >.flex
       display: flex
   .person-menu
     background-image: url('../../dist/images/work-background.png')
     background-color: white
+    @media #{$mobile}
+      position: fixed
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 3
+      transition: .3s ease-in-out
+      transform: translateX(-100%)
+      padding-top: 4rem
+      padding-left: 23%
+    &.active
+      @media #{$mobile}
+        transform: translateX(-20%)
+    .visible-xs:not(.close)
+      @media #{$mobile}
+        position: absolute
+        width: 4rem
+        height: 4rem
+        right: -4rem
+        top: 10%
+        display: inline-block!important
+        background-image: url('../../dist/images/work-background.png')
+        background-color: white
+      span
+        font-size: 2rem
+        color: $deep-brown
+    .close
+      position: absolute
+      top: .5rem
+      right: .5rem
+      color: $color-b
+      opacity: 1
+      span
+        font-size: 22px
   .head
     background: darken($light-brown, 2%)
     padding: 1vw
@@ -14,6 +52,9 @@
     flex-wrap: wrap
     @media #{$pad-pc}
       height: 5em
+    @media #{$mobile}
+      height: auto
+      padding: 1rem
     .input-group // 搜尋
       display: flex
       flex-wrap: nowrap
@@ -41,10 +82,14 @@
       width: 100%
       @media #{$pad-pc}
         font-size: 1.2rem
+      @media #{$mobile}
+        font-size: 2rem
       span
         font-size: 0.8vw
         @media #{$pad-pc}
           font-size: 1rem
+        @media #{$mobile}
+          font-size: 1.5rem
         a
           color: lightgray
           font-size: inherit
@@ -53,21 +98,40 @@
       margin-top: .3vw
       @media #{$pad-pc}
         margin-top: 0.5rem
+      @media #{$mobile}
+        font-size: 1.5rem
+        margin-top: 0.5rem
+        margin-bottom: 0
   .chat
     .head
       background: lighten($light-brown, 5%)
 .col-sm-3
   .head+.col-xs-12
     padding: 0
+    @media #{$mobile}
+      height: 100%
+.col-sm-9
+  @media #{$mobile}
+    padding: 0 .5rem
+  >.row
+    @media #{$mobile}
+      margin: 0
 .list-group
+  @media #{$mobile}
+    height: 100%
+    overflow: auto
   .list-group-item
     background: none
     border: none
-    padding: 1vw 1vw
-    @media #{$pad-pc}
-      padding: .5rem 1rem
+    padding: 0
     a
+      padding: 1vw 1vw
       color: $color-b
+      display: block
+      @media #{$pad-pc}
+        padding: .5rem 1rem
+      @media #{$mobile}
+        padding: 1.5rem 2rem
     &.active
       background: rgba(#ccc, .5)
 .chat-content
@@ -80,6 +144,9 @@
       @media #{$pad-pc}
         padeidng: .5rem 1rem
         font-size: 10px
+      @media #{$mobile}
+        font-size: 14px
+        padding: .5rem 1rem
       span,button
         color: white
       >span
@@ -101,6 +168,10 @@
         background: rgba($light-brown, .3)
       &::-webkit-scrollbar-thumb
         background: rgba($deep-brown, .2)
+      @media #{$pad-pc}
+        padding: 2rem
+      @media #{$mobile}
+        padding: 2rem
       >.row .col-xs-12
         padding: 0
       .flex
@@ -108,6 +179,8 @@
         display: flex
         justify-content: flex-end
         width: 60%
+        @media #{$mobile}
+          width: 80%
         &-reverse
           flex-flow: row-reverse
         .text
@@ -118,12 +191,20 @@
           max-width: calc(85% - 3.5vw)
           @media #{$pad-pc}
             max-width: calc(85% - 3.5rem)
-            border-radius: .5rem .5rem 0 .5rem
+            border-radius: 1rem 1rem 1rem 0
+          @media #{$mobile}
+            max-width: calc(90% - 5rem)
+            border-radius: 1rem 1rem 1rem 0
+            padding: .5rem 1rem
+            line-height: 2rem
+            letter-spacing: 0.1rem
         .info
           width: 3.5vw
           margin-left: 0.5vw
-          @media #{$mobile}
+          @media #{$pad-pc}
             width: 3.5rem
+          @media #{$mobile}
+            width: 5rem
           small
             display: flex
             width: 100%
@@ -143,10 +224,16 @@
           color: white
           border-radius: .6vw .6vw 0 .6vw
           @media #{$pad-pc}
-            border-radius: .5rem .5rem 0 .5rem
+            border-radius: 1rem 1rem 0 1rem
+          @media #{$mobile}
+            border-radius: 1rem 1rem 0 1rem
+            padding: .5rem 1rem
       .link-info
         padding: .5vw 1vw
+        width: 80%
         @media #{$pad-pc}
+          padding: .5rem 1rem
+        @media #{$mobile}
           padding: .5rem 1rem
         .content
           padding: 0 .5vw
@@ -154,12 +241,19 @@
           background: rgba($light-brown, .6)
           border-radius: .6vw .6vw 0 .6vw
           @media #{$pad-pc}
-            border-radius: .5rem .5rem 0 .5rem
-            padding: 0 .5rem
+            border-radius: 1rem 1rem 0 1rem
+            padding: .5rem 1rem
+          @media #{$mobile}
+            padding: .5rem 1rem
+            border-radius: 1rem 1rem 0 1rem
+            border-width: .5rem
           h5
             color: gray
             small
               color: #efefef
+              @media #{$mobile}
+                display: block
+                margin-top: 0.5rem
     &footer
       border: 1px solid #efefef
       padding: 1vw
@@ -168,9 +262,17 @@
       .row
         margin-left: 0
         margin-right: 0
+        @media #{$mobile}
+          align-items: flex-end
       .col-xs-9
         width: calc(100% - 6.5vw)
         padding: 0
+        @media #{$mobile}
+          width: calc(100% - 9rem)
+          padding: .5rem
+        textarea
+          @media #{$mobile}
+            height: 10rem
       .col-sm-3
         width: 6.5vw
         padding: 0 1vw
@@ -179,6 +281,8 @@
         align-items: center
         @media #{$pad-pc}
           padding: 0 1rem
+        @media #{$mobile}
+          width: 9rem
         .btn
           border: 1px solid #ccc
           margin-right: 0.5vw
@@ -186,3 +290,12 @@
           &:hover
             background: $light-brown
             color: white
+.person-menu
+  >.row
+    @media #{$mobile}
+      height: 100%
+      display: block!important
+      // align-items: flex-start
+  .head
+    @media #{$mobile}
+      padding: 2rem
