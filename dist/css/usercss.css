@@ -4689,6 +4689,7 @@ body .wrapper.work .navbar {
 .mini-resume .modeal-content .modal-body .table td:first-child {
   width: 20%;
   text-align: right;
+  min-width: 8rem;
 }
 
 .mini-resume .modeal-content .modal-footer .col-xs-12 {
