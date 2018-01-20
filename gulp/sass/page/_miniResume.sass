@@ -1,0 +1,77 @@
+.mini-resume
+  .modal-dialog
+    width: 750px
+    @media #{$mobile}
+      width: 90%
+      margin-left: auto
+      margin-right: auto
+  .modeal-content
+    .modal-
+      &header
+        background: lighten($light-brown, 5%)
+        position: relative
+        border: 0
+        .col-xs-9
+        .close
+          opacity: 1
+          color: white
+          span
+            font-size: 1vw
+            @media #{$pad-pc}
+              font-size: 1rem
+            @media #{$mobile}
+              font-size: 1rem
+        h4
+          color: white
+          margin-top: 0
+        h5
+          color: lighten($deep-brown, 30%)
+      &body
+        padding-bottom: 0
+        .col-xs-3
+          position: relative
+          margin-top: -9rem
+          border-radius: 50%
+          overflow: hidden
+          padding: 0
+          width: calc(25% - 2rem)
+          margin-left: 1rem
+          &::before
+            content: ''
+            width: 100%
+            padding-top: 100%
+            display: block
+          .rounded
+            position: absolute
+            top: -5%
+            left: 0%
+            width: 105%
+            max-width: inherit
+        .resume
+          padding-top: 2rem
+        .table
+          margin-bottom: 0
+          td
+            line-height: 2rem
+          td:first-child
+            width: 20%
+            text-align: right
+      &footer
+        .col-xs-12
+          text-align: left
+          span
+            margin-bottom: 1rem
+            display: block
+        .btn-group
+          width: 100%
+          display: flex
+          flex-wrap: nowrap
+          .btn
+            width: calc(100% / 2 - 1rem)
+            margin: 2rem .5rem 1rem
+            &.submit
+              background: $light-brown
+              color: white
+            &.cancel
+              background: #efefef
+              color: $color-b

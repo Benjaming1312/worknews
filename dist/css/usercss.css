@@ -4597,4 +4597,129 @@ body .wrapper.work .navbar {
   }
 }
 
+.mini-resume .modal-dialog {
+  width: 750px;
+}
+
+@media screen and (max-width: 767px) {
+  .mini-resume .modal-dialog {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mini-resume .modeal-content .modal-header {
+  background: #bc8e57;
+  position: relative;
+  border: 0;
+}
+
+.mini-resume .modeal-content .modal-header .close {
+  opacity: 1;
+  color: white;
+}
+
+.mini-resume .modeal-content .modal-header .close span {
+  font-size: 1vw;
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .mini-resume .modeal-content .modal-header .close span {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mini-resume .modeal-content .modal-header .close span {
+    font-size: 1rem;
+  }
+}
+
+.mini-resume .modeal-content .modal-header h4 {
+  color: white;
+  margin-top: 0;
+}
+
+.mini-resume .modeal-content .modal-header h5 {
+  color: #835a4e;
+}
+
+.mini-resume .modeal-content .modal-body {
+  padding-bottom: 0;
+}
+
+.mini-resume .modeal-content .modal-body .col-xs-3 {
+  position: relative;
+  margin-top: -9rem;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 0;
+  width: calc(25% - 2rem);
+  margin-left: 1rem;
+}
+
+.mini-resume .modeal-content .modal-body .col-xs-3::before {
+  content: '';
+  width: 100%;
+  padding-top: 100%;
+  display: block;
+}
+
+.mini-resume .modeal-content .modal-body .col-xs-3 .rounded {
+  position: absolute;
+  top: -5%;
+  left: 0%;
+  width: 105%;
+  max-width: inherit;
+}
+
+.mini-resume .modeal-content .modal-body .resume {
+  padding-top: 2rem;
+}
+
+.mini-resume .modeal-content .modal-body .table {
+  margin-bottom: 0;
+}
+
+.mini-resume .modeal-content .modal-body .table td {
+  line-height: 2rem;
+}
+
+.mini-resume .modeal-content .modal-body .table td:first-child {
+  width: 20%;
+  text-align: right;
+}
+
+.mini-resume .modeal-content .modal-footer .col-xs-12 {
+  text-align: left;
+}
+
+.mini-resume .modeal-content .modal-footer .col-xs-12 span {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.mini-resume .modeal-content .modal-footer .btn-group {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.mini-resume .modeal-content .modal-footer .btn-group .btn {
+  width: calc(100% / 2 - 1rem);
+  margin: 2rem .5rem 1rem;
+}
+
+.mini-resume .modeal-content .modal-footer .btn-group .btn.submit {
+  background: #b28247;
+  color: white;
+}
+
+.mini-resume .modeal-content .modal-footer .btn-group .btn.cancel {
+  background: #efefef;
+  color: #3e3a39;
+}
+
 /*# sourceMappingURL=usercss.css.map */
