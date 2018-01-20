@@ -4525,13 +4525,8 @@ body .wrapper.work .navbar {
 .chat-content .chat-footer .row {
   margin-left: 0;
   margin-right: 0;
-}
-
-@media screen and (max-width: 767px) {
-  .chat-content .chat-footer .row {
-    -webkit-box-align: end;
-            align-items: flex-end;
-  }
+  -webkit-box-align: end;
+          align-items: flex-end;
 }
 
 .chat-content .chat-footer .col-xs-9 {
@@ -4544,6 +4539,10 @@ body .wrapper.work .navbar {
     width: calc(100% - 9rem);
     padding: .5rem;
   }
+}
+
+.chat-content .chat-footer .col-xs-9 textarea {
+  height: 10rem;
 }
 
 @media screen and (max-width: 767px) {

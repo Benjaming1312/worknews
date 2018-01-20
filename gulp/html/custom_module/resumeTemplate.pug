@@ -38,7 +38,7 @@ html(lang="zh-hant")
         .tab-content.server
           each item, index in resume
               if (index === 0)
-                .tab-pane.fade(id=`${item._id}`)
+                .tab-pane.fade.in.active(id=`${item._id}`)
                   .container-fluid.worktabs.work-info.resume
                     .row
                       .col-sm-9.col-xs-12
@@ -59,7 +59,7 @@ html(lang="zh-hant")
                       +layout(info)
               else if (item._id === 'resume05')
                 // 訊息記錄
-                .tab-pane.fade.work-list.in.active(id=`${item._id}`)
+                .tab-pane.fade.work-list(id=`${item._id}`)
                   .row.message-page
                     include ../page/message
               else
