@@ -424,6 +424,10 @@
               font-size: 1.5rem
               letter-spacing: 0.2rem
 .modal-body.work-detail-modal
+  .col-sm-9
+    @media #{$mobile}
+      padding: 0
+      margin-top: 1rem
   .work-info-content
     >.row
       margin: 0
@@ -449,7 +453,7 @@
       +border_bottom
       +list_padding_top
       display: flex
-      align-items: flex-end
+      align-items: flex-start
       width: 100%
       @media #{$mobile}
         flex-wrap: wrap
@@ -476,26 +480,32 @@
           color: $color-b
           font-weight: 400
       .work-info-list
+        width: calc(100% - 8rem)
+        @media #{$mobile}
+          width: 100%
         li
-          +fz14
           margin-bottom: 0.8vw
+          font-size: 0.9vw
           @media #{$mobile}
             letter-spacing: 0.1rem
             line-height: 2rem
+            font-size: 1.5rem
       &.items-start
         align-items: flex-start
       h3.title
-        +fz23
         margin-top: 0
         margin-bottom: 0
         margin-right: 0.8vw
         display: flex
         align-items: center
         font-weight: 400
+        font-size: 1.1vw
+        width: 8rem
         @media #{$mobile}
           display: block
           width: 100%
           letter-spacing: 0.2rem
+          font-size: 2rem
         &::before
           content: ''
           display: inline-flex
@@ -513,19 +523,25 @@
             margin-right: .5rem
             margin-bottom: 1rem
       p
-        +fz14
+        font-size: 0.9vw
         margin-bottom: 0
+        width: calc(100% - 8rem)
         @media #{$mobile}
           letter-spacing: 0.1rem
           line-height: 2rem
+          font-size: 1.5rem
+          width: 100%
+  .posa-right
+    padding: 0
   .right-info
     h3.pay,
     h3.pay span
-      +fz33
+      font-size: 1.5vw
+      @media #{$mobile}
+        font-size: 1.5rem
     small
       +fz23
     h3.pay
-      font-size: 1.5rem
       span
         @media #{$mobile}
           font-size: 24px

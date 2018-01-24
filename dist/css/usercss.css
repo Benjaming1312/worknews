@@ -4796,6 +4796,13 @@ body .wrapper.work .navbar {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .modal-body.work-detail-modal .col-sm-9 {
+    padding: 0;
+    margin-top: 1rem;
+  }
+}
+
 .modal-body.work-detail-modal .work-info-content > .row {
   margin: 0;
   padding: 0 2rem;
@@ -4839,8 +4846,8 @@ body .wrapper.work .navbar {
   padding-bottom: 1.5vw;
   display: -webkit-box;
   display: flex;
-  -webkit-box-align: end;
-          align-items: flex-end;
+  -webkit-box-align: start;
+          align-items: flex-start;
   width: 100%;
 }
 
@@ -4906,26 +4913,26 @@ body .wrapper.work .navbar {
   font-weight: 400;
 }
 
+.modal-body.work-detail-modal ul .list .work-info-list {
+  width: calc(100% - 8rem);
+}
+
+@media screen and (max-width: 767px) {
+  .modal-body.work-detail-modal ul .list .work-info-list {
+    width: 100%;
+  }
+}
+
 .modal-body.work-detail-modal ul .list .work-info-list li {
   margin-bottom: 0.8vw;
-}
-
-@media (min-width: 768px) {
-  .modal-body.work-detail-modal ul .list .work-info-list li {
-    font-size: 1.1vw;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .modal-body.work-detail-modal ul .list .work-info-list li {
-    font-size: 1.5rem;
-  }
+  font-size: 0.9vw;
 }
 
 @media screen and (max-width: 767px) {
   .modal-body.work-detail-modal ul .list .work-info-list li {
     letter-spacing: 0.1rem;
     line-height: 2rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -4935,7 +4942,6 @@ body .wrapper.work .navbar {
 }
 
 .modal-body.work-detail-modal ul .list h3.title {
-  font-size: 2rem;
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 0.8vw;
@@ -4944,18 +4950,8 @@ body .wrapper.work .navbar {
   -webkit-box-align: center;
           align-items: center;
   font-weight: 400;
-}
-
-@media (min-width: 768px) {
-  .modal-body.work-detail-modal ul .list h3.title {
-    font-size: 1.4vw;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .modal-body.work-detail-modal ul .list h3.title {
-    font-size: 2rem;
-  }
+  font-size: 1.1vw;
+  width: 8rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -4963,6 +4959,7 @@ body .wrapper.work .navbar {
     display: block;
     width: 100%;
     letter-spacing: 0.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -4990,32 +4987,33 @@ body .wrapper.work .navbar {
 }
 
 .modal-body.work-detail-modal ul .list p {
+  font-size: 0.9vw;
   margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .modal-body.work-detail-modal ul .list p {
-    font-size: 1.1vw;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 992px) {
-  .modal-body.work-detail-modal ul .list p {
-    font-size: 1.5rem;
-  }
+  width: calc(100% - 8rem);
 }
 
 @media screen and (max-width: 767px) {
   .modal-body.work-detail-modal ul .list p {
     letter-spacing: 0.1rem;
     line-height: 2rem;
+    font-size: 1.5rem;
+    width: 100%;
   }
 }
 
-@media (min-width: 768px) {
+.modal-body.work-detail-modal .posa-right {
+  padding: 0;
+}
+
+.modal-body.work-detail-modal .right-info h3.pay,
+.modal-body.work-detail-modal .right-info h3.pay span {
+  font-size: 1.5vw;
+}
+
+@media screen and (max-width: 767px) {
   .modal-body.work-detail-modal .right-info h3.pay,
   .modal-body.work-detail-modal .right-info h3.pay span {
-    font-size: 2.4vw;
+    font-size: 1.5rem;
   }
 }
 
@@ -5033,10 +5031,6 @@ body .wrapper.work .navbar {
   .modal-body.work-detail-modal .right-info small {
     font-size: 2rem;
   }
-}
-
-.modal-body.work-detail-modal .right-info h3.pay {
-  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 767px) {
