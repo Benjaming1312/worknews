@@ -41,6 +41,34 @@ article.col-xs-12
             button.close.pull-right
               span &times;
           article.chat-content.col-xs-12
+            .row.top-center
+              a.link-info(type="button" data-toggle="modal" data-target="#workdetail-1")
+                .content
+                  .img-title
+                    img.img-responsive(src="dist/images/message-work.png", alt="")
+                  //- .text-group
+                  //-   h5.title
+                  //-     span 公司名稱：
+                  //-     small 在臺形能為
+                  //-   h5
+                  //-     span 薪資待遇：
+                  //-     small NT200/hr
+                  //-   h5
+                  //-     span 發薪日期：
+                  //-     small 2018/01/02
+                  //-   h5
+                  //-     span 工作時間：
+                  //-     small 
+                  //-       | 2018/01/01-2018/09/09 
+                  //-       br
+                  //-       | Am05:00~Pm05:00
+                  //-   h5
+                  //-     span 工作地點：
+                  //-     small COMMUNE A7貨櫃市集，110台北市信義區松壽路3號
+              a.link-info.link-resume(type="button" data-toggle="modal" data-target="#resume-1")
+                .content
+                  .img-title
+                    img.center-block.img-responsive(src="dist/images/message-resume.png", alt="")
             .row
               .col-xs-12
                 p.pull-right.flex
@@ -66,24 +94,6 @@ article.col-xs-12
                     //- small 已讀
                     small.time 下午9:52
                   span.text 是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的是的
-              .col-xs-12
-                a.pull-right.link-info(href="#")
-                  .content
-                    h5.title
-                      | 公司名稱：
-                      small 在臺形能為
-                    h5
-                      | 薪資待遇：
-                      small NT200/hr
-                    h5
-                      | 發薪日期：
-                      small 2018/01/02
-                    h5
-                      | 工作時間：
-                      small 2018/01/01-2018/09/09 Am05:00~Pm05:00
-                    h5
-                      | 工作地點：
-                      small COMMUNE A7貨櫃市集，110台北市信義區松壽路3號
           footer.chat-footer.col-xs-12
             .row
               .col-xs-9
@@ -93,3 +103,157 @@ article.col-xs-12
                 label.btn(for="upload")
                   span.glyphicon.glyphicon-picture
                 input#upload.hidden(type="file", name="upload")
+// 履歷pop up
+div(class="modal fade mini-resume" id="resume-1" tabindex="-1" role="dialog" aria-labelledby="resume-1-label")
+  div(class="modal-dialog" role="document")
+    .modeal-content
+      .modal-header
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      .modal-body.resume-modal
+        .row
+          .work-info-content
+            article.row
+              .posa-right.info.col-sm-3.col-sm-push-9.col-xs-12
+                img.img-responsive(src="./dist/images/personal.png", alt="")
+              ul.col-sm-9.col-sm-pull-3.col-xs-12
+                li.list
+                  ul.sub-list
+                    li.title 
+                      h3.title 基本資料
+                    li
+                      span 中文姓名：
+                      span 郭子榕
+                    li
+                      span 英文名字：
+                      span GUO，ZI－RONG 
+                    li
+                      span 性別：
+                      span 女 
+                    li
+                      span 出生日期： 
+                      span 1993年06月01日 
+                    li
+                      span 婚姻狀況： 
+                      span 未婚
+                    li
+                      span 身高體重： 
+                      span 164公分 53公斤
+                li.list
+                  ul.sub-list
+                    li.title 
+                      h3.title 聯絡資料 
+                    li
+                      span E-mail： 
+                      span leonaguo820601@gmail.com 
+                    li
+                      span 聯絡電話：
+                      span 0982327851 
+                    li
+                      span 住家：
+                      span (04)25243667  
+                    li
+                      span 通訊地址：
+                      span 台北市大安區信義路四段279號7F  
+                li.list
+                  ul.sub-list
+                    li.title 
+                      h3.title 求職資料  
+                    li
+                      span 就業狀態：
+                      span 無工作(待業中) 
+                    li
+                      span 特殊身份：
+                      span 
+                    li
+                      span 具備駕駛執照：
+                      span 普通重型機車駕照  
+                    li
+                      span 具備交通工具：
+                      span 普通重型機車	 
+                li.list
+                  ul.sub-list
+                    li.title 
+                      h3.title 自傳
+                    li
+                      | 傳業回又四古、路論低屋怕出和！我創成行無整開蘭就然及效些果道道成臉收學美生沒期心然候小日以：對快長！也有傳早獨星交下一分教燈，景男人主：期土謝機施也關幾？對是家。十才提羅書服且無食表這已政把，花這時義他能大病間要己發回先鄉益只動家樓景。筆望樓雨。
+      .modal-footer
+        .row
+          .col-xs-12.btn-group
+            button.btn.cancel(data-dismiss="modal" aria-label="Close") 關閉
+            button.btn.submit 應徵
+// 工作內容popup
+div(class="modal fade mini-resume" id="workdetail-1" tabindex="-1" role="dialog" aria-labelledby="workdetail-1-label")
+  div(class="modal-dialog" role="document")
+    .modeal-content
+      .modal-header
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      .modal-body.work-detail-modal
+        .row
+          .work-info-content
+            article.row
+              .posa-right.info.col-sm-3.col-sm-push-9.col-xs-12
+                .right-info
+                  header
+                    h3.pay 
+                      | NT$
+                      span 300
+                      small / 小時
+                  article
+                    h4 11-30 人應徵
+              .col-sm-9.col-sm-pull-3.col-xs-12
+                header
+                  h2.title.text-light-brown A7跨年活動PT
+                  p
+                    span.tag 台北
+                    span.tag 活動
+                    span.tag 時薪 300
+                    time.pull-right 張貼於 2017 年 12 月 24 日 01:09:22 PM (大約 4 小時 前)
+                article
+                  ul
+                    li.list
+                      h3.title 公司名稱
+                      p 在臺形能為
+                    li.list
+                      h3.title 薪資待遇
+                      p NT200/hr
+                    li.list
+                      h3.title 發薪日期
+                      p 2018/01/02
+                    li.list
+                      h3.title 工作時間
+                      p 2018/01/01-2018/09/09 Am05:00~Pm05:00
+                    li.list
+                      h3.title 工作地點
+                      p COMMUNE A7貨櫃市集，110台北市信義區松壽路3號
+                    li.list.items-start
+                      h3.title 工作內容
+                      ul.work-info-list
+                        li 物有策怎；不良工！案正這
+                        li 在了用落規國不！孩變時：總事半法每內建了
+                        li 除不哥的朋主化常樹行能片成片樹
+                        li 笑媽對安位長使嚴幾的節軍清升訴隨票對學法代
+                    li.list
+                      h3.title 需求人數
+                      p 10人
+                    li.list.items-start
+                      h3.title 條件要求
+                      ul.work-info-list
+                        li 物有策怎；不良工！案正這
+                        li 在了用落規國不！孩變時：總事半法每內建了
+                        li 除不哥的朋主化常樹行能片成片樹
+                        li 笑媽對安位長使嚴幾的節軍清升訴隨票對學法代
+                    li.list
+                      h3.title 聯絡人
+                      span.icon_text 
+                        include ../svg/people.svg
+                        | Andy
+                      a.work-contact.icon_text(href="mailto: andy@mail.com.tw")
+                        include ../svg/message.svg
+                        | s8505952001@gmail.com
+                    li.list.map
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.9377367533502!2d121.56398391500622!3d25.03618698397131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb0addf3aa5%3A0x71101398d92e2e34!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5p2-5aO96LevM-iZnw!5e0!3m2!1szh-TW!2stw!4v1515600861089" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      .modal-footer
+        .row
+          .col-xs-12.btn-group
+            button.btn.cancel(data-dismiss="modal" aria-label="Close") 關閉
+            button.btn.submit 應徵
