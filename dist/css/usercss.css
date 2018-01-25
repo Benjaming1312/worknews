@@ -4356,7 +4356,7 @@ body .wrapper.work .navbar {
   display: flex;
   -webkit-box-pack: end;
           justify-content: flex-end;
-  width: 60%;
+  width: 70%;
 }
 
 @media screen and (max-width: 767px) {
@@ -4403,7 +4403,7 @@ body .wrapper.work .navbar {
 
 @media (min-width: 768px) and (max-width: 1560px) {
   .chat-content .chat-content .flex .info {
-    width: 3.5rem;
+    width: 5.5rem;
   }
 }
 
@@ -4427,6 +4427,14 @@ body .wrapper.work .navbar {
   }
 }
 
+.chat-content .chat-content .flex .user {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
 .chat-content .chat-content .pull-right .info {
   margin-right: .5vw;
   margin-left: 0vw;
@@ -4442,6 +4450,7 @@ body .wrapper.work .navbar {
   background: #c39b69;
   color: white;
   border-radius: .6vw .6vw 0 .6vw;
+  margin: 0 .5rem;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
@@ -4468,7 +4477,6 @@ body .wrapper.work .navbar {
 @media (min-width: 768px) and (max-width: 1560px) {
   .chat-content .chat-content .link-info {
     padding: .5rem 1rem;
-    height: 100%;
   }
 }
 
@@ -4485,7 +4493,7 @@ body .wrapper.work .navbar {
 .chat-content .chat-content .link-info .content {
   padding: 0 .5vw;
   border: 0.5vw solid #c39b69;
-  background: rgba(178, 130, 71, 0.6);
+  background-image: url("../../dist/images/work-background.png");
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
@@ -5092,6 +5100,11 @@ body .wrapper.work .navbar {
     padding: 1rem 3.5rem;
     font-weight: 400;
   }
+}
+
+.modal.mini-resume .modeal-content .modal-footer .btn-group {
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .mini-resume .modal-dialog {

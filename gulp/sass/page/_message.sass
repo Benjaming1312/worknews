@@ -178,7 +178,7 @@
         padding: .5vw 1vw
         display: flex
         justify-content: flex-end
-        width: 60%
+        width: 70%
         @media #{$mobile}
           width: 80%
         &-reverse
@@ -202,7 +202,7 @@
           width: 3.5vw
           margin-left: 0.5vw
           @media #{$pad-pc}
-            width: 3.5rem
+            width: 5.5rem
           @media #{$mobile}
             width: 5rem
           small
@@ -212,6 +212,12 @@
             font-size: 0.6vw
             @media #{$pad-pc}
               font-size: 10px
+        .user
+          display: block
+          width: 3rem
+          height: 3rem
+          border-radius: 50%
+          overflow: hidden
       .pull-right
         .info
           margin-right: .5vw
@@ -223,6 +229,7 @@
           background: lighten($light-brown, 10%)
           color: white
           border-radius: .6vw .6vw 0 .6vw
+          margin: 0 .5rem
           @media #{$pad-pc}
             border-radius: 1rem 1rem 0 1rem
           @media #{$mobile}
@@ -236,7 +243,7 @@
         transition: .3s ease-in
         @media #{$pad-pc}
           padding: .5rem 1rem
-          height: 100%
+          // height: 100%
         @media #{$mobile}
           padding: .5rem 1rem
         &:hover
@@ -244,8 +251,9 @@
         .content
           padding: 0 .5vw
           border: .5vw solid lighten($light-brown, 10%)
-          background: rgba($light-brown, .6)
+          // background: rgba($light-brown, .6)
           // border-radius: .6vw .6vw 0 .6vw
+          background-image: url('../../dist/images/work-background.png')
           @media #{$pad-pc}
             // border-radius: 1rem 1rem 0 1rem
             padding: .5rem 1rem
@@ -569,3 +577,6 @@
           margin-bottom: 1rem
           padding: 1rem 3.5rem
           font-weight: 400
+.modal.mini-resume .modeal-content .modal-footer
+  .btn-group
+    justify-content: center
