@@ -1,0 +1,57 @@
+
+<div class="container-fluid worktabs work-info resume">
+  <div class="row">
+    <div class="col-sm-9">
+      <div class="work-info-content">
+        <header>
+          <h2 class="title text-light-brown">
+             會員資訊</h2>
+        </header>
+        <article>
+          <ul class="form-inline">
+            <li class="list">
+              <ul class="sub-list">
+                <li class="form-group"><span class="col">帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：</span>
+                  <input class="form-control" type="text" disabled="disabled" value="user_account"/>
+                </li>
+                <li class="form-group"><span class="col">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：</span>
+                  <input class="form-control pwd" type="password"/>
+                </li>
+                <li class="form-group"><span class="col">確認密碼：</span>
+                  <input class="form-control pwd confirm" type="password"/>
+                </li>
+                <li class="form-group"><span class="col">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機： </span>
+                  <input class="form-control" type="text" value="09xx-xxx-xxx"/>
+                </li>
+                <li class="form-group"><span class="col">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別：</span>
+                  <div class="radio-inline">
+                    <input class="hidden" type="radio" name="gender" value="male" id="male" checked="true"/>
+                    <label for="male">男</label>
+                  </div>
+                  <div class="radio-inline">
+                    <input class="hidden" type="radio" name="gender" value="female" id="female"/>
+                    <label for="female">女</label>
+                  </div>
+                </li>
+                <li class="form-group"><span class="col">連絡信箱： </span>
+                  <input class="form-control" type="mail" value="user_account@mail.com"/>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p class="text-center"><a class="btn submit-modified" href="#">確認修改</a></p>
+        </article>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="work-info-side">
+        <div class="personal-images"><img class="img-responsive" src="./dist/images/personal.png" alt=""/>
+          <p>
+            <label class="btn submit-modified upload" for="upload">上傳圖片</label>
+            <input class="hidden" id="upload" type="file"/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

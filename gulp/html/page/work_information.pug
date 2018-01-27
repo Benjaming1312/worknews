@@ -1,0 +1,43 @@
+.container-fluid.worktabs.work-info.resume
+  .row
+    .col-sm-9
+      .work-info-content
+        header
+          h2.title.text-light-brown 
+            | 會員資訊
+        article
+          ul.form-inline
+            li.list
+              ul.sub-list
+                li.form-group
+                  span.col 帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：
+                  input.form-control(type="text", disabled,value="user_account")
+                li.form-group
+                  span.col 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：
+                  input.form-control.pwd(type="password")
+                li.form-group
+                  span.col 確認密碼：
+                  input.form-control.pwd.confirm(type="password")
+                li.form-group
+                  span.col 手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機： 
+                  input.form-control(type="text", value="09xx-xxx-xxx")
+                li.form-group
+                  span.col 性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別：
+                  div.radio-inline
+                    input.hidden(type="radio", name="gender", value="male", id="male", checked="true")
+                    label(for="male") 男
+                  div.radio-inline
+                    input.hidden(type="radio", name="gender", value="female", id="female")
+                    label(for="female") 女
+                li.form-group
+                  span.col 連絡信箱： 
+                  input.form-control(type="mail", value="user_account@mail.com")
+          p.text-center
+            a.btn.submit-modified(href="#") 確認修改
+    .col-sm-3
+      .work-info-side
+        .personal-images
+          img.img-responsive(src="./dist/images/personal.png", alt="")
+          p
+            label.btn.submit-modified.upload(for="upload") 上傳圖片
+            input#upload.hidden(type="file")

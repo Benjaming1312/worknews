@@ -12,7 +12,16 @@
     <script src="./dist/js/bootstrap.min.js"></script>
     <script src="./dist/js/owl.carousel.min.js"></script>
     <script src="./dist/js/vivus.min.js"></script>
-    <script src="./dist/js/userjs.js"></script>
+    <script src="./dist/js/userjs.js"></script><div id="fb-root"></div>
+    <script>
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.11&appId=1815619388470635&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
     <title>註冊會員</title>
   </head>
   <body>
@@ -185,6 +194,7 @@
               <div class="form-group"><span class="col">&nbsp;&nbsp;&nbsp;驗證碼：</span>
                 <input class="form-control verification" type="text" value=""/><img src="./dist/images/verification.png" alt=""/>
               </div>
+              <div class="form-group"><div class="fb-login-button" data-width="100" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div></div>
             </article>
             <footer class="foot text-center"><a class="btn" href="#">註冊</a></footer>
             <footer class="foot text-center otherLogin"><a class="text-deep-brown register" href="login.html">登入會員</a><a class="text-deep-brown forget" href="forget.html">忘記密碼？</a></footer>

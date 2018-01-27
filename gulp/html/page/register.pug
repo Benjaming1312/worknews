@@ -16,6 +16,15 @@ html(lang="zh-hant")
     script(src="./dist/js/owl.carousel.min.js")
     script(src="./dist/js/vivus.min.js")
     script(src="./dist/js/userjs.js")
+    <div id="fb-root"></div>
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.11&appId=1815619388470635&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     title 註冊會員
   body
     .wrapper.contact.register
@@ -55,6 +64,8 @@ html(lang="zh-hant")
                 span.col &nbsp;&nbsp;&nbsp;驗證碼：
                 input.form-control.verification(type="text", value="")
                 img(src="./dist/images/verification.png", alt="")
+              .form-group
+                <div class="fb-login-button" data-width="100" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
             footer.foot.text-center
               a.btn(href="#") 註冊
             footer.foot.text-center.otherLogin

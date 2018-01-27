@@ -179,6 +179,7 @@
         display: flex
         justify-content: flex-end
         width: 70%
+        align-items: flex-end
         @media #{$mobile}
           width: 80%
         &-reverse
@@ -187,8 +188,10 @@
           min-height: 2vw
           background: #ececec
           padding: .5vw 1vw
-          border-radius: .6vw .6vw .6vw 0
+          border-radius: .6vw
           max-width: calc(85% - 3.5vw)
+          margin-left: 1rem
+          position: relative
           @media #{$pad-pc}
             max-width: calc(85% - 3.5rem)
             border-radius: 1rem 1rem 1rem 0
@@ -198,6 +201,28 @@
             padding: .5rem 1rem
             line-height: 2rem
             letter-spacing: 0.1rem
+          &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            left: -.8rem
+            bottom: 1.3rem
+            width: 2rem
+            height: 2rem
+            background: #ececec
+            border-radius: 1vw
+            z-index: -2
+          &:before
+            content: ''
+            display: inline-block
+            position: absolute
+            left: -1.2rem
+            bottom: 2rem
+            width: 3rem
+            height: 3rem
+            background: white
+            border-radius: 40%
+            z-index: -1
         .info
           width: 3.5vw
           margin-left: 0.5vw
@@ -214,10 +239,13 @@
               font-size: 10px
         .user
           display: block
-          width: 3rem
-          height: 3rem
+          width: 4rem
+          height: 4rem
           border-radius: 50%
           overflow: hidden
+          margin: 0 .5rem
+          position: relative
+          top: 1rem
       .pull-right
         .info
           margin-right: .5vw
@@ -228,13 +256,39 @@
         .text
           background: lighten($light-brown, 10%)
           color: white
-          border-radius: .6vw .6vw 0 .6vw
+          border-radius: .6vw
           margin: 0 .5rem
+          margin-right: 1rem
+          position: relative
           @media #{$pad-pc}
-            border-radius: 1rem 1rem 0 1rem
+            border-radius: 1rem 1rem 1rem 1rem
           @media #{$mobile}
-            border-radius: 1rem 1rem 0 1rem
+            border-radius: 1rem 1rem 1rem 1rem
             padding: .5rem 1rem
+          &::after
+            content: ''
+            display: inline-block
+            position: absolute
+            right: -.8rem
+            left: inherit
+            bottom: 1.3rem
+            width: 2rem
+            height: 2rem
+            background: lighten($light-brown, 10%)
+            border-radius: 1vw
+            z-index: -2
+          &:before
+            content: ''
+            display: inline-block
+            position: absolute
+            right: -1.2rem
+            left: inherit
+            bottom: 2rem
+            width: 3rem
+            height: 3rem
+            background: white
+            border-radius: 40%
+            z-index: -1
       .link-info
         padding: .5vw 1vw
         width: 100%
@@ -361,7 +415,7 @@
       margin: 0
   .content
     padding: 0
-
+    height: 100%
 // modal
 .modal-body.resume-modal
   .posa-right

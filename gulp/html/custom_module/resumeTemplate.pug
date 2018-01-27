@@ -57,6 +57,11 @@ html(lang="zh-hant")
                   .row
                     each info in contentCol
                       +layout(info)
+              else if (item._id === 'resume04')
+                // 會員資訊頁面
+                .tab-pane.fade.work-list(id=`${item._id}`)
+                  .row.work-information
+                    include ../page/work_information
               else if (item._id === 'resume05')
                 // 訊息記錄
                 .tab-pane.fade.work-list(id=`${item._id}`)
