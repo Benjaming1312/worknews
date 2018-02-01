@@ -4027,6 +4027,12 @@ body .wrapper.work .navbar {
   opacity: 1;
 }
 
+.form-group.jcc {
+  -webkit-box-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
 @media screen and (max-width: 767px) {
   .message-page {
     margin-left: -.5rem;
@@ -4465,7 +4471,6 @@ body .wrapper.work .navbar {
   overflow: hidden;
   margin: 0 .5rem;
   position: relative;
-  top: 1rem;
 }
 
 .chat-content .chat-content .pull-right .info {

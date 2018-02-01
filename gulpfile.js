@@ -40,7 +40,7 @@ gulp.task('scripts',function(){
         .pipe(concat('userjs.js')) //合併所有JS
         .pipe(gulpUglify()) //最小化JS
         .pipe(gulp.dest('dist/js')) //輸出路徑
-        .pipe(connect.reload())
+        // .pipe(connect.reload())
 })
 
 // // // 轉換sass
@@ -55,7 +55,7 @@ gulp.task('styles',function(){
             sourceRoot: 'gulp/sass'
         })) //sourceMap寫入在一樣的地方  
         .pipe(gulp.dest('dist/css')) //翻譯後的路徑
-        .pipe(connect.reload())
+        // .pipe(connect.reload())
 })
 
 //圖片壓縮

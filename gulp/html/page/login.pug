@@ -17,6 +17,14 @@ html(lang="zh-hant")
     script(src="./dist/js/vivus.min.js")
     script(src="./dist/js/userjs.js")
     title 會員登入
+    script.
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.11&appId=1815619388470635&autoLogAppEvents=1';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
   body
     .wrapper.contact.login
       include ../custom_module/social-menu
@@ -33,6 +41,8 @@ html(lang="zh-hant")
               .form-group
                 span.col 密&nbsp;&nbsp;&nbsp;碼：
                 input.form-control(type="tel", value="")
+              .form-group.flex.jcc
+                <div class="fb-login-button" data-width="100" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
             footer.foot.text-center
               a.btn(href="resume.html") 送出
             footer.foot.text-center.otherLogin

@@ -70,7 +70,7 @@ block side
           li
             a.btn.light-brown(href="#") 加入收藏
           li
-            a.btn.deep-brown(href="#") 我要檢舉
+            a.btn.deep-brown(type="button" class="btn" data-toggle="modal" data-target="#report-1") 我要檢舉
     .recommend.tab-content.server
       header
         h3.title 推薦專區
@@ -198,3 +198,21 @@ block side
             .col-xs-12.btn-group
               button.btn.cancel(data-dismiss="modal" aria-label="Close") 關閉
               button.btn.submit 應徵
+  // 我要檢舉 up
+  div(class="modal fade mini-resume" id="report-1" tabindex="-1" role="dialog" aria-labelledby="report-1-label")
+    div(class="modal-dialog" role="document")
+      .modeal-content
+        .modal-header
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          .row
+            .col-xs-offset-3.col-xs-9
+              h4.modal-title#modal-1-label 我要檢舉
+              h5 您的檢舉將幫助其他人避免
+        .modal-footer
+          .row
+            .col-xs-12
+              span 檢舉內容
+              textarea.form-control(rows="5")
+            .col-xs-12.btn-group
+              button.btn.cancel(data-dismiss="modal" aria-label="Close") 關閉
+              button.btn.submit 檢舉

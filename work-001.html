@@ -142,8 +142,9 @@
         <ul class="nav navbar-nav flex">
           <li><a href="work.html">打工報</a></li>
           <li><a href="part.html">臨時報</a></li>
-          <li><a href="contact.html">聯絡我們</a></li>
+          <li><a href="contact.html">FAQ</a></li>
           <li><a href="login.html">會員專區</a></li>
+          <li><a href="release.html">發佈快報</a></li>
         </ul>
       </div>
     </nav>
@@ -225,7 +226,7 @@
                 <ul>
                   <li><a class="btn red btn" type="button" data-toggle="modal" data-target="#modal-1">我要應徵</a></li>
                   <li><a class="btn light-brown" href="#">加入收藏</a></li>
-                  <li><a class="btn deep-brown" href="#">我要檢舉</a></li>
+                  <li><a class="btn deep-brown btn" type="button" data-toggle="modal" data-target="#report-1">我要檢舉</a></li>
                 </ul>
               </footer>
             </div>
@@ -352,6 +353,32 @@
                     <div class="col-xs-12 btn-group">
                       <button class="btn cancel" data-dismiss="modal" aria-label="Close">關閉</button>
                       <button class="btn submit">應徵</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 我要檢舉 up-->
+          <div class="modal fade mini-resume" id="report-1" tabindex="-1" role="dialog" aria-labelledby="report-1-label">
+            <div class="modal-dialog" role="document">
+              <div class="modeal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <div class="row">
+                    <div class="col-xs-offset-3 col-xs-9">
+                      <h4 class="modal-title" id="modal-1-label">我要檢舉</h4>
+                      <h5>您的檢舉將幫助其他人避免</h5>
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <div class="row">
+                    <div class="col-xs-12"><span>檢舉內容</span>
+                      <textarea class="form-control" rows="5"></textarea>
+                    </div>
+                    <div class="col-xs-12 btn-group">
+                      <button class="btn cancel" data-dismiss="modal" aria-label="Close">關閉</button>
+                      <button class="btn submit">檢舉</button>
                     </div>
                   </div>
                 </div>
