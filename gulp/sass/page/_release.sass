@@ -1,6 +1,10 @@
 .styled
   list-style: none
 .worktabs.resume.release
+  .nav.nav-tabs.site
+    li
+      @media #{$mobile}
+        width: calc(100% / 3)
   #release01
     padding-top: 0
     // margin-top: -2vw
@@ -8,6 +12,8 @@
     padding: 0
     max-width: 1280px
     margin: 0 auto
+    @media #{$mobile}
+      padding: 1.5rem 1rem
   .worktabs.resume.work-info
     > header.row
       border: 0
@@ -36,20 +42,41 @@
     .row.release-content
       margin: 4rem 0
       padding: 2rem
+      @media #{$mobile}
+        padding: 1rem
       &:nth-of-type(1)
         margin-top: 0
       &.release-user,
       &.release-modified
         margin-top: 4rem
+      .col-sm-4,
+      .col-sm-8
+        @media #{$mobile}
+          padding: 0
       .col-sm-4
+        ul
+          @media #{$mobile}
+            display: flex
+            flex-wrap: nowrap
+            padding-left: 0
+            margin-bottom: 0
         li
           margin-bottom: 1.5rem
+          @media #{$mobile}
+            width: calc(100% / 5)
+            margin-bottom: 0
+            text-align: center
           span
             font-size: 1.5rem
             letter-spacing: 0.1rem
+            &:not(.glyphicon)
+              @media #{$mobile}
+                display: none
           span.glyphicon
             display: inline-block
             margin-right: 1rem
+            @media #{$mobile}
+              margin: 0
           a
             transition: .3s ease-in-out
             &:hover
@@ -64,6 +91,8 @@
           margin-bottom: 2rem
           width: 100%
           display: flex
+          @media #{$mobile}
+            display: block
           ul
             margin-top: 0.5rem
             display: inline-block
@@ -81,6 +110,9 @@
           letter-spacing: 0.1rem
           display: inline-flex
           flex-wrap: nowrap
+          @media #{$mobile}
+            display: block
+            margin-bottom: .5rem
           &::after
             content: ':'
             font-size: 2rem

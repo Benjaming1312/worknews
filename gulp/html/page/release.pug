@@ -114,29 +114,7 @@ block main
         | 新增工作
   each job in jobs
     .row.release-content
-      .col-sm-4.col-sm-push-8.col-xs-12
-        ul.btn-list.styled
-          li
-            a.btn.light-brown(href="release_modified.html") 
-              span.glyphicon.glyphicon-pencil
-              span 編輯
-          li
-            a.btn.light-brown(href="#") 
-              span.glyphicon.glyphicon-trash
-              span 刪除
-          li
-            a.btn.light-brown(href="#") 
-              span.glyphicon.glyphicon-upload
-              span 上架
-          li
-            a.btn.light-brown(href="#") 
-              span.glyphicon.glyphicon-pushpin
-              span 頭條消息
-          li
-            a.btn.light-brown(data-toggle="tab" href="#release02")
-              span.glyphicon.glyphicon-envelope
-              span 應徵者紀錄
-      .col-sm-8.col-sm-pull-4.col-xs-12
+      .col-sm-8.col-xs-12
         h3.title.text-light-brown=job.title
         ul.list.styled
           li
@@ -165,3 +143,25 @@ block main
           li
             span.title 面試方式
             span=job.meetting
+      .col-sm-4.col-xs-12
+        ul.btn-list.styled
+          li
+            a.btn.light-brown(href="release_modified.html") 
+              span.glyphicon.glyphicon-pencil
+              span 編輯
+          li
+            a.btn.light-brown(href="#") 
+              span.glyphicon.glyphicon-trash
+              span 刪除
+          li
+            a.btn.light-brown(href="#") 
+              span.glyphicon.glyphicon-upload
+              span 上架
+          li
+            a.btn.light-brown(href="#") 
+              span.glyphicon.glyphicon-pushpin
+              span 頭條消息
+          li
+            a.btn.light-brown(data-toggle="tab" href="#release02")
+              span.glyphicon.glyphicon-envelope
+              span 應徵者紀錄

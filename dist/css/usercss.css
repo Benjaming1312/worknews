@@ -5306,6 +5306,12 @@ body .wrapper.work .navbar {
   list-style: none;
 }
 
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .nav.nav-tabs.site li {
+    width: calc(100% / 3);
+  }
+}
+
 .worktabs.resume.release #release01 {
   padding-top: 0;
 }
@@ -5314,6 +5320,12 @@ body .wrapper.work .navbar {
   padding: 0;
   max-width: 1280px;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .tab-content {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .worktabs.resume.release .worktabs.resume.work-info > header.row {
@@ -5359,6 +5371,12 @@ body .wrapper.work .navbar {
   padding: 2rem;
 }
 
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content {
+    padding: 1rem;
+  }
+}
+
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content:nth-of-type(1) {
   margin-top: 0;
 }
@@ -5367,8 +5385,33 @@ body .wrapper.work .navbar {
   margin-top: 4rem;
 }
 
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4,
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-8 {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 ul {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+}
+
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li {
   margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li {
+    width: calc(100% / 5);
+    margin-bottom: 0;
+    text-align: center;
+  }
 }
 
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span {
@@ -5376,9 +5419,21 @@ body .wrapper.work .navbar {
   letter-spacing: 0.1rem;
 }
 
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span:not(.glyphicon) {
+    display: none;
+  }
+}
+
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span.glyphicon {
   display: inline-block;
   margin-right: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span.glyphicon {
+    margin: 0;
+  }
 }
 
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li a {
@@ -5404,6 +5459,12 @@ body .wrapper.work .navbar {
   width: 100%;
   display: -webkit-box;
   display: flex;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .list > li {
+    display: block;
+  }
 }
 
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .list > li ul {
@@ -5432,6 +5493,13 @@ body .wrapper.work .navbar {
   display: -webkit-inline-box;
   display: inline-flex;
   flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span.title {
+    display: block;
+    margin-bottom: .5rem;
+  }
 }
 
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span.title::after {

@@ -122,13 +122,7 @@
   ]
 each user in users
   .row.release-content.release-user
-    .col-sm-4.col-sm-push-8.col-xs-12
-      ul.btn-list.styled
-        li
-          a.btn.light-brown(href="/worknews/resume.html#resume05") 
-            span.glyphicon.glyphicon-check
-            span 發送通知
-    .col-sm-8.col-sm-pull-4.col-xs-12
+    .col-sm-8.col-xs-12
       ul.list.styled
         li.img
           img.img-responsive(src="./dist/images/personal.png", alt="")
@@ -177,3 +171,9 @@ each user in users
         li
           span.title 自&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;傳
           span=user.biography
+    .col-sm-4.col-xs-12
+      ul.btn-list.styled
+        li
+          a.btn.light-brown(href="/worknews/resume.html#resume05") 
+            span.glyphicon.glyphicon-check
+            span 發送通知
