@@ -125,17 +125,13 @@ each user in users
     .col-sm-4.col-sm-push-8.col-xs-12
       ul.btn-list.styled
         li
-          a.btn.light-brown(href="#") 編輯
-        li
-          a.btn.light-brown(href="#") 刪除
-        li
-          a.btn.light-brown(href="#") 上架
-        li
-          a.btn.light-brown(href="#") 頭條消息
-        li
-          a.btn.light-brown(href="#") 應徵者紀錄
+          a.btn.light-brown(href="/worknews/resume.html#resume05") 
+            span.glyphicon.glyphicon-check
+            span 發送通知
     .col-sm-8.col-sm-pull-4.col-xs-12
-      ul.list
+      ul.list.styled
+        li.img
+          img.img-responsive(src="./dist/images/personal.png", alt="")
         li
           span.title 中文姓名
           span=user.name
@@ -143,7 +139,7 @@ each user in users
           span.title 英文名字
           span=user.nameEn
         li
-          span.title 性別
+          span.title 性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別
           span=user.male
         li
           span.title 出生日期
@@ -161,7 +157,7 @@ each user in users
           span.title 聯絡電話
           span=user.phone
         li
-          span.title 住家
+          span.title 住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家
           span=user.tel
         li
           span.title 通訊地址
@@ -179,5 +175,5 @@ each user in users
           span.title 具備交通工具
           span=user.traffic
         li
-          span.title 自傳
+          span.title 自&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;傳
           span=user.biography

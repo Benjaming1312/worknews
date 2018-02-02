@@ -5302,4 +5302,167 @@ body .wrapper.work .navbar {
   color: #3e3a39;
 }
 
+.styled {
+  list-style: none;
+}
+
+.worktabs.resume.release #release01 {
+  padding-top: 0;
+}
+
+.worktabs.resume.release .tab-content {
+  padding: 0;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info > header.row {
+  border: 0;
+  padding: 0;
+  background: none;
+  margin-bottom: 1rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info > header.row header.col-xs-12 {
+  padding: .5rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info > header.row header.col-xs-12, .worktabs.resume.release .worktabs.resume.work-info > header.row header.col-xs-12 span {
+  color: #b28247;
+  font-size: 2rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info > header.row header.col-xs-12 span {
+  color: #231815;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info > header.row main.col-xs-12 {
+  padding: 0;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info > header.row main.col-xs-12 a.btn {
+  background: #8e6738;
+  color: white;
+  border-radius: 3rem;
+  margin: 1rem 0;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info > header.row main.col-xs-12 a.btn span.glyphicon {
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content {
+  margin: 4rem 0;
+  padding: 2rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content:nth-of-type(1) {
+  margin-top: 0;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content.release-user, .worktabs.resume.release .worktabs.resume.work-info .row.release-content.release-modified {
+  margin-top: 4rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li {
+  margin-bottom: 1.5rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span.glyphicon {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li a {
+  transition: .3s ease-in-out;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li a:hover {
+  background: #231815;
+  color: white;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content h3.title {
+  margin-top: 0;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list {
+  padding-left: 0;
+  margin-top: 2rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list > li {
+  margin-bottom: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list > li ul {
+  margin-top: 0.5rem;
+  display: inline-block;
+  padding-left: 0rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list > li ul li {
+  margin-bottom: 1.5rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span {
+  font-size: 1.5rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span:nth-of-type(2) {
+  margin-top: .1rem;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span.title {
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  flex-wrap: nowrap;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span.title::after {
+  content: ':';
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  display: inline-block;
+  margin: 0 1rem 0 .5rem;
+}
+
+.worktabs.resume.release .release-user .img {
+  display: block !important;
+}
+
+.worktabs.resume.release .release-user img {
+  max-width: 150px;
+  height: auto;
+}
+
+.worktabs.resume.release .release-modified .form-inline {
+  padding-left: 0;
+}
+
+.worktabs.resume.release .release-modified li.form-group {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.worktabs.resume.release .release-modified textarea {
+  max-width: 500px;
+}
+
 /*# sourceMappingURL=usercss.css.map */

@@ -1,0 +1,103 @@
+.styled
+  list-style: none
+.worktabs.resume.release
+  #release01
+    padding-top: 0
+    // margin-top: -2vw
+  .tab-content
+    padding: 0
+    max-width: 1280px
+    margin: 0 auto
+  .worktabs.resume.work-info
+    > header.row
+      border: 0
+      padding: 0
+      background: none
+      margin-bottom: 1rem
+      header.col-xs-12
+        padding: .5rem
+        &,span
+          color: $light-brown
+          font-size: 2rem
+        span
+          color: $deep-brown
+          display: inline-block
+          margin: 0 1rem
+      main.col-xs-12
+        padding: 0
+        a.btn
+          background: darken($light-brown, 10%)
+          color: white
+          border-radius: 3rem
+          margin: 1rem 0
+          span.glyphicon
+            display: inline-block
+            margin-right: 0.5rem
+    .row.release-content
+      margin: 4rem 0
+      padding: 2rem
+      &:nth-of-type(1)
+        margin-top: 0
+      &.release-user,
+      &.release-modified
+        margin-top: 4rem
+      .col-sm-4
+        li
+          margin-bottom: 1.5rem
+          span
+            font-size: 1.5rem
+            letter-spacing: 0.1rem
+          span.glyphicon
+            display: inline-block
+            margin-right: 1rem
+          a
+            transition: .3s ease-in-out
+            &:hover
+              background: $deep-brown
+              color: white
+      h3.title
+        margin-top: 0
+      .list
+        padding-left: 0
+        margin-top: 2rem
+        >li
+          margin-bottom: 2rem
+          width: 100%
+          display: flex
+          ul
+            margin-top: 0.5rem
+            display: inline-block
+            padding-left: 0rem
+            li
+              margin-bottom: 1.5rem
+        span
+          font-size: 1.5rem
+          letter-spacing: 0.1rem
+          line-height: 2rem
+          &:nth-of-type(2)
+            margin-top: .1rem
+        span.title
+          font-size: 1.8rem
+          letter-spacing: 0.1rem
+          display: inline-flex
+          flex-wrap: nowrap
+          &::after
+            content: ':'
+            font-size: 2rem
+            letter-spacing: 0.1rem
+            display: inline-block
+            margin: 0 1rem 0 .5rem
+  .release-user
+    .img
+      display: block!important
+    img
+      max-width: 150px
+      height: auto
+  .release-modified
+    .form-inline
+      padding-left: 0
+    li.form-group
+      display: flex
+      flex-wrap: nowrap
+    textarea
+      max-width: 500px

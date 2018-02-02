@@ -103,45 +103,55 @@ block main
         meetting: 'Andy 09xx-xxx-xxx'
       }
     ]
+  header.row
+    header.col-xs-12
+      | 您尚可使用
+      span.num 3
+      | 條頭條消息
+    main.col-xs-12
+      a.btn.text-light-brown(href="release_modified.html")
+        span.glyphicon.glyphicon-plus
+        | 新增工作
   each job in jobs
-    header.row
-      header.col-xs-12
-        | 您尚可使用
-        span.num 3
-        | 條頭條消息
-      main.col-xs-12
-        a.btn.text-light-brown
-          span.glyphicon.glyphicon-plus
-          | 新增工作
     .row.release-content
       .col-sm-4.col-sm-push-8.col-xs-12
         ul.btn-list.styled
           li
-            a.btn.light-brown(href="#") 編輯
+            a.btn.light-brown(href="release_modified.html") 
+              span.glyphicon.glyphicon-pencil
+              span 編輯
           li
-            a.btn.light-brown(href="#") 刪除
+            a.btn.light-brown(href="#") 
+              span.glyphicon.glyphicon-trash
+              span 刪除
           li
-            a.btn.light-brown(href="#") 上架
+            a.btn.light-brown(href="#") 
+              span.glyphicon.glyphicon-upload
+              span 上架
           li
-            a.btn.light-brown(href="#") 頭條消息
+            a.btn.light-brown(href="#") 
+              span.glyphicon.glyphicon-pushpin
+              span 頭條消息
           li
-            a.btn.light-brown(href="#") 應徵者紀錄
+            a.btn.light-brown(data-toggle="tab" href="#release02")
+              span.glyphicon.glyphicon-envelope
+              span 應徵者紀錄
       .col-sm-8.col-sm-pull-4.col-xs-12
         h3.title.text-light-brown=job.title
-        ul.list
+        ul.list.styled
           li
-            span.title 公司
+            span.title 公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司
             span=job.company
           li
-            span.title 時薪
+            span.title 時&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;薪
             span=job.pay
           li
             span.title 工作內容
-            ul
+            ul.styled
               each info in job.info
                 li=info
           li
-            span.title 地區
+            span.title 地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;區
             span=job.site
           li
             span.title 工作地點

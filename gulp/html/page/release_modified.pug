@@ -1,0 +1,35 @@
+extends ../custom_module/releaseTemplate
+
+block main
+  .row.release-content.release-modified
+    .col-xs-12
+      ul.form-inline.list.styled
+        li.form-group
+          span.title 工作名稱
+          input.form-control(type="text", value="")
+        li.form-group
+          span.title 公司名稱
+          input.form-control(type="text", value="")
+        li.form-group
+          span.title 工作時薪
+          input.form-control(type="text", value="")
+        li.form-group
+          span.title 工作內容
+          textarea.form-control(rows="6")
+        li.form-group
+          span.title 工作地區
+          input.form-control(type="text")
+        li.form-group
+          span.title 工作地點
+          input.form-control(type="text")
+        li.form-group
+          span.title 工作時間
+          input.form-control(type="text")
+        li.form-group
+          span.title 聯絡方式
+          input.form-control(type="text")
+        li.form-group
+          span.title 面試方式
+          input.form-control(type="text")
+      p.text-center
+        a.btn.submit-modified(href="#") 送出
