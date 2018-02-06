@@ -153,7 +153,7 @@
       <!-- desktop only-->
       <ul class="nav nav-tabs site">
         <li class="active"><a data-toggle="tab" href="#release01"><span class="visible-xs glyphicon glyphicon-send"></span><span>發佈工作</span></a></li>
-        <li><a data-toggle="tab" href="#release02"><span class="visible-xs glyphicon glyphicon-inbox"></span><span>應徵者紀錄</span></a></li>
+        <li><a data-toggle="tab" href="#release02"><span class="visible-xs glyphicon glyphicon-inbox"></span><span>訊息記錄</span></a></li>
         <li><a data-toggle="tab" href="#release03"><span class="visible-xs glyphicon glyphicon-usd"></span><span>加值服務</span></a></li>
       </ul>
       <div class="tab-content server">
@@ -168,28 +168,63 @@
                   <li class="form-group"><span class="title">公司名稱</span>
                     <input class="form-control" type="text" value=""/>
                   </li>
-                  <li class="form-group"><span class="title">工作時薪</span>
-                    <input class="form-control" type="text" value=""/>
+                  <li class="form-group"><span class="title">工作待遇</span>
+                    <div class="row flex no-wrap">
+                      <select class="form-control col-xs-3">
+                        <option value="時薪">時薪</option>
+                        <option value="月薪">月薪</option>
+                        <option value="日薪">日薪</option>
+                      </select>
+                      <input class="form-control" type="text" value=""/>
+                    </div>
+                  </li>
+                  <li class="form-group"><span class="title">發薪日期</span>
+                    <input class="form-control" type="date" value="2018-02-26"/>
                   </li>
                   <li class="form-group"><span class="title">工作內容</span>
                     <textarea class="form-control" rows="6"></textarea>
                   </li>
                   <li class="form-group"><span class="title">工作地區</span>
-                    <input class="form-control" type="text"/>
+                    <select class="form-control">
+                      <option value="0">臺北市</option>
+                      <option value="1">新北市</option>
+                      <option value="2">桃園市</option>
+                      <option value="3">臺中市</option>
+                      <option value="4">臺南市</option>
+                      <option value="5">高雄市</option>
+                      <option value="6">基隆市</option>
+                      <option value="7">新竹市</option>
+                      <option value="8">嘉義市</option>
+                      <option value="9">新竹縣</option>
+                      <option value="10">苗栗縣</option>
+                      <option value="11">彰化縣</option>
+                      <option value="12">南投縣</option>
+                      <option value="13">雲林縣</option>
+                      <option value="14">嘉義縣</option>
+                      <option value="15">屏東縣</option>
+                      <option value="16">宜蘭縣</option>
+                      <option value="17">花蓮縣</option>
+                      <option value="18">臺東縣</option>
+                      <option value="19">澎湖縣</option>
+                    </select>
                   </li>
                   <li class="form-group"><span class="title">工作地點</span>
                     <input class="form-control" type="text"/>
                   </li>
                   <li class="form-group"><span class="title">工作時間</span>
+                    <input class="form-control" type="datetime-local"/>
+                  </li>
+                  <li class="form-group"><span class="title">聯絡人&nbsp;&nbsp;</span>
                     <input class="form-control" type="text"/>
                   </li>
                   <li class="form-group"><span class="title">聯絡方式</span>
                     <input class="form-control" type="text"/>
                   </li>
-                  <li class="form-group"><span class="title">面試方式</span>
+                  <li class="form-group"><span class="title">需求人數</span>
                     <input class="form-control" type="text"/>
                   </li>
                 </ul>
+                <p class="text-center"><span>每則工作有效日期為七日，七日之後系統將自動下架<br/><span>到期日 </span><span class="date">02/02</span></span></p>
                 <p class="text-center"><a class="btn submit-modified" href="#">送出</a></p>
               </div>
             </div>
@@ -198,6 +233,9 @@
         <!-- 應徵者紀錄-->
         <div class="tab-pane fade work-list" id="release02">
           <div class="container-fluid worktabs work-info resume">
+            <header class="row">
+              <h3 class="title">訊息記錄</h3>
+            </header>
             <div class="row release-content release-user">
               <div class="col-sm-8 col-xs-12">
                 <ul class="list styled">

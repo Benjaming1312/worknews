@@ -3409,23 +3409,29 @@ body .wrapper.work .navbar {
 .worktabs.resume.resume > .row .form-group {
   display: block;
   width: 100%;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
-.worktabs.resume.resume > .row .form-group input {
+.worktabs.resume.resume > .row .form-group input,
+.worktabs.resume.resume > .row .form-group select {
   font-size: .8vw;
   line-height: 2vw;
   min-width: 15rem;
+  width: 50%;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
-  .worktabs.resume.resume > .row .form-group input {
+  .worktabs.resume.resume > .row .form-group input,
+  .worktabs.resume.resume > .row .form-group select {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .worktabs.resume.resume > .row .form-group input {
+  .worktabs.resume.resume > .row .form-group input,
+  .worktabs.resume.resume > .row .form-group select {
     font-size: 1.5rem;
     line-height: 2rem;
   }
@@ -3434,7 +3440,8 @@ body .wrapper.work .navbar {
 .worktabs.resume.resume > .row .form-group textarea {
   font-size: .8vw;
   line-height: 2vw;
-  width: 100%;
+  width: 50%;
+  max-width: inherit;
   height: auto;
 }
 
@@ -3529,6 +3536,24 @@ body .wrapper.work .navbar {
   opacity: 1;
 }
 
+.worktabs.resume.resume > .row .form-group .flex.no-wrap {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 50%;
+  margin: 0;
+}
+
+.worktabs.resume.resume > .row .form-group .flex.no-wrap select.form-control {
+  width: 20%;
+  min-width: 4rem;
+}
+
+.worktabs.resume.resume > .row .form-group .flex.no-wrap input {
+  width: 100%;
+  margin-left: 2rem;
+}
+
 @media screen and (max-width: 767px) {
   .worktabs.resume.resume > .row .form-group.weight > span {
     display: block;
@@ -3616,6 +3641,41 @@ body .wrapper.work .navbar {
 .submit-modified.upload {
   background: transparent;
   color: #b28247;
+}
+
+.faq {
+  max-width: 750px;
+  padding: 0 !important;
+  margin: 4rem auto !important;
+}
+
+@media screen and (max-width: 767px) {
+  .faq {
+    padding: 0 1.5rem !important;
+  }
+}
+
+.faq .panel {
+  background: none;
+}
+
+.faq .panel a {
+  color: #727171;
+}
+
+.faq .panel a span {
+  font-size: 1vw;
+}
+
+.faq .panel a + div p {
+  font-size: 0.8vw;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  padding: 0.5vw 1vw;
+}
+
+.faq .page-qa {
+  margin-bottom: 4rem;
 }
 
 .wrapper.contact {
@@ -5300,6 +5360,14 @@ body .wrapper.work .navbar {
 .mini-resume .modeal-content .modal-footer .btn-group .btn.cancel {
   background: #efefef;
   color: #3e3a39;
+}
+
+.release .resume.work-info header.row h3.title {
+  margin-top: 4rem;
+  font-size: 1.5vw;
+  border-bottom: 1px solid #3e3a39;
+  padding-bottom: 1rem;
+  color: #231815;
 }
 
 .styled {

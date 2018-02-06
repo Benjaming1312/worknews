@@ -18,10 +18,13 @@
     .form-group
       display: block
       width: 100%
-      input
+      justify-content: center
+      input,
+      select
         font-size: .8vw
         line-height: 2vw
         min-width: 15rem
+        width: 50%
         @media #{$pad-pc}
           font-size: 1.5rem
           line-height: 2rem
@@ -31,7 +34,8 @@
       textarea
         font-size: .8vw
         line-height: 2vw
-        width: 100%
+        width: 50%
+        max-width: inherit
         height: auto
         @media #{$pad-pc}
           font-size: 1.5rem
@@ -87,6 +91,17 @@
           &:checked+label
             &::after
               opacity: 1
+      .flex.no-wrap
+        display: flex
+        flex-wrap: nowrap
+        width: 50%
+        margin: 0
+        select.form-control
+          width: 20%
+          min-width: 4rem
+        input
+          width: 100%
+          margin-left: 2rem
       &.weight
         >span
           @media #{$mobile}

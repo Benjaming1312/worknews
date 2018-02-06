@@ -1,6 +1,28 @@
 extends ../custom_module/releaseTemplate
-
 block main
+  -
+    var citys = [
+      {city: '臺北市'},
+      {city: '新北市'},
+      {city: '桃園市'},
+      {city: '臺中市'},
+      {city: '臺南市'},
+      {city: '高雄市'},
+      {city: '基隆市'},
+      {city: '新竹市'},
+      {city: '嘉義市'},
+      {city: '新竹縣'},
+      {city: '苗栗縣'},
+      {city: '彰化縣'},
+      {city: '南投縣'},
+      {city: '雲林縣'},
+      {city: '嘉義縣'},
+      {city: '屏東縣'},
+      {city: '宜蘭縣'},
+      {city: '花蓮縣'},
+      {city: '臺東縣'},
+      {city: '澎湖縣'}
+    ]
   .row.release-content.release-modified
     .col-xs-12
       ul.form-inline.list.styled
@@ -11,25 +33,44 @@ block main
           span.title 公司名稱
           input.form-control(type="text", value="")
         li.form-group
-          span.title 工作時薪
-          input.form-control(type="text", value="")
+          span.title 工作待遇
+          .row.flex.no-wrap
+            select.form-control.col-xs-3
+              option(value="時薪") 時薪
+              option(value="月薪") 月薪
+              option(value="日薪") 日薪
+            input.form-control(type="text", value="")
+        li.form-group
+          span.title 發薪日期
+          input.form-control(type="date", value="2018-02-26")
         li.form-group
           span.title 工作內容
           textarea.form-control(rows="6")
         li.form-group
           span.title 工作地區
-          input.form-control(type="text")
+          select.form-control
+            each city, index in citys
+              option(value=index)=city.city
         li.form-group
           span.title 工作地點
           input.form-control(type="text")
         li.form-group
           span.title 工作時間
+          input.form-control(type="datetime-local")
+        li.form-group
+          span.title 聯絡人&nbsp;&nbsp;
           input.form-control(type="text")
         li.form-group
           span.title 聯絡方式
           input.form-control(type="text")
         li.form-group
-          span.title 面試方式
+          span.title 需求人數
           input.form-control(type="text")
+      p.text-center
+        span
+          | 每則工作有效日期為七日，七日之後系統將自動下架
+          br
+          span 到期日 
+          span.date 02/02
       p.text-center
         a.btn.submit-modified(href="#") 送出
