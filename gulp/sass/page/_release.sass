@@ -7,6 +7,10 @@
         border-bottom: 1px solid $color-b
         padding-bottom: 1rem
         color: $deep-brown
+        @media #{$mobile}
+          margin-top: 2rem
+
+          font-size: 2.6rem
 .styled
   list-style: none
 .worktabs.resume.release
@@ -64,17 +68,27 @@
           padding: 0
       .col-sm-4
         ul
+          display: flex
+          flex-wrap: wrap
+          justify-content: space-between
+          padding: 0 4rem
           @media #{$mobile}
-            display: flex
+            display: inline-flex
             flex-wrap: nowrap
             padding-left: 0
+            padding: 0
             margin-bottom: 0
         li
+
           margin-bottom: 1.5rem
+          display: inline-block
+          float: left
+          margin: .25rem
           @media #{$mobile}
             width: calc(100% / 5)
-            margin-bottom: 0
+            margin: 0 .25rem
             text-align: center
+            float: inherit
           span
             font-size: 1.5rem
             letter-spacing: 0.1rem

@@ -5370,6 +5370,13 @@ body .wrapper.work .navbar {
   color: #231815;
 }
 
+@media screen and (max-width: 767px) {
+  .release .resume.work-info header.row h3.title {
+    margin-top: 2rem;
+    font-size: 2.6rem;
+  }
+}
+
 .styled {
   list-style: none;
 }
@@ -5460,25 +5467,39 @@ body .wrapper.work .navbar {
   }
 }
 
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 ul {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 0 4rem;
+}
+
 @media screen and (max-width: 767px) {
   .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 ul {
-    display: -webkit-box;
-    display: flex;
+    display: -webkit-inline-box;
+    display: inline-flex;
     flex-wrap: nowrap;
     padding-left: 0;
+    padding: 0;
     margin-bottom: 0;
   }
 }
 
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li {
   margin-bottom: 1.5rem;
+  display: inline-block;
+  float: left;
+  margin: .25rem;
 }
 
 @media screen and (max-width: 767px) {
   .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li {
     width: calc(100% / 5);
-    margin-bottom: 0;
+    margin: 0 .25rem;
     text-align: center;
+    float: inherit;
   }
 }
 

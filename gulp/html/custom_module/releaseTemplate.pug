@@ -36,6 +36,12 @@ html(lang="zh-hant")
                 a(data-toggle="tab", href=`#${item._id}`)
                   span.visible-xs(class=item.icon)
                   span=item.title
+            else if (index === 1)
+              // 訊息記錄
+              li
+                a(href=`javascript: redirectToMessage()`)
+                  span.visible-xs(class=item.icon)
+                  span=item.title
             else
               li
                 a(data-toggle="tab", href=`#${item._id}`)
@@ -51,7 +57,7 @@ html(lang="zh-hant")
                 // 應徵者紀錄
                 .tab-pane.fade.work-list(id=`${item._id}`)
                   .container-fluid.worktabs.work-info.resume
-                    include ../page/release_user
+                    //- include ../page/release_user
               else if (item._id === 'release03')
                 // 我的收藏
                 .tab-pane.fade.work-list(id=`${item._id}`)
