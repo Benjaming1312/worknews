@@ -116,7 +116,11 @@ block main
   each job in jobs
     .row.release-content
       .col-sm-8.col-xs-12
-        h3.title.text-light-brown=job.title
+        hgroup
+          h3.title.text-light-brown=job.title
+          a.btn.red(href="#") 
+            span.glyphicon.glyphicon-pushpin
+            span 頭條消息
         ul.list.styled
           li
             span.title 公&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;司
@@ -158,11 +162,7 @@ block main
             a.btn.light-brown(href="#") 
               span.glyphicon.glyphicon-upload
               span 上架
-          li
-            a.btn.light-brown(href="#") 
-              span.glyphicon.glyphicon-pushpin
-              span 頭條消息
-          li
-            a.btn.light-brown(href="release_user.html")
-              span.glyphicon.glyphicon-envelope
-              span 應徵者紀錄
+      footer.col-xs-12.text-center
+        a.btn(href="release_user.html")
+          span.glyphicon.glyphicon-envelope
+          span 應徵者紀錄

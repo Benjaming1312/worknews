@@ -5460,6 +5460,49 @@ body .wrapper.work .navbar {
   margin-top: 4rem;
 }
 
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup {
+    flex-wrap: wrap;
+  }
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup h3.title {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-right: 1vw;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup h3.title {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup a.btn {
+    margin-top: 1rem;
+  }
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup a.btn span {
+  color: white;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup a.btn .red {
+  background: #b73242;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content hgroup a.btn .glyphicon {
+  margin-right: 0.5rem;
+}
+
 @media screen and (max-width: 767px) {
   .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4,
   .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-8 {
@@ -5478,12 +5521,14 @@ body .wrapper.work .navbar {
 
 @media screen and (max-width: 767px) {
   .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 ul {
-    display: -webkit-inline-box;
-    display: inline-flex;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+            justify-content: center;
     flex-wrap: nowrap;
     padding-left: 0;
     padding: 0;
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
 }
 
@@ -5531,6 +5576,14 @@ body .wrapper.work .navbar {
 
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li a:hover {
   background: #231815;
+  color: white;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content footer.col-xs-12 a.btn {
+  background: #366c9b;
+}
+
+.worktabs.resume.release .worktabs.resume.work-info .row.release-content footer.col-xs-12 a.btn span {
   color: white;
 }
 
