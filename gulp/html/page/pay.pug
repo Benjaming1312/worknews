@@ -1,0 +1,121 @@
+-
+  var mayBeYouPay = [
+    {
+      title: '員庭完一也向公一',
+      nopay: true,
+      pay: true
+    },
+    {
+      title: '頭在界用轉不人排分一作是',
+      nopay: false,
+      pay: true
+    },
+    {
+      title: '間燈事面靈綠上',
+      nopay: false,
+      pay: true
+    },
+    {
+      title: '光自們第得我多所建道轉',
+      nopay: true,
+      pay: true
+    },
+    {
+      title: '以有會到們全頭政人河母容她步燈單',
+      nopay: false,
+      pay: true
+    },
+    {
+      title: '同許幾面在花世法童的空中到母頭和',
+      nopay: false,
+      pay: true
+    },
+    {
+      title: '這天這親、報節命會',
+      nopay: false,
+      pay: true
+    },
+    {
+      title: '不課東在正善依傳長答灣正走因預傳',
+      nopay: false,
+      pay: true
+    },
+    {
+      title: '模師優術一傳是由的心',
+      nopay: false,
+      pay: true
+    }
+  ]
+header.row
+  h3.title 加值服務
+main.row.release-content
+  .col-xs-12
+    table.table
+      thead
+        tr
+          th
+          th 免費功能
+          th 付費功能
+      tbody
+        each table in mayBeYouPay
+          tr
+            td=table.title
+            td(data-th="免費功能")
+              if (table.nopay)
+                span.text-light-brown.glyphicon.glyphicon-ok
+              else
+                span.glyphicon.glyphicon-remove
+            td(data-th="付費功能")
+              if (table.pay)
+                span.text-light-brown.glyphicon.glyphicon-ok
+              else
+                span.glyphicon.glyphicon-remove
+  .col-xs-12.simpleChart
+    .svg-group
+      .svg-center-top
+        .position-text
+          p.title.b 工作24H置頂
+          p.info
+            | 您的頭條工作在24小時內置頂，被更多的求職者看見，增加尋找人才的效率。
+        include ../svg/moutain.svg
+      .svg-center
+        .svg-left-bottom
+          .position-text
+            p.title.b 推薦專區專欄
+            p.info
+              | 我們設有推薦專欄，將頭條工作隨機展示在專欄中有效增加曝光率
+          include ../svg/moutain.svg
+        .svg-right-bottom
+          .position-text
+            p.title.b 特殊版型設計
+            p.info
+              | 頭條快報擁有特別的版型設計，吸引更多求職者的目光
+          include ../svg/moutain.svg
+  footer.col-xs-12.howTobuy
+    h4.title 購買資訊
+    .row
+      //- .col-sm-4*3>(p.title{購買}>span.red{1}份)+(p.price>i{$149})+p>a.btn{購買}
+      .col-sm-4
+        p.title 購買
+          span 1
+          | 份
+        p.price
+          i $149
+        p
+          a.btn(href="#") 購買
+      .col-sm-4
+        p.title 購買
+          span 5
+          | 份
+        p.price
+          i $700
+        p
+          a.btn(href="#") 購買
+      .col-sm-4
+        p.title 購買
+          span 10
+          | 份
+        p.price
+          i $1200
+        p
+          a.btn(href="#") 購買

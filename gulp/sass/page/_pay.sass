@@ -1,0 +1,227 @@
+.table
+  border-top: 1px solid $color-b
+  thead>tr>th
+    border-bottom: 2px solid #ccc
+    background: $light-brown
+  th
+    color: white
+  th, td
+    text-align: center
+    border: 1px solid $color-b
+    &:first-child
+      text-align: left
+      width: 50%
+.simpleChart
+  .svg-group
+    padding-top: 150px
+    display: flex
+    flex-wrap: wrap
+    @media screen and (max-width: 1200px)
+      padding-top: 4rem
+    >div
+      display: inline-block
+      position: relative
+      svg
+        width: 300px
+        height: 300px
+    .svg-center-top
+      margin: 0 auto
+      width: 300px
+      @media screen and (max-width: 1200px)
+        width: calc(100% / 3 - 2rem)
+      @media #{$pad}
+        width: 100%
+        text-align: center
+      @media #{$mobile}
+        width: 100%
+    .position-text
+      position: absolute
+      width: 300px
+      top: 0
+      @media screen and (max-width: 1200px)
+        position: static
+        text-align: center
+        margin: 0 auto
+      &::before, &::after
+        content: ''
+        display: inline-block
+        width: 150px
+        height: 1px
+        background: #aaa
+        position: absolute
+      .title.b
+        font-weight: bold
+        font-size: 22px
+        margin-top: -1.5rem
+      .info
+        font-size: 1.5rem
+        letter-spacing: 0.1rem
+        line-height: 2rem
+    .svg-center
+      display: flex
+      justify-content: center
+      width: 100%
+      @media screen and (max-width: 1200px)
+        width: calc((100% / 3) * 2 - 2rem)
+        margin: 0 1rem
+      @media #{$pad}
+        width: 100%
+        flex-wrap: wrap
+      @media #{$mobile}
+        width: 100%
+        flex-wrap: wrap
+      .svg-left-bottom,
+      .svg-right-bottom
+        position: relative
+        top: -65px
+        @media screen and (max-width: 1200px)
+          top: 0
+          width: calc(100% / 2 - 2rem)
+          margin: 0 1rem
+          position: static
+        @media #{$pad}
+          width: 100%
+          margin-top: 4rem
+        @media #{$mobile}
+          width: 100%
+          margin-top: 4rem
+      .svg-left-bottom
+        right: -10px
+        @media screen and (max-width: 1200px)
+          margin-left: 0
+        @media #{$pad}
+          text-align: center
+        @media #{$mobile}
+          margin: 5rem 0
+      .svg-right-bottom
+        left: -10px
+        @media screen and (max-width: 1200px)
+          margin-left: 2rem
+        @media #{$pad}
+          text-align: center
+        @media #{$mobile}
+          margin: 0
+      #Polygon
+        stroke: white
+        stroke-width: 1rem
+    .svg-center-top
+      #Polygon
+        fill: darkseagreen
+        stroke: white
+        stroke-width: 1rem
+      .position-text
+        right: -300px
+        top: -100px
+        @media #{$mobile}
+          margin: 0 auto
+        &::before
+          top: 35px
+          left: -189px
+          transform: rotate(-60deg)
+          @media screen and (max-width: 1200px)
+            display: none
+        &::after
+          top: -2.4rem
+          left: -76px
+          width: 330px
+          @media screen and (max-width: 1200px)
+            display: none
+        p
+          padding-right: 4rem
+          @media screen and (max-width: 1200px)
+            padding-right: 0
+          @media #{$mobile}
+            padding-right: 0
+    .svg-left-bottom
+      .position-text
+        left: -250px
+        top: -142px
+        &::before
+          right: -150px
+          top: 57px
+          width: 200px
+          transform: rotate(60deg)
+          @media screen and (max-width: 1200px)
+            display: none
+        &::after
+          top: -2.4rem
+          width: 300px
+          @media screen and (max-width: 1200px)
+            display: none
+        p
+          padding-left: 2rem
+          @media #{$mobile}
+            padding-left: 0
+      #Polygon
+        fill: paleturquoise
+    .svg-right-bottom
+      .position-text
+        right: -250px
+        top: -142px
+        &::before
+          left: -150px
+          top: 57px
+          width: 200px
+          transform: rotate(-60deg)
+          @media screen and (max-width: 1200px)
+            display: none
+        &::after
+          top: -2.4rem
+          width: 300px
+          @media screen and (max-width: 1200px)
+            display: none
+        p
+          padding-left: 2rem
+          padding-right: 2rem
+.howTobuy
+  @media #{$mobile}
+    margin-top: 2rem
+  h4.title
+    font-size: 3rem
+    text-align: center
+    font-weight: bold
+    margin-bottom: 4rem
+    &::after
+      content: ''
+      width: 4rem
+      height: .5rem
+      display: block
+      margin: 2rem auto 0
+      background: #000
+  .row
+    display: flex
+    @media #{$mobile}
+      display: block
+    .col-sm-4
+      width: calc(100% / 3 - 2rem)
+      margin: 0 1rem
+      border: 1px solid $light-brown
+      padding: 2rem
+      @media #{$mobile}
+        width: 100%
+        margin-bottom: 2rem
+        padding: 2rem!important
+      p.title
+        font-size: 22px
+        text-align: center
+        font-weight: bold
+        span
+          font-weight: bold
+          font-size: 32px
+          color: red
+          display: inline-block
+          margin: 0 .5rem
+      .price
+        margin-top: 2rem
+        margin-bottom: 2rem
+        text-align: center
+        i
+          font-size: 22px
+      p:last-child
+        text-align: center
+        margin-top: 4rem
+        a.btn
+          background: $light-brown!important
+          color: white
+          padding: 1rem 5rem
+          font-size: 20px

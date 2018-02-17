@@ -31,7 +31,7 @@ html(lang="zh-hant")
         // desktop only
         ul.nav.nav-tabs.site
           each item,index in release
-            if (index === 0)
+            if (index === 2)
               li.active
                 a(data-toggle="tab", href=`#${item._id}`)
                   span.visible-xs(class=item.icon)
@@ -50,7 +50,7 @@ html(lang="zh-hant")
         .tab-content.server
           each item, index in release
               if (index === 0)
-                .tab-pane.fade.in.active(id=`${item._id}`)
+                .tab-pane.fade(id=`${item._id}`)
                   .container-fluid.worktabs.work-info.resume
                     block main
               else if (item._id === 'release02')
@@ -59,9 +59,10 @@ html(lang="zh-hant")
                   .container-fluid.worktabs.work-info.resume
                     //- include ../page/release_user
               else if (item._id === 'release03')
-                // 我的收藏
-                .tab-pane.fade.work-list(id=`${item._id}`)
-                  .row
+                // 加值服務
+                .tab-pane.fade.in.active(id=`${item._id}`)
+                  .container-fluid.worktabs.work-info.resume
+                    include ../page/pay
       footer.work-detail-footer.container-fluid
         p.text-center 
           span © Copyright work news打工快報2018. 
