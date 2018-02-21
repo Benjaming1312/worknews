@@ -4,7 +4,7 @@ include ../components/accordion
 -
   var release = [
     {title: '發佈工作', _id: 'release01', icon: 'glyphicon glyphicon-send'},
-    {title: '訊息記錄', _id: 'release02', icon: 'glyphicon glyphicon-inbox'},
+    {title: '訊息記錄', _id: 'release02', icon: 'glyphicon glyphicon-comment'},
     {title: '加值服務', _id: 'release03', icon: 'glyphicon glyphicon-usd'}
   ]
 <!DOCTYPE html>
@@ -17,6 +17,7 @@ html(lang="zh-hant")
     link(rel="stylesheet", href="./dist/css/owl.carousel.min.css")
     link(rel="stylesheet", href="./dist/css/animate.min.css")
     link(rel="stylesheet", href="./dist/css/usercss.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     script(src="./dist/js/jquery.min.js")
     script(src="./dist/js/bootstrap.min.js")
     script(src="./dist/js/owl.carousel.min.js")
@@ -63,7 +64,8 @@ html(lang="zh-hant")
                 .tab-pane.fade(id=`${item._id}`)
                   .container-fluid.worktabs.work-info.resume
                     include ../page/pay
-      footer.work-detail-footer.container-fluid
-        p.text-center 
-          span © Copyright work news打工快報2018. 
-          span All rights reserved.
+      include ../custom_module/footer
+      //- footer.work-detail-footer.container-fluid
+      //-   p.text-center 
+      //-     span © Copyright work news打工快報2018. 
+      //-     span All rights reserved.

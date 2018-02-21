@@ -22,6 +22,10 @@
     &.active
       @media #{$mobile}
         transform: translateX(-20%)
+    &.openMessage
+      @media #{$mobile}
+        transform: translateX(0%)
+        padding-left: 0
     .visible-xs:not(.close)
       @media #{$mobile}
         position: absolute
@@ -132,6 +136,10 @@
         padding: .5rem 1rem
       @media #{$mobile}
         padding: 1.5rem 2rem
+      small
+        font-size: 12px
+        display: inline-block
+        margin-left: .5rem
     &.active
       background: rgba(#ccc, .5)
 .chat-content

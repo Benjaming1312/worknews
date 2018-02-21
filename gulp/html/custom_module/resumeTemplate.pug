@@ -11,6 +11,7 @@ html(lang="zh-hant")
     link(rel="stylesheet", href="./dist/css/owl.carousel.min.css")
     link(rel="stylesheet", href="./dist/css/animate.min.css")
     link(rel="stylesheet", href="./dist/css/usercss.css")
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
     script(src="./dist/js/jquery.min.js")
     script(src="./dist/js/bootstrap.min.js")
     script(src="./dist/js/owl.carousel.min.js")
@@ -27,6 +28,11 @@ html(lang="zh-hant")
           each item,index in resume
             if (index === 0)
               li.active
+                a(data-toggle="tab", href=`#${item._id}`)
+                  span.visible-xs(class=item.icon)
+                  span=item.title
+            else if (index === 4)
+              li.openMessage
                 a(data-toggle="tab", href=`#${item._id}`)
                   span.visible-xs(class=item.icon)
                   span=item.title
@@ -48,15 +54,23 @@ html(lang="zh-hant")
               else if (item._id === 'resume02')
                 // 會員應徵紀錄
                 .tab-pane.fade.work-list(id=`${item._id}`)
-                  .row
-                    each info in contentCol
-                      +layout(info)
+                  article.col-xs-12
+                    header.row
+                      h3.title 會員應徵紀錄
+                  .col-xs-12
+                    .row
+                      each info in contentCol
+                        +layout(info)
               else if (item._id === 'resume03')
                 // 我的收藏
                 .tab-pane.fade.work-list(id=`${item._id}`)
-                  .row
-                    each info in contentCol
-                      +layout(info)
+                  article.col-xs-12
+                    header.row
+                      h3.title 我的收藏
+                  .col-xs-12
+                    .row
+                      each info in contentCol
+                        +layout(info)
               else if (item._id === 'resume04')
                 // 會員資訊頁面
                 .tab-pane.fade.work-list(id=`${item._id}`)
@@ -69,7 +83,8 @@ html(lang="zh-hant")
                     include ../page/message
               else
                 .tab-pane.fade(id=`${item._id}`)
-      footer.work-detail-footer.container-fluid
-        p.text-center 
-          span © Copyright work news打工快報2018. 
-          span All rights reserved.
+      include ../custom_module/footer
+      //- footer.work-detail-footer.container-fluid
+      //-   p.text-center 
+      //-     span © Copyright work news打工快報2018. 
+      //-     span All rights reserved.

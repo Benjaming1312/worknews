@@ -1,7 +1,7 @@
 .table
   border-top: 1px solid $color-b
   thead>tr>th
-    border-bottom: 2px solid #ccc
+    border-bottom: 2px solid $deep-brown
     background: $light-brown
   th
     color: white
@@ -12,6 +12,8 @@
       text-align: left
       width: 50%
 .simpleChart
+  @media #{$mobile}
+    padding: 0
   .svg-group
     padding-top: 150px
     display: flex
@@ -135,11 +137,11 @@
     .svg-left-bottom
       .position-text
         left: -250px
-        top: -142px
+        top: -130px
         &::before
-          right: -150px
-          top: 57px
-          width: 200px
+          right: -135px
+          top: 50px
+          width: 180px
           transform: rotate(60deg)
           @media screen and (max-width: 1200px)
             display: none
@@ -157,11 +159,11 @@
     .svg-right-bottom
       .position-text
         right: -250px
-        top: -142px
+        top: -130px
         &::before
-          left: -150px
-          top: 57px
-          width: 200px
+          left: -135px
+          top: 50px
+          width: 180px
           transform: rotate(-60deg)
           @media screen and (max-width: 1200px)
             display: none
@@ -211,12 +213,22 @@
           color: red
           display: inline-block
           margin: 0 .5rem
-      .price
+      .price, .origin
         margin-top: 2rem
         margin-bottom: 2rem
         text-align: center
-        i
+        small:first-child
+          display: inline-block
+          margin-right: 0.5rem
+        small:last-child
+          display: inline-block
+          margin-left: 0.5rem
+        small
+          font-size: 16px
+        i, u
           font-size: 22px
+        u
+          text-decoration: line-through
       p:last-child
         text-align: center
         margin-top: 4rem
