@@ -40,7 +40,10 @@ html(lang="zh-hant")
             else if (index === 1)
               // 訊息記錄
               li
-                a(href=`javascript: redirectToMessage()`)
+                //- a(href=`javascript: redirectToMessage()`)
+                //-   span.visible-xs(class=item.icon)
+                //-   span=item.title
+                a(data-toggle="tab", href=`#${item._id}`)
                   span.visible-xs(class=item.icon)
                   span=item.title
             else
@@ -57,7 +60,9 @@ html(lang="zh-hant")
               else if (item._id === 'release02')
                 // 應徵者紀錄
                 .tab-pane.fade.work-list(id=`${item._id}`)
-                  .container-fluid.worktabs.work-info.resume
+                  .row.message-page
+                    include ../page/message
+                  //- .container-fluid.worktabs.work-info.resume
                     //- include ../page/release_user
               else if (item._id === 'release03')
                 // 加值服務
