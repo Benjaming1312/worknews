@@ -1519,6 +1519,7 @@ body .wrapper.work .navbar {
   width: 100%;
   display: -webkit-box;
   display: flex;
+  flex-wrap: nowrap;
 }
 
 @media (min-width: 768px) {
