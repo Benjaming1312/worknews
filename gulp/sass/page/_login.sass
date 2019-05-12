@@ -1,12 +1,14 @@
 .login.login.login.login.login,
 .register.register.register.register.register,
 .forget.forget.forget.forget.forget
-  .form-group
+  .form-group.form-group
     display: flex
+    flex-wrap: wrap
     @media #{$mobile}
       flex-wrap: wrap
     .col
       width: 7vw
+      margin: 0
       @media #{$pad-pc}
         width: 10rem
       @media #{$mobile}
@@ -16,6 +18,14 @@
         width: calc(100% - 7vw)
         @media #{$pad-pc}
           width: calc(100% - 10rem)
+    .help-block
+      padding-left: 125px
+      color: $color-red
+      margin-top: 0
+      margin-bottom: 0
+      width: 100%
+      @media #{$mobile}
+        padding-left: 0
     .verification
       width: 8vw!important
       margin-right: 1vw
@@ -27,6 +37,14 @@
       &+img
         width: 100px
         height: 40px
+    &.validation
+      margin-top: 2rem
+      .col
+        width: 100%
+        *
+          color: $color-red
+          font-size: 16px
+          font-weight: bold
   .male.col
     @media #{$pad-pc}
       width: 10rem

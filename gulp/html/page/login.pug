@@ -36,11 +36,16 @@ html(lang="zh-hant")
               h2.title.text-light-brown 會員登入
             article.content
               .form-group
-                span.col 帳&nbsp;&nbsp;&nbsp;號：
+                span.col 帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：
                 input.form-control(type="text", value="")
+                .help-block.with-errors Error message
               .form-group
-                span.col 密&nbsp;&nbsp;&nbsp;碼：
+                span.col 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：
                 input.form-control(type="tel", value="")
+                .help-block.with-errors Error message
+              .form-group.validation
+                .col.text-center
+                  .error 輸入錯誤，請確認。
               .form-group.flex.jcc
                 <div class="fb-login-button" data-width="100" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
             footer.foot.text-center

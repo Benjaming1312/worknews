@@ -38,16 +38,20 @@ html(lang="zh-hant")
             article.content
               .form-group
                 span.col 帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：
-                input.form-control(type="text", value="")
+                input.form-control(type="text", value="", data-error="Bruh, that email address is invalid")
+                .help-block.with-errors Error message
               .form-group
                 span.col 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：
                 input.form-control(type="password", value="")
+                .help-block.with-errors Error message
               .form-group
                 span.col 確認密碼：
                 input.form-control(type="password", value="")
+                .help-block.with-errors Error message
               .form-group
                 span.col 手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機：
                 input.form-control(type="tel", value="")
+                .help-block.with-errors Error message
               .form-group
                 span.col.male 性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別：
                 .radio-group
@@ -57,13 +61,19 @@ html(lang="zh-hant")
                   div.radio-inline
                     input.hidden(type="radio", name="gender", value="female", id="female")
                     label(for="female") 女
+                .help-block.with-errors Error message
               .form-group
                 span.col 聯絡信箱：
                 input.form-control(type="text", value="")
+                .help-block.with-errors Error message
               .form-group
                 span.col &nbsp;&nbsp;&nbsp;驗證碼：
                 input.form-control.verification(type="text", value="")
                 img(src="./dist/images/verification.png", alt="")
+                .help-block.with-errors Error message
+              .form-group.validation
+                .col.text-center
+                  .error 輸入錯誤，請確認。
               .form-group.flex.jcc
                 <div class="fb-login-button" data-width="100" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
             footer.foot.text-center

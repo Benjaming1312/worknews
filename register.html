@@ -166,16 +166,20 @@
             </header>
             <article class="content">
               <div class="form-group"><span class="col">帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：</span>
-                <input class="form-control" type="text" value=""/>
+                <input class="form-control" type="text" value="" data-error="Bruh, that email address is invalid"/>
+                <div class="help-block with-errors">Error message</div>
               </div>
               <div class="form-group"><span class="col">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：</span>
                 <input class="form-control" type="password" value=""/>
+                <div class="help-block with-errors">Error message</div>
               </div>
               <div class="form-group"><span class="col">確認密碼：</span>
                 <input class="form-control" type="password" value=""/>
+                <div class="help-block with-errors">Error message</div>
               </div>
               <div class="form-group"><span class="col">手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機：</span>
                 <input class="form-control" type="tel" value=""/>
+                <div class="help-block with-errors">Error message</div>
               </div>
               <div class="form-group"><span class="col male">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;別：</span>
                 <div class="radio-group">
@@ -188,12 +192,20 @@
                     <label for="female">女</label>
                   </div>
                 </div>
+                <div class="help-block with-errors">Error message</div>
               </div>
               <div class="form-group"><span class="col">聯絡信箱：</span>
                 <input class="form-control" type="text" value=""/>
+                <div class="help-block with-errors">Error message</div>
               </div>
               <div class="form-group"><span class="col">&nbsp;&nbsp;&nbsp;驗證碼：</span>
                 <input class="form-control verification" type="text" value=""/><img src="./dist/images/verification.png" alt=""/>
+                <div class="help-block with-errors">Error message</div>
+              </div>
+              <div class="form-group validation">
+                <div class="col text-center">
+                  <div class="error">輸入錯誤，請確認。</div>
+                </div>
               </div>
               <div class="form-group flex jcc"><div class="fb-login-button" data-width="100" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div></div>
             </article>

@@ -3918,92 +3918,132 @@ body .wrapper.work .navbar {
   }
 }
 
-.login.login.login.login.login .form-group,
-.register.register.register.register.register .form-group,
-.forget.forget.forget.forget.forget .form-group {
+.login.login.login.login.login .form-group.form-group,
+.register.register.register.register.register .form-group.form-group,
+.forget.forget.forget.forget.forget .form-group.form-group {
   display: -webkit-box;
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media screen and (max-width: 767px) {
-  .login.login.login.login.login .form-group,
-  .register.register.register.register.register .form-group,
-  .forget.forget.forget.forget.forget .form-group {
+  .login.login.login.login.login .form-group.form-group,
+  .register.register.register.register.register .form-group.form-group,
+  .forget.forget.forget.forget.forget .form-group.form-group {
     flex-wrap: wrap;
   }
 }
 
-.login.login.login.login.login .form-group .col,
-.register.register.register.register.register .form-group .col,
-.forget.forget.forget.forget.forget .form-group .col {
+.login.login.login.login.login .form-group.form-group .col,
+.register.register.register.register.register .form-group.form-group .col,
+.forget.forget.forget.forget.forget .form-group.form-group .col {
   width: 7vw;
+  margin: 0;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
-  .login.login.login.login.login .form-group .col,
-  .register.register.register.register.register .form-group .col,
-  .forget.forget.forget.forget.forget .form-group .col {
+  .login.login.login.login.login .form-group.form-group .col,
+  .register.register.register.register.register .form-group.form-group .col,
+  .forget.forget.forget.forget.forget .form-group.form-group .col {
     width: 10rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .login.login.login.login.login .form-group .col,
-  .register.register.register.register.register .form-group .col,
-  .forget.forget.forget.forget.forget .form-group .col {
+  .login.login.login.login.login .form-group.form-group .col,
+  .register.register.register.register.register .form-group.form-group .col,
+  .forget.forget.forget.forget.forget .form-group.form-group .col {
     width: 100%;
   }
 }
 
-.login.login.login.login.login .form-group .col + input,
-.login.login.login.login.login .form-group .col + div,
-.register.register.register.register.register .form-group .col + input,
-.register.register.register.register.register .form-group .col + div,
-.forget.forget.forget.forget.forget .form-group .col + input,
-.forget.forget.forget.forget.forget .form-group .col + div {
+.login.login.login.login.login .form-group.form-group .col + input,
+.login.login.login.login.login .form-group.form-group .col + div,
+.register.register.register.register.register .form-group.form-group .col + input,
+.register.register.register.register.register .form-group.form-group .col + div,
+.forget.forget.forget.forget.forget .form-group.form-group .col + input,
+.forget.forget.forget.forget.forget .form-group.form-group .col + div {
   width: calc(100% - 7vw);
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
-  .login.login.login.login.login .form-group .col + input,
-  .login.login.login.login.login .form-group .col + div,
-  .register.register.register.register.register .form-group .col + input,
-  .register.register.register.register.register .form-group .col + div,
-  .forget.forget.forget.forget.forget .form-group .col + input,
-  .forget.forget.forget.forget.forget .form-group .col + div {
+  .login.login.login.login.login .form-group.form-group .col + input,
+  .login.login.login.login.login .form-group.form-group .col + div,
+  .register.register.register.register.register .form-group.form-group .col + input,
+  .register.register.register.register.register .form-group.form-group .col + div,
+  .forget.forget.forget.forget.forget .form-group.form-group .col + input,
+  .forget.forget.forget.forget.forget .form-group.form-group .col + div {
     width: calc(100% - 10rem);
   }
 }
 
-.login.login.login.login.login .form-group .verification,
-.register.register.register.register.register .form-group .verification,
-.forget.forget.forget.forget.forget .form-group .verification {
+.login.login.login.login.login .form-group.form-group .help-block,
+.register.register.register.register.register .form-group.form-group .help-block,
+.forget.forget.forget.forget.forget .form-group.form-group .help-block {
+  padding-left: 125px;
+  color: #c30d23;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .login.login.login.login.login .form-group.form-group .help-block,
+  .register.register.register.register.register .form-group.form-group .help-block,
+  .forget.forget.forget.forget.forget .form-group.form-group .help-block {
+    padding-left: 0;
+  }
+}
+
+.login.login.login.login.login .form-group.form-group .verification,
+.register.register.register.register.register .form-group.form-group .verification,
+.forget.forget.forget.forget.forget .form-group.form-group .verification {
   width: 8vw !important;
   margin-right: 1vw;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
-  .login.login.login.login.login .form-group .verification,
-  .register.register.register.register.register .form-group .verification,
-  .forget.forget.forget.forget.forget .form-group .verification {
+  .login.login.login.login.login .form-group.form-group .verification,
+  .register.register.register.register.register .form-group.form-group .verification,
+  .forget.forget.forget.forget.forget .form-group.form-group .verification {
     width: 12rem !important;
     margin-right: .5rem;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .login.login.login.login.login .form-group .verification,
-  .register.register.register.register.register .form-group .verification,
-  .forget.forget.forget.forget.forget .form-group .verification {
+  .login.login.login.login.login .form-group.form-group .verification,
+  .register.register.register.register.register .form-group.form-group .verification,
+  .forget.forget.forget.forget.forget .form-group.form-group .verification {
     width: 12rem !important;
   }
 }
 
-.login.login.login.login.login .form-group .verification + img,
-.register.register.register.register.register .form-group .verification + img,
-.forget.forget.forget.forget.forget .form-group .verification + img {
+.login.login.login.login.login .form-group.form-group .verification + img,
+.register.register.register.register.register .form-group.form-group .verification + img,
+.forget.forget.forget.forget.forget .form-group.form-group .verification + img {
   width: 100px;
   height: 40px;
+}
+
+.login.login.login.login.login .form-group.form-group.validation,
+.register.register.register.register.register .form-group.form-group.validation,
+.forget.forget.forget.forget.forget .form-group.form-group.validation {
+  margin-top: 2rem;
+}
+
+.login.login.login.login.login .form-group.form-group.validation .col,
+.register.register.register.register.register .form-group.form-group.validation .col,
+.forget.forget.forget.forget.forget .form-group.form-group.validation .col {
+  width: 100%;
+}
+
+.login.login.login.login.login .form-group.form-group.validation .col *,
+.register.register.register.register.register .form-group.form-group.validation .col *,
+.forget.forget.forget.forget.forget .form-group.form-group.validation .col * {
+  color: #c30d23;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
