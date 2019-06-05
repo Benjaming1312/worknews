@@ -61,6 +61,19 @@ html(lang="zh-hant")
                     .row
                       each info in contentCol
                         +layout(info)
+                  .col-xs-12
+                    .row.pageNav
+                      ul.pagination
+                        li.active
+                          a(href="") 1
+                        li
+                          a(href="") 2
+                        li
+                          a(href="") 3
+                        li
+                          a(href="") 4
+                        li
+                          a(href="") 5
               else if (item._id === 'resume03')
                 // 我的收藏
                 .tab-pane.fade.work-list(id=`${item._id}`)
@@ -71,6 +84,19 @@ html(lang="zh-hant")
                     .row
                       each info in contentCol
                         +layout(info)
+                  .col-xs-12
+                    .row.pageNav
+                      ul.pagination
+                        li.active
+                          a(href="") 1
+                        li
+                          a(href="") 2
+                        li
+                          a(href="") 3
+                        li
+                          a(href="") 4
+                        li
+                          a(href="") 5
               else if (item._id === 'resume04')
                 // 會員資訊頁面
                 .tab-pane.fade.work-list(id=`${item._id}`)

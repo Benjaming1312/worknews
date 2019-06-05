@@ -30,7 +30,23 @@ block main
                 label(for="female") 女
             li.form-group
               span.col 出生日期： 
-              input.form-control(type="text", value="1993年06月01日 ")
+              .select-group
+                select#year.form-control.col-xs-6(name="year")
+                  option(disabled) 年
+                  - var y = 1950
+                  while y < 2020
+                    option(value=y++)= y++
+                select#month.form-control.col-xs-3(name="month")
+                  option(disabled) 月
+                  - var m = 1
+                  while m < 13
+                    option(value=y++)= m++
+                select#day.form-control.col-xs-3(name="day")
+                  option(disabled) 日
+                  - var d = 0
+                  while d < 31
+                    option(value=y++)= d++
+                //- input.form-control(type="text", value="1993年06月01日 ")
             li.form-group
               span.col 婚姻狀況： 
               div.radio-inline

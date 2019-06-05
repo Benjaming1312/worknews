@@ -16,11 +16,16 @@
         width: 100%
         margin-top: .5rem
     .form-group
-      display: block
+      display: flex
       width: 100%
-      justify-content: center
+      // justify-content: center
+      float: left
+      flex-wrap: nowrap
+      @media #{$mobile}
+        display: block
       input,
-      select
+      select,
+      .select-group
         font-size: .8vw
         line-height: 2vw
         min-width: 15rem
@@ -31,6 +36,15 @@
         @media #{$mobile}
           font-size: 1.5rem
           line-height: 2rem
+      .select-group
+        #year
+          width: 50%
+          min-width: initial
+        #month,
+        #day
+          width: calc(25% - 1rem)
+          margin-left: 0.5rem
+          min-width: initial
       textarea
         font-size: .8vw
         line-height: 2vw
@@ -153,3 +167,12 @@
   &.upload
     background: $color-n
     color: $light-brown
+
+.pagination.pagination.pagination
+  a
+    color: $light-brown
+  .active
+    a
+      background: $light-brown
+      color: white
+      border-color: $light-brown

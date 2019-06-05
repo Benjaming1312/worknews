@@ -5,6 +5,9 @@
   article.col-xs-12
     >.flex
       display: flex
+      flex-wrap: nowrap
+      @media #{$mobile}
+        flex-wrap: wrap
   .person-menu
     background-image: url('../../dist/images/work-background.png')
     background-color: white
