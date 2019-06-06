@@ -3422,6 +3422,13 @@ body .wrapper.work .navbar {
   }
 }
 
+@media screen and (min-width: 1561px) {
+  .tab-content.server .work-list .row > [class*="layout"] {
+    width: calc(100% / 3 - 6vw);
+    transition: .3s ease-in-out;
+  }
+}
+
 .tab-content.server .work-list header.row {
   display: -webkit-box;
   display: flex;

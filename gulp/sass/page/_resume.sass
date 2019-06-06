@@ -176,6 +176,9 @@
         @media (max-width: 540px)
           width: calc(100% - 2rem)
           min-height: 420px
+        @media screen and #{$big-pc}
+          width: calc(100% / 3 - 6vw)
+          transition: .3s ease-in-out
     header.row
       display: flex
       justify-content: center
