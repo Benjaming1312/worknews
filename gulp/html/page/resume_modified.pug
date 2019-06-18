@@ -17,6 +17,7 @@ block main
             li.form-group
               span.col 中文姓名：
               input.form-control(type="text", value="郭子榕")
+              .help-block.with-errors Error message
             li.form-group
               span.col 英文名字：
               input.form-control(type="text", value="GUO，ZI－RONG")
@@ -68,9 +69,11 @@ block main
             li.form-group
               span.col 信&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱： 
               input.form-control(type="mail", value="leonaguo820601@gmail.com ")
+              .help-block.with-errors Error message
             li.form-group
               span.col 聯絡電話：
               input.form-control(type="text", value="0982327851")
+              .help-block.with-errors Error message
             li.form-group
               span.col 住&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;家：
               input.form-control(type="text", value="(04)25243667")
@@ -83,7 +86,6 @@ block main
               h3.title 求職資料  
             li.form-group
               span.col 就業狀態：
-              span 
               div.radio-inline
                 input.hidden(type="radio", name="jobStatus", value="true", id="nonJobStatus")
                 label(for="nonJobStatus") 待業中
@@ -94,10 +96,10 @@ block main
               span.col 特殊身份：
               input.form-control(type="text", value="")
             li.form-group
-              span.col 具備駕駛執照：
+              span.col.long 具備駕駛執照：
               input.form-control(type="text", value="普通重型機車駕照")
             li.form-group
-              span.col 具備交通工具：
+              span.col.long 具備交通工具：
               input.form-control(type="text", value="普通重型機車")
         li.list
           ul.sub-list

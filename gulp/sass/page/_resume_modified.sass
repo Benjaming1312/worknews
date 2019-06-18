@@ -16,11 +16,11 @@
         width: 100%
         margin-top: .5rem
     .form-group
-      display: flex
+      display: block
       width: 100%
       // justify-content: center
       float: left
-      flex-wrap: nowrap
+      // flex-wrap: nowrap
       @media #{$mobile}
         display: block
       input,
@@ -36,7 +36,15 @@
         @media #{$mobile}
           font-size: 1.5rem
           line-height: 2rem
+          width: 90%
       .select-group
+        width: calc(50% - 8rem)
+        display: inline-block
+        @media #{$pad-pc}
+          position: relative
+          top: .75rem
+        @media #{$mobile}
+          width: 90%
         #year
           width: 50%
           min-width: initial
@@ -134,12 +142,12 @@
       input[type="mail"]
         width: 25vw
         @media #{$mobile}
-          width: 100%
+          width: 90%
       &.address
         input
           width: 25vw
           @media #{$mobile}
-            width: 100%
+            width: 90%
   .col-sm-9 
     .work-info-content 
       article 
@@ -171,8 +179,15 @@
 .pagination.pagination.pagination
   a
     color: $light-brown
+    margin: 0 .2rem
   .active
     a
       background: $light-brown
       color: white
       border-color: $light-brown
+
+.pager.pager.pager
+  .previous,
+  .next
+    a
+      border-radius: 15px

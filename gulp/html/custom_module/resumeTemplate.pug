@@ -63,7 +63,9 @@ html(lang="zh-hant")
                         +layout(info)
                   .col-xs-12
                     .row.pageNav
-                      ul.pagination
+                      ul.pagination.pager
+                        li.previous
+                          a(href="") <<
                         li.active
                           a(href="") 1
                         li
@@ -74,6 +76,9 @@ html(lang="zh-hant")
                           a(href="") 4
                         li
                           a(href="") 5
+                        li.next
+                          a(href="") >>
+
               else if (item._id === 'resume03')
                 // 我的收藏
                 .tab-pane.fade.work-list(id=`${item._id}`)
@@ -86,7 +91,9 @@ html(lang="zh-hant")
                         +layout(info)
                   .col-xs-12
                     .row.pageNav
-                      ul.pagination
+                      ul.pagination.pager
+                        li.previous
+                          a(href="") <<
                         li.active
                           a(href="") 1
                         li
@@ -97,6 +104,9 @@ html(lang="zh-hant")
                           a(href="") 4
                         li
                           a(href="") 5
+                        li.next
+                          a(href="") >>
+
               else if (item._id === 'resume04')
                 // 會員資訊頁面
                 .tab-pane.fade.work-list(id=`${item._id}`)

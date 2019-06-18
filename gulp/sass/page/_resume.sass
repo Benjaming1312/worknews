@@ -127,12 +127,24 @@
                 font-size: 1.5rem
                 line-height: 3rem
                 letter-spacing: 0.2rem
+              .help-block
+                width: 100%
+                color: $color-red
+                margin: 0
+                line-height: 1.5rem
+                margin-top: 0.5rem
+                @media #{$pad-pc}
+                  padding-left: 8rem
               span
                 font-size: 1.1vw
                 letter-spacing: 0.1vw
                 @media #{$pad-pc}
                   font-size: 1.5rem
                   letter-spacing: 0.2rem
+                  width: 8rem
+                  white-space: nowrap
+                  &.long
+                    width: 11rem
                 @media #{$mobile}
                   font-size: 1.5rem
                   letter-spacing: 0.2rem

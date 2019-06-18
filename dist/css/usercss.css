@@ -3327,6 +3327,20 @@ body .wrapper.work .navbar {
   }
 }
 
+.worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .help-block {
+  width: 100%;
+  color: #c30d23;
+  margin: 0;
+  line-height: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .help-block {
+    padding-left: 8rem;
+  }
+}
+
 .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span {
   font-size: 1.1vw;
   letter-spacing: 0.1vw;
@@ -3336,6 +3350,11 @@ body .wrapper.work .navbar {
   .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
+    width: 8rem;
+    white-space: nowrap;
+  }
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span.long {
+    width: 11rem;
   }
 }
 
@@ -3504,11 +3523,9 @@ body .wrapper.work .navbar {
 }
 
 .worktabs.resume.resume > .row .form-group {
-  display: -webkit-box;
-  display: flex;
+  display: block;
   width: 100%;
   float: left;
-  flex-wrap: nowrap;
 }
 
 @media screen and (max-width: 767px) {
@@ -3541,6 +3558,25 @@ body .wrapper.work .navbar {
   .worktabs.resume.resume > .row .form-group .select-group {
     font-size: 1.5rem;
     line-height: 2rem;
+    width: 90%;
+  }
+}
+
+.worktabs.resume.resume > .row .form-group .select-group {
+  width: calc(50% - 8rem);
+  display: inline-block;
+}
+
+@media (min-width: 768px) and (max-width: 1560px) {
+  .worktabs.resume.resume > .row .form-group .select-group {
+    position: relative;
+    top: .75rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.resume > .row .form-group .select-group {
+    width: 90%;
   }
 }
 
@@ -3705,7 +3741,7 @@ body .wrapper.work .navbar {
 
 @media screen and (max-width: 767px) {
   .worktabs.resume.resume > .row .form-group input[type="mail"] {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -3715,7 +3751,7 @@ body .wrapper.work .navbar {
 
 @media screen and (max-width: 767px) {
   .worktabs.resume.resume > .row .form-group.address input {
-    width: 100%;
+    width: 90%;
   }
 }
 
@@ -3764,12 +3800,18 @@ body .wrapper.work .navbar {
 
 .pagination.pagination.pagination a {
   color: #b28247;
+  margin: 0 .2rem;
 }
 
 .pagination.pagination.pagination .active a {
   background: #b28247;
   color: white;
   border-color: #b28247;
+}
+
+.pager.pager.pager .previous a,
+.pager.pager.pager .next a {
+  border-radius: 15px;
 }
 
 .faq {
@@ -3825,6 +3867,12 @@ body .wrapper.work .navbar {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+}
+
+.wrapper.contact .container-fluid > .row.contact {
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .wrapper.contact .container-fluid > .row .contact-content {
@@ -5612,6 +5660,7 @@ body .wrapper.work .navbar {
   padding: 0;
   background: none;
   margin-bottom: 1rem;
+  display: block;
 }
 
 .worktabs.resume.release .worktabs.resume.work-info > header.row header.col-xs-12 {
@@ -5648,6 +5697,7 @@ body .wrapper.work .navbar {
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content {
   margin: 4rem 0;
   padding: 2rem;
+  display: block;
 }
 
 @media screen and (max-width: 767px) {
