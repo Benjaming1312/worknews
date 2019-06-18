@@ -3327,39 +3327,69 @@ body .wrapper.work .navbar {
   }
 }
 
+.worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .inputGroup {
+  width: 50%;
+  display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .inputGroup {
+    width: 90%;
+    margin-top: 0;
+  }
+}
+
+.worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .inputGroup input {
+  width: 100%;
+}
+
 .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .help-block {
   width: 100%;
   color: #c30d23;
   margin: 0;
   line-height: 1.5rem;
   margin-top: 0.5rem;
+  padding-left: 1rem;
+  display: block;
 }
 
-@media (min-width: 768px) and (max-width: 1560px) {
+@media screen and (max-width: 767px) {
   .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .help-block {
-    padding-left: 8rem;
+    padding-left: 0;
   }
 }
 
 .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span {
   font-size: 1.1vw;
   letter-spacing: 0.1vw;
+  max-width: 9rem;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
   .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
-    width: 8rem;
     white-space: nowrap;
   }
   .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span.long {
     width: 11rem;
   }
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span.posr {
+    position: relative;
+    top: -2.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1560px) and (max-width: 767px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span.posr {
+    position: static;
+  }
 }
 
 @media screen and (max-width: 767px) {
   .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span {
+    max-width: initial;
+    width: auto;
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
   }
@@ -3611,6 +3641,7 @@ body .wrapper.work .navbar {
   .worktabs.resume.resume > .row .form-group textarea {
     font-size: 1.5rem;
     line-height: 3rem;
+    width: 90%;
   }
 }
 

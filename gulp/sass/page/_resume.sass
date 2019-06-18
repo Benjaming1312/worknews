@@ -127,25 +127,42 @@
                 font-size: 1.5rem
                 line-height: 3rem
                 letter-spacing: 0.2rem
+              .inputGroup
+                width: 50%
+                display: inline-block
+                @media #{$mobile}
+                  width: 90%
+                  margin-top: 0
+                input
+                  width: 100%
               .help-block
                 width: 100%
                 color: $color-red
                 margin: 0
                 line-height: 1.5rem
                 margin-top: 0.5rem
-                @media #{$pad-pc}
-                  padding-left: 8rem
+                padding-left: 1rem
+                display: block
+                @media #{$mobile}
+                  padding-left: 0
               span
                 font-size: 1.1vw
                 letter-spacing: 0.1vw
+                max-width: 9rem
                 @media #{$pad-pc}
                   font-size: 1.5rem
                   letter-spacing: 0.2rem
-                  width: 8rem
                   white-space: nowrap
                   &.long
                     width: 11rem
+                  &.posr
+                    position: relative
+                    top: -2.5rem
+                    @media #{$mobile}
+                      position: static
                 @media #{$mobile}
+                  max-width: initial
+                  width: auto
                   font-size: 1.5rem
                   letter-spacing: 0.2rem
     .col-sm-3
