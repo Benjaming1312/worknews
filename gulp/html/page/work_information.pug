@@ -13,11 +13,15 @@
                   span.col 帳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;號：
                   input.form-control(type="text", disabled,value="user_account")
                 li.form-group
-                  span.col 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：
-                  input.form-control.pwd(type="password")
+                  span.col.posr 密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;碼：
+                  .inputGroup
+                    input.form-control.pwd(type="password")
+                    .help-block.with-errors Error message
                 li.form-group
-                  span.col 確認密碼：
-                  input.form-control.pwd.confirm(type="password")
+                  span.col.posr 確認密碼：
+                  .inputGroup
+                    input.form-control.pwd.confirm(type="password")
+                    .help-block.with-errors Error message
                 li.form-group
                   span.col 手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;機： 
                   input.form-control(type="text", value="09xx-xxx-xxx")
