@@ -3851,6 +3851,12 @@ body .wrapper.work .navbar {
   margin: 4rem auto !important;
 }
 
+@media screen and (min-width: 1540px) {
+  .faq {
+    max-width: 1280px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .faq {
     padding: 0 1.5rem !important;
