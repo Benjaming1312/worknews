@@ -1,42 +1,68 @@
 .tab-content.server.tab-content.server
   .layout-5.layout-5
     background: $light-brown
-    padding: 1rem 1rem 0
+    padding: 20px 15px 15px
     h4.title
       background: white
       margin-top: 0
+      height: 54px
+      padding-top: 15px
+      padding-bottom: 0
     h4.title:not(.money)
-      padding: 1rem 0
+      // padding: 1rem 0
       margin-bottom: 0.5rem
       font-size: 26px
-      @media #{$dsk}
-        font-size: 2.2vw
+      @media (min-width: 1800px)
+        font-size: 36px
+        padding-top: 10px
+        padding-right: 0px
     h4.money
       text-align: center
       padding: .5rem 0
+      display: flex
+      justify-content: space-around
+      align-items: flex-end
       span
         font-size: 32px
         letter-spacing: 0.5rem
-        @media #{$dsk}
-          font-size: 2.5vw
+        overflow: hidden
+        // text-overflow: ellipsis
+        min-width: 40%
+        // @media #{$dsk}
+          // font-size: 2.5vw
       small
         font-size: 16px
         padding: .5rem 0
-        @media #{$dsk}
-          font-size: 1.1vw
+        // @media #{$dsk}
+        //   font-size: 1.1vw
     .info-content
       background: none
       padding: 1rem 0
       .col-sm-4,
       .col-sm-8
         color: white
+      .text-box
+        table
+          tbody
+            tr
+              td
+                color: white
     .info-footer
       display: flex
       justify-content: center
       h4.title
-        width: 90%
-        font-size: 52px
+        width: 100%
+        font-size: 50px
         letter-spacing: 1rem
         border-radius: 1rem
+        height: 85px
+        overflow: hidden
+        // text-overflow: ellipsis
+        // display: flex
+        // align-items: center
+        // justify-content: center
+        // padding-top: 0
+        // text-overflow: ellipsis
+        // overflow: hidden
         @media #{$dsk}
-          font-size: 3vw
+          // font-size: 3vw

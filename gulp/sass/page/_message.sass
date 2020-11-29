@@ -39,9 +39,15 @@
         display: inline-block!important
         background-image: url('../../dist/images/work-background.png')
         background-color: white
+      &:active,
+      &:focus
+        outline: 0
+        box-shadow: none
       span
         font-size: 2rem
         color: $deep-brown
+        @media #{$mobile}
+          font-size: 25px
     .close
       position: absolute
       top: .5rem
@@ -248,10 +254,14 @@
             font-size: 0.6vw
             @media #{$pad-pc}
               font-size: 10px
+          &+a
+            img
+              width: 100%
         .user
           display: block
           width: 4rem
           height: 4rem
+          // min-width: 50px
           border-radius: 50%
           overflow: hidden
           margin: 0 .5rem
@@ -264,6 +274,8 @@
           small
             float: right
             justify-content: flex-end
+            flex-wrap: nowrap
+            white-space: nowrap
         .text
           background: lighten($light-brown, 10%)
           color: white
@@ -361,17 +373,17 @@
         margin-right: 0
         align-items: flex-end
       .col-xs-9
-        width: calc(100% - 6.5vw)
+        width: calc(100% - 120px)
         padding: 0
         @media #{$mobile}
-          width: calc(100% - 9rem)
+          width: 100%
           padding: .5rem
         textarea
           height: 10rem
           @media #{$mobile}
             height: 10rem
       .col-sm-3
-        width: 6.5vw
+        width: 120px
         padding: 0 1vw
         display: flex
         flex-wrap: nowrap
@@ -379,12 +391,17 @@
         @media #{$pad-pc}
           padding: 0 1rem
         @media #{$mobile}
-          width: 9rem
+          width: 100%
         .btn
           border: 1px solid #ccc
           margin-right: 0.5vw
           transition: .3s ease-in-out
+          background: none
+          &:active,
+          &:focus,
           &:hover
+            outline: none
+            box-shadow: none
             background: $light-brown
             color: white
 .person-menu
@@ -451,7 +468,7 @@
           color: $color-b
           font-size: 1vw
           font-weight: 400
-          margin-left: 1.5vw
+          margin-left: 24px
           @media #{$mobile}
             font-size: 1.5rem
             margin-left: 1rem
@@ -502,13 +519,16 @@
       padding: 0
       margin-top: 1rem
   .work-info-content
+    width: 100%
     >.row
       margin: 0
-      padding: 0 2rem
+      padding: 0 0px
   h2.title
-    +fz_title
+    // +fz_title
+    font-size: 30px
     margin-top: 0
-    margin-bottom: 1.5vw
+    // margin-bottom: 1.5vw
+    margin-bottom: 15px
     &+p
       .tag
         margin: 0 .5rem
@@ -518,6 +538,7 @@
         display: block
         float: left!important
         margin-top: 1rem
+        width: 100%
   ul
     padding-left: 0
     list-style: none
@@ -572,8 +593,9 @@
         display: flex
         align-items: center
         font-weight: 400
-        font-size: 1.1vw
         width: 8rem
+        font-size: 24px
+        white-space: nowrap
         @media #{$mobile}
           display: block
           width: 100%
@@ -609,11 +631,13 @@
   .right-info
     h3.pay,
     h3.pay span
-      font-size: 1.5vw
+      // font-size: 1.5vw
+      font-size: 24px
       @media #{$mobile}
         font-size: 1.5rem
     small
-      +fz23
+      // +fz23
+        font-size: 18px
     h3.pay
       span
         @media #{$mobile}

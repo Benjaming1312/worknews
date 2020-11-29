@@ -12,13 +12,15 @@
       height: 100%
       padding-top: 1rem
       h2.info-title
-        font-size: 42px
-        @media #{$dsk}
-          font-size: 2.5vw
+        font-size: 40px
+        // @media #{$dsk}
+        //   font-size: 2.5vw
       .info-row
         padding: 0 0 0 1rem
         @media #{$mobile}
           padding-left: 15%
+      .text-box
+        padding: 0 30px
       h4.title
         width: 100%
       .border
@@ -29,7 +31,7 @@
         &::before
           content: ''
           display: block
-          width: 80%
+          width: 70%
           height: 1rem
           background: url('../../dist/images/work-layout-3-border.png') no-repeat
           background-size: cover
@@ -37,17 +39,21 @@
         &.end
           margin-bottom: 0
       .content-footer
-        width: 100%
+        width: 80%
+        margin: 0 auto
         padding-bottom: 4rem
         h4.title
-          font-size: 36px
-          letter-spacing: 0.7rem
+          // font-size: 26px
+          // letter-spacing: 0.7rem
           width: 100%
-          @media #{$dsk}
-            font-size: 2.6vw
+          padding: .25rem 1rem
+          margin: 0
+          font-size: 30px
+          // @media #{$dsk}
+            // font-size: 2.6vw
           &.money
             font-weight: 400
-            font-size: 32px
+            font-size: 26px
             letter-spacing: .2rem
-            @media #{$dsk}
-              font-size: 2vw
+            // @media #{$dsk}
+            //   font-size: 2vw

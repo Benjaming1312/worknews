@@ -1,4 +1,4 @@
-$width: 65%
+$width: 350px
 $border: 1px solid rgba(#231815, .9)
 =border_bottom
   border-bottom: $border
@@ -60,11 +60,11 @@ $border: 1px solid rgba(#231815, .9)
       padding: 1rem
       margin: 0
   .col-sm-3
-    width: calc(100% - #{$width})
+    width: $width
     @media #{$mobile}
       width: 100%
   .col-sm-9
-    width: $width
+    width: calc(100% - #{$width})
     @media #{$mobile}
       width: 100%
       // padding: 0
@@ -106,12 +106,12 @@ $border: 1px solid rgba(#231815, .9)
             color: $color-b
             font-weight: 400
         .work-info-list
-          li
-            +fz14
-            margin-bottom: 0.8vw
-            @media #{$mobile}
-              letter-spacing: 0.1rem
-              line-height: 2rem
+          +fz14
+          margin-bottom: 0.8vw
+          line-height: 30px
+          @media #{$mobile}
+            letter-spacing: 0.1rem
+            line-height: 2rem
         &.items-start
           align-items: flex-start
         h3.title
@@ -122,6 +122,7 @@ $border: 1px solid rgba(#231815, .9)
           display: flex
           align-items: center
           font-weight: 400
+          min-width: 85px
           @media #{$mobile}
             display: block
             width: 100%
@@ -174,18 +175,21 @@ $border: 1px solid rgba(#231815, .9)
   .tab-content.server 
     padding: 0 1vw
     .row>[class*="layout"]
-      width: 100%
-      min-height: 32vw
-      @for $i from 1 through 3
-        @media (max-width: 1644px - $i * 144)
-          min-height: 32vw + $i * 1
-      @for $i from 1 through 5
-        @media (max-width: 1366px - $i * 144)
-          min-height: 31vw + $i * 3
-      @media #{$mobile}
-        min-height: 450px
-        max-width: 330px
-        margin-bottom: 2rem
+      width: 283px
+      min-height: 415px
+      // width: 100%
+      // min-height: 380px
+      // min-height: 32vw
+      // @for $i from 1 through 3
+      //   @media (max-width: 1644px - $i * 144)
+      //     min-height: 32vw + $i * 1
+      // @for $i from 1 through 5
+      //   @media (max-width: 1366px - $i * 144)
+      //     min-height: 31vw + $i * 3
+      // @media #{$mobile}
+      //   min-height: 450px
+      //   max-width: 330px
+      //   margin-bottom: 2rem
       &:last-child
         margin-bottom: 0
       .info-content .row.info-row
@@ -194,18 +198,21 @@ $border: 1px solid rgba(#231815, .9)
           flex-wrap: nowrap
         .col-sm-4,
         .col-sm-8
-          +fz14
+          // +fz14
+          font-size: 14px
           @media #{$mobile}
             font-size: 14px
             margin-bottom: .5rem
         .col-sm-4
+          min-width: 70px
           @media #{$mobile}
             width: 8rem
         .col-sm-8
+          width: calc(100% - 100px)
           @media #{$mobile}
             width: calc(100% - 8rem)
   .work-info-side
-    padding-left: 10%
+    padding-left: 0px
     padding-top: 3vw
     @media #{$mobile}
       padding: 0

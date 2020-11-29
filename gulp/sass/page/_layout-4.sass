@@ -1,6 +1,6 @@
 .tab-content.server.tab-content.server
   .layout-4.layout-4
-    padding: 1rem 2rem
+    padding: 1rem 20px
     background: white
     &::before
       content: ''
@@ -14,15 +14,15 @@
     h4.title
       padding-top: 1rem
       font-size: 32px
-      @media #{$dsk}
-          font-size: 2.5vw
+      // @media #{$dsk}
+          // font-size: 2.5vw
     h2.info-title
       color: $color-b
       font-size: 46px
       font-weight: 500
       letter-spacing: 1rem
       @media #{$dsk}
-        font-size: 3vw
+        // font-size: 3vw
     .info-content
       border-top: 2px solid $light-brown
       padding-left: 0
@@ -35,11 +35,20 @@
         margin-top: 0
         margin-bottom: 0
         padding-bottom: 0
+        display: flex
+        justify-content: center
+        align-items: flex-end
+        padding: 0
       .money+.title
-        margin-top: 0.5rem
-        margin-bottom: 1rem
+        margin-top: 0rem
+        margin-bottom: 0rem
+        padding-left: 15px
         span
-          font-size: 36px
+          // font-size: 26px
           letter-spacing: 1rem
+          font-size: 40px
+          overflow: hidden
+          // text-overflow: ellipsis
+          min-width: 40%
           @media #{$dsk}
-            font-size: 2.6vw
+            // font-size: 2.6vw

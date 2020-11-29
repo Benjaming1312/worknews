@@ -10,10 +10,18 @@ body
     justify-content: space-around
     @media #{$pad}
       flex-wrap: no-wrap
+    @media #{$mobile}
+      flex-wrap: wrap
+      border: 2px solid $color-b-deep
+      justify-content: flex-start
     li
       width: 100%
       text-align: center
       border-top: 1px solid $color-b-deep
+      @media #{$mobile}
+        width: 25%
+        border-bottom: 1px solid $color-b-deep
+        border-top: 0
       &.active
         a
           background: $color-b-deep
@@ -32,7 +40,7 @@ body
           padding-left: .5rem
           padding-right: .5rem
         @media #{$dsk}
-          font-size: .9vw
+          // font-size: .9vw
         &:hover
           background: $light-brown
           color: white
@@ -50,8 +58,8 @@ body
       transition: .3s ease-in-out
       margin: 0
       @media #{$dsk}
-        font-size: 0.9vw
-        padding: 1vw 1.6vw
+        // font-size: 0.9vw
+        // padding: 1vw 1.6vw
       @media #{$pad}
         padding-left: .5rem
         padding-right: .5rem
@@ -86,8 +94,7 @@ body
           border: 0
           &:hover
             background: $deep-brown
-        &:first-child,
-        &:last-child
+        &.arrow
           width: 2.5rem
           height: 2.5rem
           display: inline-flex
@@ -109,6 +116,10 @@ body
   // border-style: solid
   // border-color: $color-b
   padding: 2rem 1rem
+  max-width: calc(283px * 6)
+  @media (min-width: 1800px)
+    max-width: calc(330px * 6)
+    width: 100%
   .already
     width: 100%
     height: 100%
@@ -116,7 +127,7 @@ body
     align-items: center
     justify-content: center
     position: absolute
-    z-index: 1
+    z-index: 2
     top: 0
     left: 0
     background: rgba(white, .45)
@@ -127,7 +138,7 @@ body
     width: 100%
     height: 100%
     position: absolute
-    z-index: 1
+    z-index: 9
     top: 0
     right: 0
     display: flex
@@ -137,23 +148,20 @@ body
     display: flex
     justify-content: center
     flex-wrap: wrap
+    // max-width: 1100px
+    margin: 0 auto
     >[class*="layout"]
       color: inherit
-      padding: 0
+      // padding: 0
       margin: 0 .5rem 1rem
-      @media #{$dsk}
-        margin: 0 .5vw 1vw
-        width: calc(100% / 4 - 2rem)
-        transition: .3s ease-in-out
-      @media #{$mini-pc}
-        width: calc(100% / 3 - 2rem)
-      @media #{$pad}
-        width: calc(100% / 3 - 2rem)
-      @media #{$mobile}
-        width: calc(100% / 2 - 2rem)
-      @media (max-width: 540px)
-        width: calc(100% - 2rem)
-        min-height: 420px
+      // height: 380px
+      margin-bottom: 15px!important
+      transition: .3s ease-in-out
+      width: 283px
+      min-height: 415px
+      @media (min-width: 1800px)
+        width: 339px
+        min-height: 501px
       &:hover
         opacity: 0.7
       h2.info-title
@@ -162,78 +170,132 @@ body
         display: flex
         align-items: center
         justify-content: center
-        letter-spacing: .5rem
         color: white
         font-weight: normal
-        margin-top: 1rem
-        @media #{$dsk}
-          margin-top: 1vw
-          font-size: 2.5vw
+        flex-wrap: nowrap
+        @media (min-width: 1800px)
+          font-size: 40px
+          height: 60px
         &::before,
         &::after
           content: ''
           display: inline-flex
-          width: .7rem
-          height: .7rem
+          width: 13px
+          height: 13px
           background: white
           border-radius: 50%
           letter-spacing: 0
           margin: 0 1rem
       .info-content
         background: white
-        padding: 2rem 2rem 0
+        // padding: 2rem 30px 0
         display: flex
         flex-wrap: wrap
         @media #{$dsk}
-          padding: 2vw 2vw 0
-        .row.info-row
-          margin: 0 0 1rem
+          // padding: 2vw 2vw 0
+        .text-box
           width: 100%
-          display: flex
-          flex-wrap: nowrap
-          @media #{$dsk}
-            margin-bottom: 1.2vw
-          .col-sm-4
-            font-size: 12px
-            padding: 0
-            width: 5rem
-            color: $light-brown
-            letter-spacing: 0
-            font-weight: 400
-            @media #{$dsk}
-              font-size: 1vw
-              width: 6vw
-            @media #{$mobile}
-              width: 30%
-          .col-sm-8
-            font-size: 12px
-            padding: 0
-            width: calc(100% - 5rem)
-            letter-spacing: 0
-            text-overflow: ellipsis
-            word-break: keep-all
-            overflow: hidden
-            font-weight: 400
-            @media #{$dsk}
-              font-size: 1vw
-              width: calc(100% - 6vw)
-            @media #{$mobile}
-              width: 70%
+        table
+          width: 100%
+          table-layout: fixed
+          tr
+            td
+              white-space: nowrap
+              padding: 0
+              text-align: justify
+              text-justify: distribute
+              text-align-last: justify
+              font-size: 14px
+              letter-spacing: 0
+              font-weight: 400
+              height: 30px
+              @media (min-width: 1800px)
+                font-size: 18px
+                height: 50px
+              &:first-child
+                position: relative
+                width: initial
+                color: $light-brown
+                width: 60px
+                @media (min-width: 1800px)
+                  width: 110px
+                &::after
+                  content: ':'
+                  display: inline-block
+                  font-size: 12px
+                  color: $light-brown
+                  letter-spacing: 0
+                  font-weight: 400
+                  position: absolute
+                  top: 5px
+                  right: -5px
+                  @media (min-width: 1800px)
+                    top: 12px
+                    font-size: 18px
+                    right: -8px
+              &:last-child
+                overflow: hidden
+                text-overflow: ellipsis
+                padding-left: 12.5px
+                // width: calc(100% - 70px)
+                text-align-last: left
+                text-align: left
+                font-weight: bold
+        // .row.info-row
+        //   margin: 0 0 1rem
+        //   width: 100%
+        //   display: flex
+        //   flex-wrap: nowrap
+        //   @media #{$dsk}
+        //     margin-bottom: 15px
+        //   .col-sm-4
+        //     font-size: 12px
+        //     color: $light-brown
+        //     letter-spacing: 0
+        //     font-weight: 400
+        //   //   padding: 0
+        //   //   width: 5rem
+        //   //   @media #{$dsk}
+        //   //     // font-size: 1vw
+        //   //     // width: 6vw
+        //   //   @media #{$mobile}
+        //   //     width: 30%
+        //   .col-sm-8
+        //     font-size: 12px
+        //     letter-spacing: 0
+        //     font-weight: 400
+          //   padding: 0
+          //   width: calc(100% - 5rem)
+          //   text-overflow: ellipsis
+          //   word-break: keep-all
+          //   overflow: hidden
+          //   @media #{$dsk}
+          //     // font-size: 1vw
+          //     // width: calc(100% - 6vw)
+          //   @media #{$mobile}
+          //     width: 70%
       h4.title
-        font-size: 26px
+        // font-size: 24px
+        white-space: nowrap
+        overflow: hidden
+        padding-right: 15px
+        // text-overflow: ellipsis
+        // padding-left: 0.5rem
+        // padding-right: 0.5rem
         @media #{$dsk}
-          font-size: 2vw
+          // font-size: 2vw
         small
           color: $color-b
           font-size: 16px
-      .content-footer,
-      .info-footer
-        h4.title
-          span
-            font-size: 26px
-            letter-spacing: 0.5rem
-            @media #{$dsk}
-              font-size: 2vw
+      // .content-footer,
+      // .info-footer
+      //   h4.title
+      //     padding: 0.5rem 0
+          // span
+            // font-size: 22px
+            // letter-spacing: 0.5rem
+            // @media #{$dsk}
+              // font-size: 2vw
 .toggle-left-menu
   position: fixed
   bottom: 0

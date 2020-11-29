@@ -1,24 +1,28 @@
 .tab-content.server.tab-content.server
   .layout-7.layout-7
     background: $light-brown
-    padding: 0rem 1rem
+    padding: 15px 15px 0
     h4.title
       background: white
-      letter-spacing: 0.5rem
+      // letter-spacing: 0.5rem
       border-radius: 1rem 1rem 0 0
-      padding: 1.5rem 0 .5rem
+      padding: 1rem 0 .5rem
       font-size: 32px
       font-weight: normal
       margin-bottom: 0
-      @media #{$dsk}
-        font-size: 2.5vw
+      height: 63px
+      padding-top: 15px
+    >h4.title
+      @media (min-width: 1800px)
+        font-size: 42px
+        padding-top: 10px
     h2.info-title
       font-size: 42px
-      margin-top: 0.5rem
-      margin-bottom: 0.5rem
+      margin-top: 15px
+      margin-bottom: 15px
       width: 100%
-      @media #{$dsk}
-        font-size: 3vw
+      // @media #{$dsk}
+      //   font-size: 3vw
       &::before,
       &::after
         display: none
@@ -26,21 +30,31 @@
       border-radius: 0 0 1rem 1rem
       padding-top: 1rem
       padding-bottom: 2rem
-      @media #{$dsk}
-        padding-top: 1vw
-        padding-bottom: 2vw
+      // @media #{$dsk}
+      //   padding-top: 1vw
+      //   padding-bottom: 2vw
+      .text-box
+        padding: 0 15px
     .info-footer
       h4.title
         padding-top: 0
         background: none
         color: white
+        display: flex
+        justify-content: space-around
+        align-items: center
         span
-          font-size: 36px
+          font-size: 32px
           letter-spacing: 0.5rem
-          @media #{$dsk}
-            font-size: 2.5vw
+          overflow: hidden
+          // text-overflow: ellipsis
+          min-width: 40%
+          // @media #{$dsk}
+          //   font-size: 2.5vw
         small
           font-size: 16px
           color: white
-          @media #{$dsk}
-            font-size: 1.1vw
+          position: relative
+          top: 5px
+          // @media #{$dsk}
+          //   font-size: 1.1vw

@@ -12,7 +12,8 @@ var gulp = require('gulp'), //gulp主程式
 
 // 監看JS
 gulp.task('watch',function(){
-    gulp.watch('gulp/**/**',['scripts','styles','views']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
+    // gulp.watch('gulp/**/**',['scripts','styles','views']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
+    gulp.watch('gulp/**/**',['scripts','styles']) //(‘原始路徑’,['執行的名稱']) **代表路徑的所有檔案轉換
 })
 // live sass
 gulp.task('watch-sass',function(){
@@ -26,7 +27,7 @@ gulp.task('connect',function(){
         name: "dist server",
         root: './',
         port: 8001,
-        livereload: true
+        livereload: false
     })
 })
 
@@ -55,6 +56,8 @@ gulp.task('styles',function(){
             sourceRoot: 'gulp/sass'
         })) //sourceMap寫入在一樣的地方  
         .pipe(gulp.dest('dist/css')) //翻譯後的路徑
+        .pipe(gulp.dest('dist/css/localhost%3a8001/dist/css/')) //翻譯後的路徑
+        .pipe(gulp.dest('dist/css/www.worknews.tw/assets/css/')) //翻譯後的路徑
         // .pipe(connect.reload())
 })
 

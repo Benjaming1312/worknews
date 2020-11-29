@@ -2,15 +2,14 @@
   .layout-2.layout-2
     background: url('../../dist/images/work-layout-2-bg.png') no-repeat
     background-size: 100% 100%
-    padding: 4.5rem 2rem 0
-    @media #{$dsk}
-      padding: 4vw 2vw 0
+    padding: 40px 2rem 0
+    // height: 380px
+    // @media #{$dsk}
+    //   padding: 30px 2vw 0
     h2.info-title
       color: $color-b
-      font-size: 42px
+      font-size: 40px
       margin-bottom: 0
-      @media #{$dsk}
-        font-size: 2.5vw
       &::before,
       &::after
         display: none
@@ -18,32 +17,55 @@
       padding: 0rem 1.5rem 0
       background: none
       @media #{$dsk}
-        padding: 0vw 2vw 0
+        padding: 0vw 25px 0
+      @media (min-width: 1800px)
+        padding: 0 25px
       h4.title
-        font-size: 32px
+        font-size: 28px
         background: $light-brown
         color: white
-        letter-spacing: 1rem
+        // letter-spacing: 1rem
         width: 100%
         border-radius: 1.7rem
-        padding: .5rem 0
-        text-align: center
+        // padding: .5rem
         font-weight: normal
-        @media #{$dsk}
-          font-size: 2vw
+        height: 52px
+        padding: 0 15px
+        padding-top: 5px
+        text-align: center
+        padding-top: 10px
+        @media (min-width: 1800px)
+          margin-top: 5px
+          margin-bottom: 5px
+        // @media #{$dsk}
+        //   font-size: 2vw
       .info-row
         padding-left: 1rem
         padding-right: 1rem
         overflow: hidden
     .info-footer
       padding: 0 1.5rem
+      height: 40px
+      @media (min-width: 1800px)
+        padding: 0 20px
       h4.title
         margin-top: 0
         background: $light-brown
-        padding: 1rem 0
-        border-radius: 0 0 2.5rem 2.5rem
+        padding: .5rem 15px
+        border-radius: 0 0 30px 30px
         color: white
         font-weight: normal
         letter-spacing: 0.5rem
+        height: 100%
+        display: flex
+        justify-content: space-around
+        align-items: flex-end
         small
           color: white
+          position: relative
+          top: -3px
+        span
+          font-size: 28px
+          overflow: hidden
+          // text-overflow: ellipsis
+          min-width: 40%

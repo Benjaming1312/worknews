@@ -4,34 +4,50 @@
     padding: .5rem
     >h4.title
       background: white
-      margin-top: 0
-      padding: 1rem 0
-      letter-spacing: 0.5rem
-      display: flex
-      align-items: center
-      justify-content: center
-      @media #{$dsk}
-        padding: 1.5vw 0
+      padding: 15px
+      height: 74px
+      text-align: center
+      position: relative
+      span
+        margin-top: 0
+        padding: 0rem 0
+        font-size: 31px
+        width: 80%
+        display: block
+        margin: 0 auto
+        overflow: hidden
+        @media (min-width: 1800px)
+          font-size: 42px
       &::before,
       &::after
         content: ''
-        width: .8rem
-        height: .8rem
+        width: 9px
+        height: 9px
         background: $light-brown
         display: inline-block
         margin: 0 1rem
-        @media #{$dsk}
-          width: 0.9vw
-          height: .9vw
+        position: absolute
+        left: 15px
+        top: 25px
+        @media (min-width: 1800px)
+          top: 35px
+      &::after
+        right: 15px
+        left: initial
+        // @media #{$dsk}
+        //   width: 0.9vw
+        //   height: .9vw
     .info-content
       background: none
-      padding-top: 1rem
-      padding-left: 1rem
-      padding-right: 1rem
-      @media #{$dsk}
-        padding-top: 1vw
-        padding-left: 1vw
-        padding-right: 1vw
+      padding-top: 0
+      padding-left: 15px
+      padding-right: 15px
+      .text-box
+        table
+          tbody
+            tr
+              td
+                color: white
       .col-sm-4,
       .col-sm-8
         color: white
@@ -40,27 +56,44 @@
         margin-top: 0
         background: white
         color: $color-b
-        font-size: 46px
+        font-size: 42px
         padding: .5rem 0
+        height: 77px
+        overflow: hidden
+        text-overflow: ellipsis
+        font-weight: bold
+        display: block
+        width: 100%
+        white-space: nowrap
+        padding: 0 15px
+        padding-top: 15px
         &::before,
         &::after
           display: none
-        @media #{$dsk}
-          font-size: 3vw
       h4.money
         text-align: center
-        padding: 1rem 0
+        padding: 1rem 15px
         border: 2px solid white
         border-radius: 1rem
         color: white
+        height: 73px
+        margin-bottom: 0
+        display: flex
+        justify-content: space-around
+        align-items: center
         span
-          font-size: 32px
+          font-size: 28px
           letter-spacing: 0.5rem
-          @media #{$dsk}
-            font-size: 2.5vw
+          overflow: hidden
+          text-overflow: ellipsis
+          min-width: 40%
+          // @media #{$dsk}
+          //   font-size: 2.5vw
         small
           font-size: 16px
           padding: .5rem 0
           color: white
-          @media #{$dsk}
-            font-size: 1.1vw
+          position: relative
+          top: 3px
+          // @media #{$dsk}
+          //   font-size: 1.1vw

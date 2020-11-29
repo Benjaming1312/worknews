@@ -1,5 +1,6 @@
 include ../jsonFormat/tabs_site
 include ../workLayout/layout
+include ../workLayout-new/layout
 include ../components/accordion
 <!DOCTYPE html>
 html(lang="zh-hant")
@@ -74,12 +75,12 @@ html(lang="zh-hant")
                       .tab-pane.fade.in.active(id=`${tab_pane._id}${server_tab_pane._id}`)
                         .row
                           each info in contentCol
-                            +layout(info)
+                            +layoutNew(info)
                     else
                       .tab-pane.fade(id=`${tab_pane._id}${server_tab_pane._id}`)
                         .row
                           each info in contentCol
-                            +layout(info)
+                            +layoutNew(info)
             else
               .tab-pane.fade(id=`${tab_pane._id}`)
                 // tabs
@@ -98,12 +99,12 @@ html(lang="zh-hant")
                       .tab-pane.fade.in.active(id=`${tab_pane._id}${server_tab_pane._id}`)
                         .row
                           each info in contentCol
-                            +layout(info)
+                            +layoutNew(info)
                     else
                       .tab-pane.fade(id=`${tab_pane._id}${server_tab_pane._id}`)
                         .row
                           each info in contentCol
-                            +layout(info)
+                            +layoutNew(info)
           .page.col-12
             ul.pagination
               li

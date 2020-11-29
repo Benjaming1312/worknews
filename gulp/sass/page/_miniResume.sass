@@ -1,6 +1,8 @@
 .mini-resume
   .modal-dialog
     width: 750px
+    @media #{$big-pc}
+      width: 1200px
     @media #{$mobile}
       width: 90%
       margin-left: auto
@@ -43,10 +45,14 @@
             display: block
           .rounded
             position: absolute
-            top: -5%
-            left: 0%
+            top: -2.5%
+            left: -2.5%
             width: 105%
-            max-width: inherit
+            max-width: initial
+            // top: -5%
+            // left: 0%
+            // width: 105%
+            // max-width: inherit
         .resume
           padding-top: 2rem
         .table

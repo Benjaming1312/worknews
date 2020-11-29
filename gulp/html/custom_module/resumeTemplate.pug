@@ -1,5 +1,6 @@
 include ../jsonFormat/tabs_site
 include ../workLayout/layout
+include ../workLayout-new/layout
 include ../components/accordion
 <!DOCTYPE html>
 html(lang="zh-hant")
@@ -60,7 +61,7 @@ html(lang="zh-hant")
                   .col-xs-12
                     .row
                       each info in contentCol
-                        +layout(info)
+                        +layoutNew(info)
                   .col-xs-12
                     .row.pageNav
                       ul.pagination.pager
@@ -88,7 +89,7 @@ html(lang="zh-hant")
                   .col-xs-12
                     .row
                       each info in contentCol
-                        +layout(info)
+                        +layoutNew(info)
                   .col-xs-12
                     .row.pageNav
                       ul.pagination.pager

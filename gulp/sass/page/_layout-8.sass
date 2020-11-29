@@ -1,47 +1,54 @@
 .tab-content.server.tab-content.server
   .layout-8.layout-8
     background: white
-    padding: 1rem
+    padding: 20px 15px
+    position: relative
     &::before
       content: ''
-      width: 100%
+      width: calc((100% - 30px))
       height: 1rem
       display: block
       background-image: url('../../dist/images/work-layout-8-border.png') 
       background-repeat: repeat no-repeat
       background-size: 100% 100%
+      position: absolute
+      top: 10px
+      left: 15px
     h4.title:not(.money)
-      padding: 1rem
+      padding: .5rem
       border-radius: 1rem
       width: 100%
-      font-size: 4.2rem
+      font-size: 42px
       border: 4px solid $light-brown
       margin-top: 0
-      text-align: center
-      width: 90%
-      margin-left: 5%
-      margin-right: 5%
-      @media #{$dsk}
-        font-size: 3.5vw
+      width: 100%
+      height: 94px
+      padding-top: 15px
+      // @media #{$dsk}
+      //   font-size: 3.5vw
     h4.money
       text-align: center
       padding: .5rem 0
       margin-top: 0
+      display: flex
+      justify-content: space-around
+      align-items: flex-end
       span
-        font-size: 3.6rem
+        font-size: 32px
         letter-spacing: 0.5rem
-        @media #{$dsk}
-          font-size: 2.8vw
+        overflow: hidden
+        // text-overflow: ellipsis
+        min-width: 40%
+        // @media #{$dsk}
+        //   font-size: 2.8vw
         small
           font-size: 16px
           padding: .5rem 0
-          @media #{$dsk}
-            font-size: 1.1vw
+          // @media #{$dsk}
+          //   font-size: 1.1vw
     .info-content
       background: $light-brown
-      width: 90%
-      margin-left: 5%
-      margin-right: 5%
+      width: 100%
       padding-top: 1rem
       padding-left: 1rem
       padding-right: 1rem
@@ -50,12 +57,21 @@
       .col-sm-4,
       .col-sm-8
         color: white
+      .text-box
+        table
+          tbody
+            tr
+              td
+                color: white
     .info-footer
       border-bottom: 2px solid $light-brown
       h2.info-title
+        margin-top: 0.25rem
+        margin-bottom: 0.25rem
         color: $color-b
         display: flex
         align-items: center
+        font-size: 41px
         &::before,
         &::after
           content: ''

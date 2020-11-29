@@ -18,25 +18,50 @@
     .form-group
       display: block
       width: 100%
+      flex-wrap: wrap
       // justify-content: center
       float: left
+      font-size: 16px
       // flex-wrap: nowrap
       @media #{$mobile}
         display: block
+      .verification+a
+        @media #{$mobile}
+          display: block
+          margin-top: 7.55px
+          text-align: center
+      span.form-text
+        display: inline-block
+        margin: 0 7.5px
+        position: relative
+        top: 2px
+        @media #{$mobile}
+          position: static
+          margin: 7.5px 0
+      #verify_image
+        width: 100px
+        height: auto
       input,
       select,
       .select-group
         font-size: .8vw
         line-height: 2vw
         min-width: 15rem
-        width: 50%
+        max-width: 40%
         @media #{$pad-pc}
           font-size: 1.5rem
           line-height: 2rem
         @media #{$mobile}
           font-size: 1.5rem
           line-height: 2rem
-          width: 90%
+          width: 100%
+          max-width: initial
+        &+input,
+        &+select,
+        &+a
+          margin-left: 15px
+          @media #{$mobile}
+            margin-left: 0
       .select-group
         width: calc(50% - 8rem)
         display: inline-block
@@ -44,7 +69,7 @@
           position: relative
           top: .75rem
         @media #{$mobile}
-          width: 90%
+          width: 100%
         #year
           width: 50%
           min-width: initial
@@ -65,10 +90,11 @@
         @media #{$mobile}
           font-size: 1.5rem
           line-height: 3rem
-          width: 90%
+          width: 100%
       .radio-inline
         display: inline-flex
         align-items: center
+        position: relative
         label
           font-size: 1vw
           font-weight: 400
@@ -108,23 +134,51 @@
               top: 1.2rem
               left: .5rem
         input[type="radio"]
-          width: 1.1vw
-          height: 1.1vw
+          max-width: initial
+          min-width: initial
+          width: auto
+          height: auto
           background: $color-n
+          position: absolute
+          left: 0
+          top: 4px
+          display: inline-flex
+          margin: 0
           &:checked+label
             &::after
               opacity: 1
       .flex.no-wrap
         display: flex
-        flex-wrap: nowrap
-        width: 50%
+        flex-wrap: wrap
+        width: 100%
         margin: 0
-        select.form-control
-          width: 20%
-          min-width: 4rem
-        input
+        justify-content: flex-start
+        @media #{$mobile}
           width: 100%
+          flex-wrap: wrap
+
+        $select: 150px
+
+        select.form-control
+          width: $select
+          min-width: 4rem
+          @media #{$mobile}
+            width: 100%
+        input
+          width: calc(100% - #{$select} - 2rem)
           margin-left: 2rem
+          @media #{$mobile}
+            width: 100%
+            margin-left: 0
+          &#pay_money
+            max-width: initial
+            min-width: initial
+      .help-block.help-block.help-block
+        display: block
+        width: 100%
+        ul
+          li
+            margin: 0
       &.weight
         >span
           @media #{$mobile}
@@ -136,19 +190,21 @@
             font-weight: 400
         input
           width: 3vw
-          min-width: 5rem
+          min-width: 8rem
+          position: relative
           @media #{$mobile}
             width: 5rem
+            min-width: initial
             display: inline-block
       input[type="mail"]
         width: 25vw
         @media #{$mobile}
-          width: 90%
+          width: 100%
       &.address
         input
           width: 25vw
           @media #{$mobile}
-            width: 90%
+            width: 100%
   .col-sm-9 
     .work-info-content 
       article 
@@ -170,9 +226,11 @@
   @media #{$mobile}
     padding: .5rem 3rem
     font-size: 1.5rem
-  &:hover
+  &:hover,
+  &:focus
     background: $light-brown
     color: white
+    outline: none
   &.upload
     background: $color-n
     color: $light-brown

@@ -1,22 +1,71 @@
 .layout-1
   background: $light-brown
+  position: relative
+  padding: 0
+  padding-bottom: 20px
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    width: 100%
+    height: 50%
+    bottom: 0
+    left: 0
+    z-index: 0
+    background: #fff
+  >div,
+  h2
+    position: relative
+    z-index: 1
   h4.title
-    border-bottom: 3px solid $light-brown
+    border-bottom: 4px solid $light-brown
     padding-bottom: 0.5rem
-    letter-spacing: .7rem
     width: 100%
   .info-content
-    border-radius: 6rem 0 0 0
+    border-radius: 100px 0 0 0
+    padding-right: 15px!important
+    padding-top: 30px
+    padding-left: 30px
     h4.title
+      padding: 0
       margin-bottom: 2rem
+      font-size: 32px
+      font-weight: normal
+      padding-bottom: 15px
+      @media (min-width: 1800px)
+        font-size: 42px
   .content-footer
     display: block
     width: 100%
     h4.title
       letter-spacing: .7rem
-      border-top: 3px solid $light-brown
+      border-top: 4px solid $light-brown
       padding: 1rem 0
-      margin-bottom: 1.5rem
+      margin-bottom: 1rem
+      margin-top: 0
+      padding: 0.5rem 0
+      display: flex
+      justify-content: space-around
+      align-items: flex-end
+      span
+        font-size: 30px
+        letter-spacing: 0.5rem
+        overflow: hidden
+        // text-overflow: ellipsis
+        min-width: 40%
+      small
+        position: relative
+        top: -3px
+  .text-box
+    .info-row
+      span
+        white-space: nowrap
+  .info-title
+    height: 50px
+    margin: 0
+    white-space: nowrap
+    text-align: center
+    overflow: hidden
   .info-footer
     background: $light-brown
     width: 100%
@@ -24,9 +73,9 @@
     display: flex
     flex-wrap: wrap
     justify-content: center
-    border-bottom: 2.5rem solid white
+    // border-bottom: 2.5rem solid white
     @media #{$dsk}
-      border-bottom: 1.5vw solid white
+      // border-bottom: 1.5vw solid white
     &::before
       content: ''
       display: flex
@@ -36,3 +85,4 @@
       background-position: -3px
       background-image: url('../../dist/images/work-layout-1-footer.png')
       background-color: $light-brown
+   

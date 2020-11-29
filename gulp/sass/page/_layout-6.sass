@@ -3,20 +3,26 @@
     background-image: url('../../dist/images/work-layout-6-bg.png')
     background-size: 100% 100%
     background-repeat: no-repeat repeat
-    padding-top: 2rem
-    @media #{$dsk}
-      padding-top: 2vw
+    padding: 30px 26px 30px
+    // @media #{$dsk}
+    //   padding-top: 1.5vw
     h4.title
-      font-size: 32px
+      font-size: 30px
       margin-top: .5rem
       font-weight: normal
-      @media #{$dsk}
-        font-size: 2.5vw
+      @media (min-width: 1800px)
+        font-size: 45px
+      // @media #{$dsk}
+      //   font-size: 2.5vw
     h4.money
       text-align: center
-      padding: .5rem
+      padding: .5rem 0
       position: relative
       padding-bottom: 1rem
+      display: flex
+      justify-content: space-around
+      align-items: flex-end
+      margin-top: 15px
       &::before,
       &::after
         content: ''
@@ -25,22 +31,30 @@
         height: 1.2rem
         background: $light-brown
         transform: rotate(45deg)
-        @media #{$dsk}
-          width: 1vw
-          height: 1vw
+        // @media #{$dsk}
+        //   width: 1vw
+        //   height: 1vw
       span
         font-size: 22px
         letter-spacing: 0.5rem
-        @media #{$dsk}
-          font-size: 1.5vw
+        overflow: hidden
+        @media (min-width: 1800px)
+          font-size: 26px
         &:first-child
           margin-left: 0.5rem
+          min-width: 25%
         &:last-child
           margin-right: 0.5rem
+          min-width: 15%
+      small
+        font-size: 16px
+        padding: .5rem 0
+        position: relative
+        top: 3px
       .line
         position: absolute
-        width: 80%
-        left: 10%
+        width: 100%
+        left: 0%
         bottom: 0
         height: 4px
         background: $light-brown
@@ -48,12 +62,17 @@
       background: none
       padding-top: 0
     .info-footer
-      padding: 0 2.5rem
+      padding: 0
+      height: 61px
+      margin-top: 25px
       h4.title
         background: $light-brown
         color: white
         border-radius: 1rem
         font-size: 42px
         padding: .5rem 0
-        @media #{$dsk}
-          font-size: 3vw
+        overflow: hidden
+        // text-overflow: ellipsis
+        height: 100%
+        // @media #{$dsk}
+        //   font-size: 3vw
