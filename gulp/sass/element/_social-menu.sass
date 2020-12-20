@@ -155,7 +155,9 @@ $trPositon: 44%
   margin-top: 1.5rem
   width: 260px
   @media #{$mobile}
-    left: -35%
+    // left: -35%
+    right: 35px
+    left: initial
     width: 250px
   &::before
     content: ''
@@ -164,6 +166,9 @@ $trPositon: 44%
     position: absolute
     left: 26.5%
     top: -2.5rem
+    @media #{$mobile}
+      left: initial
+      right: 11.5px
   &::after
     content: ''
     +tr3($color-n, $color-n, white, $color-n)
@@ -171,6 +176,9 @@ $trPositon: 44%
     position: absolute
     left: 26.5%
     top: -2.2rem
+    @media #{$mobile}
+      left: initial
+      right: 11.5px
   li:not(:first-child)
     padding: 0rem0
     border-bottom: 2px solid $deep-brown
@@ -213,3 +221,6 @@ $trPositon: 44%
     position: absolute
     left: 25.5%
     top: -2.2rem
+    @media #{$mobile}
+      left: initial
+      right: 5px

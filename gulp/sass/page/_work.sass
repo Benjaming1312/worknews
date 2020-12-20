@@ -1,384 +1,391 @@
 body
+	padding-bottom: 100px
+	position: relative
+	@media screen and (min-width: 768px)
+		min-height: 100vh
+	@media #{$mobile}
+		padding-bottom: 150px
+		min-height: 100vh
 	.wrapper.work
-    background: none
-    .navbar
-      margin-bottom: -2px
+		background: none
+		.navbar
+			margin-bottom: -2px
 .worktabs
-  .nav.site
-    display: flex
-    flex-wrap: nowrap
-    justify-content: space-around
-    @media #{$pad}
-      flex-wrap: no-wrap
-    @media #{$mobile}
-      flex-wrap: wrap
-      border: 2px solid $color-b-deep
-      justify-content: flex-start
-    li
-      width: 100%
-      text-align: center
-      border-top: 1px solid $color-b-deep
-      @media #{$mobile}
-        width: 25%
-        border-bottom: 1px solid $color-b-deep
-        border-top: 0
-      &.active
-        a
-          background: $color-b-deep
-          color: white
-          &:hover
-            background: $color-b-deep
-            color: white
-      a
-        padding: 1.5rem 1rem
-        color: $color-b
-        border-radius: 0
-        border: 0
-        margin: 0
-        transition: .3s ease-in-out
-        @media #{$pad}
-          padding-left: .5rem
-          padding-right: .5rem
-        @media #{$dsk}
-          // font-size: .9vw
-        &:hover
-          background: $light-brown
-          color: white
+	.nav.site
+		display: flex
+		flex-wrap: nowrap
+		justify-content: space-around
+		@media #{$pad}
+			flex-wrap: no-wrap
+		@media #{$mobile}
+			flex-wrap: wrap
+			border: 2px solid $color-b-deep
+			justify-content: flex-start
+		li
+			width: 100%
+			text-align: center
+			border-top: 1px solid $color-b-deep
+			@media #{$mobile}
+				width: 25%
+				border-bottom: 1px solid $color-b-deep
+				border-top: 0
+			&.active
+				a
+					background: $color-b-deep
+					color: white
+					&:hover
+						background: $color-b-deep
+						color: white
+			a
+				padding: 1.5rem 1rem
+				color: $color-b
+				border-radius: 0
+				border: 0
+				margin: 0
+				transition: .3s ease-in-out
+				@media #{$pad}
+					padding-left: .5rem
+					padding-right: .5rem
+				@media #{$dsk}
+					// font-size: .9vw
+				&:hover
+					background: $light-brown
+					color: white
 .worktabs
-  .nav.server
-    background: $light-brown
-    border-width: 2px 0px 2px 0px
-    border-style: solid
-    border-color: $color-b
-    a
-      color: white
-      border-radius: 0
-      padding: 1.5rem 2.1rem
-      border: 0
-      transition: .3s ease-in-out
-      margin: 0
-      @media #{$dsk}
-        // font-size: 0.9vw
-        // padding: 1vw 1.6vw
-      @media #{$pad}
-        padding-left: .5rem
-        padding-right: .5rem
-      &:hover
-        background: $deep-brown
-        color: white
-    li.active
-      a
-        background: white
-        color: $color-b
-        border: 0
-        border-bottom: .25px solid $color-b
+	.nav.server
+		background: $light-brown
+		border-width: 2px 0px 2px 0px
+		border-style: solid
+		border-color: $color-b
+		a
+			color: white
+			border-radius: 0
+			padding: 1.5rem 2.1rem
+			border: 0
+			transition: .3s ease-in-out
+			margin: 0
+			@media #{$dsk}
+				// font-size: 0.9vw
+				// padding: 1vw 1.6vw
+			@media #{$pad}
+				padding-left: .5rem
+				padding-right: .5rem
+			&:hover
+				background: $deep-brown
+				color: white
+		li.active
+			a
+				background: white
+				color: $color-b
+				border: 0
+				border-bottom: .25px solid $color-b
 .tab-content.site
-  border-width: 0 2px 2px 2px
-  border-style: solid
-  border-color: $color-b
-  background-image: url('../../dist/images/work-background.png')
-  margin-bottom: 2rem
-  .page.col-12
-    display: flex
-    justify-content: center
-    .pagination
-      display: flex
-      align-items: center
-      li
-        a
-          margin: 0 .5rem
-          border-radius: 0
-          background: $color-b
-          transition: .3s ease-in-out
-          color: white
-          border: 0
-          &:hover
-            background: $deep-brown
-        &.arrow
-          width: 2.5rem
-          height: 2.5rem
-          display: inline-flex
-          justify-content: center
-          align-items: center
-          overflow: hidden
-          margin: 0 .5rem
-          a
-            position: relative
-            top: -2px
-            background: none
-            color: $color-b
-            font-size: 26px
-        &.active
-          a
-            background: $light-brown
+	border-width: 0 2px 2px 2px
+	border-style: solid
+	border-color: $color-b
+	background-image: url('../../dist/images/work-background.png')
+	margin-bottom: 2rem
+	.page.col-12
+		display: flex
+		justify-content: center
+		.pagination
+			display: flex
+			align-items: center
+			li
+				a
+					margin: 0 .5rem
+					border-radius: 0
+					background: $color-b
+					transition: .3s ease-in-out
+					color: white
+					border: 0
+					&:hover
+						background: $deep-brown
+				&.arrow
+					width: 2.5rem
+					height: 2.5rem
+					display: inline-flex
+					justify-content: center
+					align-items: center
+					overflow: hidden
+					margin: 0 .5rem
+					a
+						position: relative
+						top: -2px
+						background: none
+						color: $color-b
+						font-size: 26px
+				&.active
+					a
+						background: $light-brown
 .tab-content.server
-  // border-width: 2px 0 0 0
-  // border-style: solid
-  // border-color: $color-b
-  padding: 2rem 1rem
-  max-width: calc(283px * 6)
-  @media (min-width: 1800px)
-    max-width: calc(330px * 6)
-    width: 100%
-  .already
-    width: 100%
-    height: 100%
-    display: flex
-    align-items: center
-    justify-content: center
-    position: absolute
-    z-index: 2
-    top: 0
-    left: 0
-    background: rgba(white, .45)
-    img
-      position: relative
-      top: -2rem
-  .vip
-    width: 100%
-    height: 100%
-    position: absolute
-    z-index: 9
-    top: 0
-    right: 0
-    display: flex
-    align-items: flex-start
-    justify-content: flex-end
-  .row
-    display: flex
-    justify-content: center
-    flex-wrap: wrap
-    // max-width: 1100px
-    margin: 0 auto
-    >[class*="layout"]
-      color: inherit
-      // padding: 0
-      margin: 0 .5rem 1rem
-      // height: 380px
-      margin-bottom: 15px!important
-      transition: .3s ease-in-out
-      width: 283px
-      min-height: 415px
-      @media (min-width: 1800px)
-        width: 339px
-        min-height: 501px
-      &:hover
-        opacity: 0.7
-      h2.info-title
-        text-align: center
-        width: 100%
-        display: flex
-        align-items: center
-        justify-content: center
-        color: white
-        font-weight: normal
-        flex-wrap: nowrap
-        @media (min-width: 1800px)
-          font-size: 40px
-          height: 60px
-        &::before,
-        &::after
-          content: ''
-          display: inline-flex
-          width: 13px
-          height: 13px
-          background: white
-          border-radius: 50%
-          letter-spacing: 0
-          margin: 0 1rem
-      .info-content
-        background: white
-        // padding: 2rem 30px 0
-        display: flex
-        flex-wrap: wrap
-        @media #{$dsk}
-          // padding: 2vw 2vw 0
-        .text-box
-          width: 100%
-        table
-          width: 100%
-          table-layout: fixed
-          tr
-            td
-              white-space: nowrap
-              padding: 0
-              text-align: justify
-              text-justify: distribute
-              text-align-last: justify
-              font-size: 14px
-              letter-spacing: 0
-              font-weight: 400
-              height: 30px
-              @media (min-width: 1800px)
-                font-size: 18px
-                height: 50px
-              &:first-child
-                position: relative
-                width: initial
-                color: $light-brown
-                width: 60px
-                @media (min-width: 1800px)
-                  width: 110px
-                &::after
-                  content: ':'
-                  display: inline-block
-                  font-size: 12px
-                  color: $light-brown
-                  letter-spacing: 0
-                  font-weight: 400
-                  position: absolute
-                  top: 5px
-                  right: -5px
-                  @media (min-width: 1800px)
-                    top: 12px
-                    font-size: 18px
-                    right: -8px
-              &:last-child
-                overflow: hidden
-                text-overflow: ellipsis
-                padding-left: 12.5px
-                // width: calc(100% - 70px)
-                text-align-last: left
-                text-align: left
-                font-weight: bold
-        // .row.info-row
-        //   margin: 0 0 1rem
-        //   width: 100%
-        //   display: flex
-        //   flex-wrap: nowrap
-        //   @media #{$dsk}
-        //     margin-bottom: 15px
-        //   .col-sm-4
-        //     font-size: 12px
-        //     color: $light-brown
-        //     letter-spacing: 0
-        //     font-weight: 400
-        //   //   padding: 0
-        //   //   width: 5rem
-        //   //   @media #{$dsk}
-        //   //     // font-size: 1vw
-        //   //     // width: 6vw
-        //   //   @media #{$mobile}
-        //   //     width: 30%
-        //   .col-sm-8
-        //     font-size: 12px
-        //     letter-spacing: 0
-        //     font-weight: 400
-          //   padding: 0
-          //   width: calc(100% - 5rem)
-          //   text-overflow: ellipsis
-          //   word-break: keep-all
-          //   overflow: hidden
-          //   @media #{$dsk}
-          //     // font-size: 1vw
-          //     // width: calc(100% - 6vw)
-          //   @media #{$mobile}
-          //     width: 70%
-      h4.title
-        // font-size: 24px
-        white-space: nowrap
-        overflow: hidden
-        padding-right: 15px
-        // text-overflow: ellipsis
-        // padding-left: 0.5rem
-        // padding-right: 0.5rem
-        @media #{$dsk}
-          // font-size: 2vw
-        small
-          color: $color-b
-          font-size: 16px
-      // .content-footer,
-      // .info-footer
-      //   h4.title
-      //     padding: 0.5rem 0
-          // span
-            // font-size: 22px
-            // letter-spacing: 0.5rem
-            // @media #{$dsk}
-              // font-size: 2vw
+	// border-width: 2px 0 0 0
+	// border-style: solid
+	// border-color: $color-b
+	padding: 2rem 1rem
+	max-width: calc(283px * 6)
+	@media (min-width: 1800px)
+		max-width: calc(330px * 6)
+		width: 100%
+	.already
+		width: 100%
+		height: 100%
+		display: flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		background: rgba(white, .45)
+		img
+			position: relative
+			top: -2rem
+	.vip
+		width: 100%
+		height: 100%
+		position: absolute
+		z-index: 9
+		top: 0
+		right: 0
+		display: flex
+		align-items: flex-start
+		justify-content: flex-end
+	.row
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		// max-width: 1100px
+		margin: 0 auto
+		>[class*="layout"]
+			color: inherit
+			// padding: 0
+			margin: 0 .5rem 1rem
+			// height: 380px
+			margin-bottom: 15px!important
+			transition: .3s ease-in-out
+			width: 283px
+			min-height: 415px
+			@media (min-width: 1800px)
+				width: 339px
+				min-height: 501px
+			&:hover
+				opacity: 0.7
+			h2.info-title
+				text-align: center
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: center
+				color: white
+				font-weight: normal
+				flex-wrap: nowrap
+				@media (min-width: 1800px)
+					font-size: 40px
+					height: 60px
+				&::before,
+				&::after
+					content: ''
+					display: inline-flex
+					width: 13px
+					height: 13px
+					background: white
+					border-radius: 50%
+					letter-spacing: 0
+					margin: 0 1rem
+			.info-content
+				background: white
+				// padding: 2rem 30px 0
+				display: flex
+				flex-wrap: wrap
+				@media #{$dsk}
+					// padding: 2vw 2vw 0
+				.text-box
+					width: 100%
+				table
+					width: 100%
+					table-layout: fixed
+					tr
+						td
+							white-space: nowrap
+							padding: 0
+							text-align: justify
+							text-justify: distribute
+							text-align-last: justify
+							font-size: 14px
+							letter-spacing: 0
+							font-weight: 400
+							height: 30px
+							@media (min-width: 1800px)
+								font-size: 18px
+								height: 50px
+							&:first-child
+								position: relative
+								width: initial
+								color: $light-brown
+								width: 60px
+								@media (min-width: 1800px)
+									width: 110px
+								&::after
+									content: ':'
+									display: inline-block
+									font-size: 12px
+									color: $light-brown
+									letter-spacing: 0
+									font-weight: 400
+									position: absolute
+									top: 5px
+									right: -5px
+									@media (min-width: 1800px)
+										top: 12px
+										font-size: 18px
+										right: -8px
+							&:last-child
+								overflow: hidden
+								text-overflow: ellipsis
+								padding-left: 12.5px
+								// width: calc(100% - 70px)
+								text-align-last: left
+								text-align: left
+								font-weight: bold
+				// .row.info-row
+				//   margin: 0 0 1rem
+				//   width: 100%
+				//   display: flex
+				//   flex-wrap: nowrap
+				//   @media #{$dsk}
+				//     margin-bottom: 15px
+				//   .col-sm-4
+				//     font-size: 12px
+				//     color: $light-brown
+				//     letter-spacing: 0
+				//     font-weight: 400
+				//   //   padding: 0
+				//   //   width: 5rem
+				//   //   @media #{$dsk}
+				//   //     // font-size: 1vw
+				//   //     // width: 6vw
+				//   //   @media #{$mobile}
+				//   //     width: 30%
+				//   .col-sm-8
+				//     font-size: 12px
+				//     letter-spacing: 0
+				//     font-weight: 400
+					//   padding: 0
+					//   width: calc(100% - 5rem)
+					//   text-overflow: ellipsis
+					//   word-break: keep-all
+					//   overflow: hidden
+					//   @media #{$dsk}
+					//     // font-size: 1vw
+					//     // width: calc(100% - 6vw)
+					//   @media #{$mobile}
+					//     width: 70%
+			h4.title
+				// font-size: 24px
+				white-space: nowrap
+				overflow: hidden
+				padding-right: 15px
+				// text-overflow: ellipsis
+				// padding-left: 0.5rem
+				// padding-right: 0.5rem
+				@media #{$dsk}
+					// font-size: 2vw
+				small
+					color: $color-b
+					font-size: 16px
+			// .content-footer,
+			// .info-footer
+			//   h4.title
+			//     padding: 0.5rem 0
+					// span
+						// font-size: 22px
+						// letter-spacing: 0.5rem
+						// @media #{$dsk}
+							// font-size: 2vw
 .toggle-left-menu
-  position: fixed
-  bottom: 0
-  z-index: 2
-  width: 100%
-  left: 0
-  border: 2px solid $deep-brown
-  padding: .25rem
-  background: $deep-brown
-  text-align: center
-  p
-    margin-bottom: 0
-  a
-    font-weight: 100
-    font-size: 16px
-    color: white
-    letter-spacing: 0.2rem
-    opacity: 1
-    span
-      margin-right: 0.5rem
+	position: fixed
+	bottom: 0
+	z-index: 2
+	width: 100%
+	left: 0
+	border: 2px solid $deep-brown
+	padding: .25rem
+	background: $deep-brown
+	text-align: center
+	p
+		margin-bottom: 0
+	a
+		font-weight: 100
+		font-size: 16px
+		color: white
+		letter-spacing: 0.2rem
+		opacity: 1
+		span
+			margin-right: 0.5rem
 .left-menu
-  position: fixed
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  z-index: 99
-  background: $deep-brown
-  overflow-y: scroll
-  transition: .3s ease-in
-  transform: scale(0)
-  &.active
-    transform: scale(1)
-  .close
-    opacity: 1
-    padding: .5rem
-    span
-      color: white
-      font-size: 22px
-  &::-webkit-scrollbar
-    display: none
-  .panel-group
-    .panel-heading
-      padding: 0
-    .panel
-      border: 0
-      border-bottom: 1px solid rgba(#fff, .2)
-      margin-top: 0
-      border-radius: 0
-      background: none
-      h4
-        a
-          display: block
-          width: 80%
-          color: white
-          font-size: 16px
-          font-weight: 300
-          letter-spacing: 0.5rem
-          padding: 1rem
-      .panel-body
-        padding: 0
-        background: $light-brown
-      .server
-        background: none
-        li
-          width: 100%
-          a
-            border: 0
-            border-radius: 0
-            color: white
-            font-size: 16px
-            letter-spacing: 0.5rem
-            margin: 0
-            color: $deep-brown
-            transition: .3s ease-in
-            &:hover
-              background: none
-          &.active
-            a
-              background: $color-grey
-              border: 0
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 99
+	background: $deep-brown
+	overflow-y: scroll
+	transition: .3s ease-in
+	transform: scale(0)
+	&.active
+		transform: scale(1)
+	.close
+		opacity: 1
+		padding: .5rem
+		span
+			color: white
+			font-size: 22px
+	&::-webkit-scrollbar
+		display: none
+	.panel-group
+		.panel-heading
+			padding: 0
+		.panel
+			border: 0
+			border-bottom: 1px solid rgba(#fff, .2)
+			margin-top: 0
+			border-radius: 0
+			background: none
+			h4
+				a
+					display: block
+					width: 80%
+					color: white
+					font-size: 16px
+					font-weight: 300
+					letter-spacing: 0.5rem
+					padding: 1rem
+			.panel-body
+				padding: 0
+				background: $light-brown
+			.server
+				background: none
+				li
+					width: 100%
+					a
+						border: 0
+						border-radius: 0
+						color: white
+						font-size: 16px
+						letter-spacing: 0.5rem
+						margin: 0
+						color: $deep-brown
+						transition: .3s ease-in
+						&:hover
+							background: none
+					&.active
+						a
+							background: $color-grey
+							border: 0
 .work-foot
-  background: url('../../dist/images/work-background.png')
-  width: 100%
-  padding-top: 1rem
-  padding-bottom: .5rem
+	background: url('../../dist/images/work-background.png')
+	width: 100%
+	padding-top: 1rem
+	padding-bottom: .5rem

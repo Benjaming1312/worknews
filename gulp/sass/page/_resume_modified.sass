@@ -38,6 +38,9 @@
         @media #{$mobile}
           position: static
           margin: 7.5px 0
+          text-align: center
+          display: block
+          width: 100%
       #verify_image
         width: 100px
         height: auto
@@ -62,6 +65,15 @@
           margin-left: 15px
           @media #{$mobile}
             margin-left: 0
+        &#work_title
+          min-width: 370px
+          max-width: 100%
+        &#address
+          min-width: 345px
+          max-width: 100%
+        &#email
+          min-width: 345px
+          max-width: 100%
       .select-group
         width: calc(50% - 8rem)
         display: inline-block
@@ -173,6 +185,7 @@
           &#pay_money
             max-width: initial
             min-width: initial
+            max-width: 200px
       .help-block.help-block.help-block
         display: block
         width: 100%
@@ -202,7 +215,9 @@
           width: 100%
       &.address
         input
-          width: 25vw
+          // width: 25vw
+          min-width: 345px
+          max-width: 100%
           @media #{$mobile}
             width: 100%
   .col-sm-9 
@@ -250,3 +265,6 @@
   .next
     a
       border-radius: 15px
+
+#verify_image
+  min-width: 100px

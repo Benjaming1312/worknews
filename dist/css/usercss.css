@@ -391,7 +391,8 @@ body .wrapper::after {
 
 @media screen and (max-width: 767px) {
   .menulist {
-    left: -35%;
+    right: 35px;
+    left: initial;
     width: 250px;
   }
 }
@@ -407,6 +408,13 @@ body .wrapper::after {
   top: -2.5rem;
 }
 
+@media screen and (max-width: 767px) {
+  .menulist::before {
+    left: initial;
+    right: 11.5px;
+  }
+}
+
 .menulist::after {
   content: '';
   border-width: .5em;
@@ -416,6 +424,13 @@ body .wrapper::after {
   position: absolute;
   left: 26.5%;
   top: -2.2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .menulist::after {
+    left: initial;
+    right: 11.5px;
+  }
 }
 
 .menulist li:not(:first-child) {
@@ -478,6 +493,13 @@ body .wrapper::after {
   position: absolute;
   left: 25.5%;
   top: -2.2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .dropdown-title::before {
+    left: initial;
+    right: 5px;
+  }
 }
 
 header.container-fluid {
@@ -616,6 +638,25 @@ header.container-fluid {
 .menu .nav li a.active::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+footer.container-fluid.foot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  footer.container-fluid.foot {
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer.container-fluid.foot {
+    padding-bottom: 30px;
+  }
 }
 
 .foot {
@@ -1212,6 +1253,24 @@ header.container-fluid {
   position: absolute;
   bottom: -1rem;
   left: 0;
+}
+
+body {
+  padding-bottom: 100px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-bottom: 150px;
+    min-height: 100vh;
+  }
 }
 
 body .wrapper.work {
@@ -2925,6 +2984,13 @@ body .wrapper.work .navbar {
   }
 }
 
+@media (min-width: 1560px) {
+  .worktabs.work-info .work-info-side .right-info h3.pay,
+  .worktabs.work-info .work-info-side .right-info h3.pay span {
+    font-size: 1.5vw;
+  }
+}
+
 .worktabs.work-info .work-info-side .right-info small {
   font-size: 2rem;
 }
@@ -2941,9 +3007,21 @@ body .wrapper.work .navbar {
   }
 }
 
+@media (min-width: 1560px) {
+  .worktabs.work-info .work-info-side .right-info small {
+    font-size: 1.5vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .worktabs.work-info .work-info-side .right-info h3.pay span {
     font-size: 24px;
+  }
+}
+
+@media (min-width: 1560px) {
+  .worktabs.work-info .work-info-side .right-info h3.pay span {
+    font-size: 1.8vw;
   }
 }
 
@@ -3328,6 +3406,10 @@ body .wrapper.work .navbar {
   width: 100%;
 }
 
+.worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .inputGroup input[name="email"] {
+  min-width: 345px;
+}
+
 .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .help-block {
   width: 100%;
   color: #c30d23;
@@ -3393,6 +3475,17 @@ body .wrapper.work .navbar {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .worktabs.resume.work-info .col-sm-3 .work-info-side .personal-images form {
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .worktabs.resume.work-info .col-sm-3 .work-info-side .personal-images img {
   width: 10vw;
 }
@@ -3409,6 +3502,7 @@ body .wrapper.work .navbar {
 @media screen and (max-width: 767px) {
   .worktabs.resume.work-info .col-sm-3 .work-info-side .personal-images p {
     text-align: center;
+    width: 100%;
   }
   .worktabs.resume.work-info .col-sm-3 .work-info-side .personal-images p label {
     font-size: 1.5rem;
@@ -3539,6 +3633,9 @@ body .wrapper.work .navbar {
   .worktabs.resume.resume > .row .form-group span.form-text {
     position: static;
     margin: 7.5px 0;
+    text-align: center;
+    display: block;
+    width: 100%;
   }
 }
 
@@ -3600,6 +3697,27 @@ body .wrapper.work .navbar {
   .worktabs.resume.resume > .row .form-group .select-group + a {
     margin-left: 0;
   }
+}
+
+.worktabs.resume.resume > .row .form-group input#work_title,
+.worktabs.resume.resume > .row .form-group select#work_title,
+.worktabs.resume.resume > .row .form-group .select-group#work_title {
+  min-width: 370px;
+  max-width: 100%;
+}
+
+.worktabs.resume.resume > .row .form-group input#address,
+.worktabs.resume.resume > .row .form-group select#address,
+.worktabs.resume.resume > .row .form-group .select-group#address {
+  min-width: 345px;
+  max-width: 100%;
+}
+
+.worktabs.resume.resume > .row .form-group input#email,
+.worktabs.resume.resume > .row .form-group select#email,
+.worktabs.resume.resume > .row .form-group .select-group#email {
+  min-width: 345px;
+  max-width: 100%;
 }
 
 .worktabs.resume.resume > .row .form-group .select-group {
@@ -3784,6 +3902,7 @@ body .wrapper.work .navbar {
 .worktabs.resume.resume > .row .form-group .flex.no-wrap input#pay_money {
   max-width: initial;
   min-width: initial;
+  max-width: 200px;
 }
 
 .worktabs.resume.resume > .row .form-group .help-block.help-block.help-block {
@@ -3834,7 +3953,8 @@ body .wrapper.work .navbar {
 }
 
 .worktabs.resume.resume > .row .form-group.address input {
-  width: 25vw;
+  min-width: 345px;
+  max-width: 100%;
 }
 
 @media screen and (max-width: 767px) {
@@ -3901,6 +4021,10 @@ body .wrapper.work .navbar {
 .pager.pager.pager .previous a,
 .pager.pager.pager .next a {
   border-radius: 15px;
+}
+
+#verify_image {
+  min-width: 100px;
 }
 
 .faq {
@@ -4134,6 +4258,10 @@ body .wrapper.work .navbar {
 .forget.forget.forget.forget.forget .form-group.form-group .col {
   width: 7vw;
   margin: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
@@ -4289,6 +4417,12 @@ body .wrapper.work .navbar {
   .forget.forget.forget.forget.forget .radio-inline label::after {
     top: 0.6rem !important;
   }
+}
+
+.login.login.login.login.login input,
+.register.register.register.register.register input,
+.forget.forget.forget.forget.forget input {
+  min-height: 34px;
 }
 
 .otherLogin {
@@ -4881,6 +5015,13 @@ body .wrapper.work .navbar {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .chat-content .chat-content .flex .info small {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
 .chat-content .chat-content .flex .info + a img {
   width: 100%;
 }
@@ -5121,6 +5262,13 @@ body .wrapper.work .navbar {
   box-shadow: none;
   background: #b28247;
   color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .chat-content .chat-footer .col-sm-3 .btn.submit {
+    position: absolute;
+    left: calc((100% - 57px) / 2);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -6106,6 +6254,13 @@ body .wrapper.work .navbar {
 .simpleChart .svg-group > div svg {
   width: 300px;
   height: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .simpleChart .svg-group > div svg {
+    margin: 0 auto;
+    display: block;
+  }
 }
 
 .simpleChart .svg-group .svg-center-top {

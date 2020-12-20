@@ -254,6 +254,9 @@
             font-size: 0.6vw
             @media #{$pad-pc}
               font-size: 10px
+            @media #{$mobile}
+              font-size: 12px
+              white-space: nowrap
           &+a
             img
               width: 100%
@@ -404,6 +407,10 @@
             box-shadow: none
             background: $light-brown
             color: white
+          &.submit
+            @media #{$mobile}
+              position: absolute
+              left: calc((100% - 57px) / 2)
 .person-menu
   >.row
     @media #{$mobile}

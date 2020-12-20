@@ -141,6 +141,8 @@
                   margin-top: 0
                 input
                   width: 100%
+                  &[name="email"]
+                    min-width: 345px
               .help-block
                 width: 100%
                 color: $color-red
@@ -183,6 +185,11 @@
         @media (min-width: 768px) and (max-width: 1280px)
           padding-right: 0rem
         .personal-images
+          form
+            @media #{$mobile}
+              display: flex
+              flex-wrap: wrap
+              flex-direction: column-reverse
           img
             width: 10vw
             @media #{$mobile}
@@ -193,6 +200,7 @@
           p
             @media #{$mobile}
               text-align: center
+              width: 100%
               label
                 font-size: 1.5rem
                 letter-spacing: 0.2rem
