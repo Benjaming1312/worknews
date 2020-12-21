@@ -21,7 +21,7 @@
       transition: .3s ease-in-out
       transform: translateX(-100%)
       padding-top: 4rem
-      padding-left: 23%
+      padding-left: 20%
     &.active
       @media #{$mobile}
         transform: translateX(-20%)
@@ -177,6 +177,7 @@
         justify-content: center
     &content
       padding: 1vw
+      min-height: 60vh
       max-height: 60vh
       overflow: auto
       border: 2px solid #efefef
@@ -412,7 +413,10 @@
               position: absolute
               left: calc((100% - 57px) / 2)
 .person-menu
+  padding-left: 0
+  padding-right: 0
   >.row
+    height: 100%
     @media #{$mobile}
       height: 100%
       display: block!important
@@ -420,6 +424,10 @@
   .head
     @media #{$mobile}
       padding: 2rem
+    &+.col-xs-12
+      @media screen and (min-width: 768px)
+        height: calc(60vh + 112px + 25px)
+        overflow: auto
 // .message-work
 //   .link-info
 //     // max-width: 400px

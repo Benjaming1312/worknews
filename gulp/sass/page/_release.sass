@@ -155,6 +155,10 @@
           font-size: 1.5rem
           letter-spacing: 0.1rem
           line-height: 2rem
+          @media (min-width: 1560px)
+            line-height: initial
+            position: relative
+            top: 0px!important
           &:nth-of-type(2)
             margin-top: .1rem
         span.title
@@ -186,6 +190,10 @@
             position: absolute
             right: -30px
             top: -1px
+            @media #{$mobile}
+              position: static
+              position: relative
+              right: initial
   .release-user
     .img
       display: block!important

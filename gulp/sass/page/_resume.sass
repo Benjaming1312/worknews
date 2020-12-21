@@ -1,257 +1,263 @@
 .worktabs.resume
-  padding-top: 0
-  padding-left: 0
-  padding-right: 0
-  @media #{$pad}
-    width: 95%
-  .tab-content
-    padding: 2vw 10vw 0vw
-    width: 100%
-    margin-bottom: 0rem
-    margin-left: auto
-    margin-right: auto
-    @media (min-width: 768px) and (max-width: 1280px)
-      padding: 1.5rem 1rem
-    @media #{$mobile}
-      padding: 1.5rem 1rem
-  >.row
-    margin-bottom: 0vw
-  .nav-tabs.site
-    justify-content: center
-    border-bottom: 2px solid $color-b
-    @media #{$mobile}
-      position: fixed
-      bottom: 0
-      width: 100%
-      z-index: 5
-      background-image: url('../../dist/images/work-background.png')
-      background: white
-      border-top: 2px solid $color-b
-      flex-wrap: nowrap
-    li
-      margin-top: -1px
-      border: 0
-      width: auto
-      @media #{$mobile}
-        width: 25%
-        text-align: center
-      a
-        padding-left: 3rem
-        padding-right: 3rem
-        padding-left: 3.7vw
-        padding-right: 3.7vw
-        border-left: 2px solid $color-b
-        @media #{$mobile}
-          padding: 0
-          padding: 1rem
-        span
-          font-size: 1vw
-          @media #{$mobile}
-            font-size: 2rem
-            display: none
-        &:hover
-          background: $color-b
-      &:first-child
-        a
-          border-left: 2px solid $color-b
-          @media #{$mobile}
-            border-left: 0
-      &:last-child
-        a
-          border-right: 2px solid $color-b
-          @media #{$mobile}
-            border-right: 0
-      &.active
-        a
-          background: $light-brown
-          border-bottom: 1px solid $color-b
-          &:hover
-            background: $light-brown!important
-  &.work-info
-    >.row
-      padding: 3vw 0vw 2vw 30px
-      flex-wrap: nowrap
-      @media (min-width: 768px) and (max-width: 1280px)
-        padding-right: 0
-      @media #{$pad}
-        flex-wrap: wrap
-      @media #{$mobile}
-        flex-wrap: wrap
-        padding: 15px
-    // .col-sm-3
-    //   @media #{$pad}  
-    //     width: 100%
-    //   @media #{$pad-pc}
-    //     min-height: 150vh
-    .col-sm-9
-      .work-info-content
-        header
-          margin-bottom: 4vw
-          border-bottom: 0
-          padding-left: 0
-          h2.title
-            border-left: 10px solid $light-brown
-            padding-left: 1vw
-            margin-right: 1vw
-            margin-bottom: 0
-            a
-              color: $color-b
-              font-size: 1vw
-              font-weight: 400
-              margin-left: 1.5vw
-              @media #{$mobile}
-                font-size: 1.5rem
-                margin-left: 1rem
-              svg
-                width: 1vw
-                height: 1vw
-                margin-right: 0.5vw
-                @media #{$mobile}
-                  width: 1.5rem
-                  height: 1.5rem
-                  margin-right: .5rem
-        article
-          >ul
-            >li:first-child
-              padding-top: 0
-            >li:last-child
-              border-bottom: 0
-          .sub-list
-            li.title
-              margin-bottom: 2vw
-            li
-              margin-bottom: 1.5vw
-              line-height: 2.5vw
-              font-size: .9vw
-              display: flex
-              @media #{$pad-pc}
-                font-size: 1.5rem
-                line-height: 3rem
-                letter-spacing: 0.2rem
-              @media #{$mobile}
-                font-size: 1.5rem
-                line-height: 3rem
-                letter-spacing: 0.2rem
-                flex-wrap: wrap
-              .inputGroup
-                width: 50%
-                display: inline-block
-                @media #{$mobile}
-                  width: 100%
-                  margin-top: 0
-                input
-                  width: 100%
-                  &[name="email"]
-                    min-width: 345px
-              .help-block
-                width: 100%
-                color: $color-red
-                margin: 0
-                line-height: 1.5rem
-                margin-top: 0.5rem
-                padding-left: 1rem
-                display: block
-                @media #{$mobile}
-                  padding-left: 0
-              span
-                font-size: 1.1vw
-                letter-spacing: 0.1vw
-                // width: 100px!important
-                min-width: 100px
-                margin-right: 0px
-                @media #{$pad-pc}
-                  font-size: 1.5rem
-                  letter-spacing: 0.2rem
-                  white-space: nowrap
-                  &.long
-                    width: 13rem
-                  &.posr
-                    // position: relative
-                    // top: -2.5rem
-                    @media #{$mobile}
-                      position: static
-                @media #{$mobile}
-                  max-width: initial
-                  width: auto
-                  font-size: 1.5rem
-                  letter-spacing: 0.2rem
-    .col-sm-3
-      h3.title
-        @media #{$mobile}
-          margin: 0 5px 30px
-      .work-info-side
-        padding-top: 6vw
-        // padding-right: 2vw
-        @media (min-width: 768px) and (max-width: 1280px)
-          padding-right: 0rem
-        .personal-images
-          form
-            @media #{$mobile}
-              display: flex
-              flex-wrap: wrap
-              flex-direction: column-reverse
-          img
-            width: 10vw
-            @media #{$mobile}
-              width: auto
-              max-width: 250px
-              margin-left: auto
-              margin-right: auto
-          p
-            @media #{$mobile}
-              text-align: center
-              width: 100%
-              label
-                font-size: 1.5rem
-                letter-spacing: 0.2rem
-      .recommend
-        bottom: 0rem
-        @media #{$mobile}
-          transform: scale(1)
+	padding-top: 0
+	padding-left: 0
+	padding-right: 0
+	@media #{$pad}
+		width: 95%
+	.tab-content
+		padding: 2vw 10vw 0vw
+		width: 100%
+		margin-bottom: 0rem
+		margin-left: auto
+		margin-right: auto
+		@media (min-width: 768px) and (max-width: 1280px)
+			padding: 1.5rem 1rem
+		@media #{$mobile}
+			padding: 1.5rem 1rem
+		@media screen and (min-width: 1560px)
+			padding-left: 5vw
+			padding-right: 5vw
+	>.row
+		margin-bottom: 0vw
+	.nav-tabs.site
+		justify-content: center
+		border-bottom: 2px solid $color-b
+		@media #{$mobile}
+			position: fixed
+			bottom: 0
+			width: 100%
+			z-index: 5
+			background-image: url('../../dist/images/work-background.png')
+			background: white
+			border-top: 2px solid $color-b
+			flex-wrap: nowrap
+		li
+			margin-top: -1px
+			border: 0
+			width: auto
+			@media #{$mobile}
+				width: 25%
+				text-align: center
+			a
+				padding-left: 3rem
+				padding-right: 3rem
+				padding-left: 3.7vw
+				padding-right: 3.7vw
+				border-left: 2px solid $color-b
+				@media #{$mobile}
+					padding: 0
+					padding: 1rem
+				span
+					font-size: 1vw
+					@media #{$mobile}
+						font-size: 2rem
+						display: none
+				&:hover
+					background: $color-b
+			&:first-child
+				a
+					border-left: 2px solid $color-b
+					@media #{$mobile}
+						border-left: 0
+			&:last-child
+				a
+					border-right: 2px solid $color-b
+					@media #{$mobile}
+						border-right: 0
+			&.active
+				a
+					background: $light-brown
+					border-bottom: 1px solid $color-b
+					&:hover
+						background: $light-brown!important
+	&.work-info
+		>.row
+			padding: 3vw 0vw 2vw 30px
+			flex-wrap: nowrap
+			@media (min-width: 768px) and (max-width: 1280px)
+				padding-right: 0
+			@media #{$pad}
+				flex-wrap: wrap
+			@media #{$mobile}
+				flex-wrap: wrap
+				padding: 15px
+		// .col-sm-3
+		//   @media #{$pad}  
+		//     width: 100%
+		//   @media #{$pad-pc}
+		//     min-height: 150vh
+		.col-sm-9
+			.work-info-content
+				header
+					margin-bottom: 4vw
+					border-bottom: 0
+					padding-left: 0
+					h2.title
+						border-left: 10px solid $light-brown
+						padding-left: 1vw
+						margin-right: 1vw
+						margin-bottom: 0
+						a
+							color: $color-b
+							font-size: 1vw
+							font-weight: 400
+							margin-left: 1.5vw
+							@media #{$mobile}
+								font-size: 1.5rem
+								margin-left: 1rem
+							svg
+								width: 1vw
+								height: 1vw
+								margin-right: 0.5vw
+								@media #{$mobile}
+									width: 1.5rem
+									height: 1.5rem
+									margin-right: .5rem
+				article
+					>ul
+						>li:first-child
+							padding-top: 0
+						>li:last-child
+							border-bottom: 0
+					.sub-list
+						li.title
+							margin-bottom: 2vw
+						li
+							margin-bottom: 1.5vw
+							line-height: 2.5vw
+							font-size: .9vw
+							display: flex
+							@media #{$pad-pc}
+								font-size: 1.5rem
+								line-height: 3rem
+								letter-spacing: 0.2rem
+							@media #{$mobile}
+								font-size: 1.5rem
+								line-height: 3rem
+								letter-spacing: 0.2rem
+								flex-wrap: wrap
+							.inputGroup
+								width: 50%
+								display: inline-block
+								@media #{$mobile}
+									width: 100%
+									margin-top: 0
+								input
+									width: 100%
+									&[name="email"]
+										min-width: 345px
+							.help-block
+								width: 100%
+								color: $color-red
+								margin: 0
+								line-height: 1.5rem
+								margin-top: 0.5rem
+								padding-left: 1rem
+								display: block
+								@media #{$mobile}
+									padding-left: 0
+							span
+								font-size: 1.1vw
+								letter-spacing: 0.1vw
+								// width: 100px!important
+								min-width: 100px
+								margin-right: 0px
+								@media #{$pad-pc}
+									font-size: 1.5rem
+									letter-spacing: 0.2rem
+									white-space: nowrap
+									&.long
+										width: 13rem
+									&.posr
+										// position: relative
+										// top: -2.5rem
+										@media #{$mobile}
+											position: static
+								@media #{$mobile}
+									max-width: initial
+									width: auto
+									font-size: 1.5rem
+									letter-spacing: 0.2rem
+		.col-sm-3
+			h3.title
+				@media #{$mobile}
+					margin: 0 5px 30px
+			.work-info-side
+				padding-top: 6vw
+				// padding-right: 2vw
+				@media (min-width: 768px) and (max-width: 1280px)
+					padding-right: 0rem
+				.personal-images
+					form
+						@media #{$mobile}
+							display: flex
+							flex-wrap: wrap
+							flex-direction: column-reverse
+					img
+						width: 10vw
+						@media #{$mobile}
+							width: auto
+							max-width: 250px
+							margin-left: auto
+							margin-right: auto
+					p
+						@media #{$mobile}
+							text-align: center
+							width: 100%
+							label
+								font-size: 1.5rem
+								letter-spacing: 0.2rem
+			.recommend
+				bottom: 0rem
+				@media #{$mobile}
+					transform: scale(1)
 .tab-content.server 
-  .work-list
-    .row 
-      >[class*="layout"]
-        width: 283px
-        min-height: 415px
-        // @media #{$dsk}
-        //   width: calc(100% / 3 - 2rem)
-        //   transition: .3s ease-in-out
-        // @media #{$mini-pc}
-        //   width: calc(100% / 3 - 2rem)
-        // @media #{$pad}
-        //   width: calc(100% / 3 - 2rem)
-        // @media #{$mobile}
-        //   width: calc(100% / 2 - 2rem)
-        // @media (max-width: 540px)
-        //   width: calc(100% - 2rem)
-        //   min-height: 420px
-        // @media screen and #{$big-pc}
-        //   width: calc(100% / 3 - 6vw)
-        //   transition: .3s ease-in-out
-    header.row
-      display: flex
-      justify-content: center
-      margin-bottom: 4rem
-      @media #{$mobile}
-        margin-bottom: 2rem
-      @media #{$pad-pc}
-        margin-bottom: 2rem
-      h3.title
-        text-align: center
-        margin-top: 4rem
-        font-size: 1.5vw
-        border-bottom: 1px solid #3e3a39
-        padding-bottom: 1rem
-        color: #231815
-        @media #{$pad-pc}
-          font-size: 22px
-          margin-top: 1rem
-          margin-bottom: 1rem
-        @media #{$mobile}
-          font-size: 22px
-          margin-top: 1rem
-          margin-bottom: 1rem
+	.work-list
+		.row 
+			>[class*="layout"]
+				width: 283px
+				min-height: 415px
+				@media screen and (min-width: 1800px)
+					width: 339px
+					min-height: 535px
+				// @media #{$dsk}
+				//   width: calc(100% / 3 - 2rem)
+				//   transition: .3s ease-in-out
+				// @media #{$mini-pc}
+				//   width: calc(100% / 3 - 2rem)
+				// @media #{$pad}
+				//   width: calc(100% / 3 - 2rem)
+				// @media #{$mobile}
+				//   width: calc(100% / 2 - 2rem)
+				// @media (max-width: 540px)
+				//   width: calc(100% - 2rem)
+				//   min-height: 420px
+				// @media screen and #{$big-pc}
+				//   width: calc(100% / 3 - 6vw)
+				//   transition: .3s ease-in-out
+		header.row
+			display: flex
+			justify-content: center
+			margin-bottom: 4rem
+			@media #{$mobile}
+				margin-bottom: 2rem
+			@media #{$pad-pc}
+				margin-bottom: 2rem
+			h3.title
+				text-align: center
+				margin-top: 4rem
+				font-size: 1.5vw
+				border-bottom: 1px solid #3e3a39
+				padding-bottom: 1rem
+				color: #231815
+				@media #{$pad-pc}
+					font-size: 22px
+					margin-top: 1rem
+					margin-bottom: 1rem
+				@media #{$mobile}
+					font-size: 22px
+					margin-top: 1rem
+					margin-bottom: 1rem
 .work-information
-  @media #{$mobile}
-    margin: 0
+	@media #{$mobile}
+		margin: 0
