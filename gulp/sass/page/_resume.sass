@@ -146,6 +146,9 @@
 									width: 100%
 									&[name="email"]
 										min-width: 345px
+										@media #{$mobile}
+											min-width: 250px
+											width: 100%
 							.help-block
 								width: 100%
 								color: $color-red

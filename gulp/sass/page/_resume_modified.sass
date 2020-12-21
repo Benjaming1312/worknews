@@ -242,6 +242,7 @@
           min-width: 345px
           max-width: 100%
           @media #{$mobile}
+            min-width: 250px
             width: 100%
   .col-sm-9 
     .work-info-content 
@@ -272,6 +273,8 @@
   &.upload
     background: $color-n
     color: $light-brown
+    @media #{$mobile}
+      padding-left: 0
 
 .pagination.pagination.pagination
   a
