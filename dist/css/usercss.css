@@ -3519,6 +3519,12 @@ body .wrapper.work .navbar {
 }
 
 @media screen and (max-width: 767px) {
+  .worktabs.resume.work-info .col-sm-3 {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .worktabs.resume.work-info .col-sm-3 h3.title {
     margin: 0 5px 30px;
   }
@@ -3566,6 +3572,18 @@ body .wrapper.work .navbar {
   .worktabs.resume.work-info .col-sm-3 .work-info-side .personal-images p label {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.work-info .col-sm-3 .work-info-side .personal-images #preview_img + p,
+  .worktabs.resume.work-info .col-sm-3 .work-info-side .personal-images #member_preview_img + p {
+    text-align: left;
+    position: absolute;
+    top: 65px;
+    left: -30px;
+    padding-left: 60px;
+    width: 100%;
   }
 }
 
@@ -4139,6 +4157,12 @@ body .wrapper.work .navbar {
 @media screen and (max-width: 767px) {
   .worktabs.resume.resume .col-sm-9 .work-info-content article .sub-list li {
     margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.resume .col-sm-9 .work-info-content .form-inline {
+    margin-top: 30px;
   }
 }
 
