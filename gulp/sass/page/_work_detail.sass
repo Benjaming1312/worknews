@@ -1,302 +1,309 @@
 $width: 350px
 $border: 1px solid rgba(#231815, .9)
 =border_bottom
-  border-bottom: $border
+	border-bottom: $border
 =list_padding
-  padding-left: 2vw
-  padding-right: 0vw
+	padding-left: 2vw
+	padding-right: 0vw
 =list_padding_top
-  padding-top: 3vw
-  padding-bottom: 1.5vw
-  @media #{$mobile}
-    padding-top: 2rem
-    padding-bottom: 1rem
+	padding-top: 3vw
+	padding-bottom: 1.5vw
+	@media #{$mobile}
+		padding-top: 2rem
+		padding-bottom: 1rem
 =fz12
-  @media (min-width: 768px)
-    font-size: .6vw
+	@media (min-width: 768px)
+		font-size: .6vw
 =fz14
-  @media (min-width: 768px)
-    font-size: 1.1vw
-  @media (min-width: 768px) and (max-width: 992px)
-    font-size: 1.5rem
+	@media (min-width: 768px)
+		font-size: 1.1vw
+	@media (min-width: 768px) and (max-width: 992px)
+		font-size: 1.5rem
 =fz16
-  @media (min-width: 768px)
-    font-size: 1.1vw
+	@media (min-width: 768px)
+		font-size: 1.1vw
 =fz21
-  @media (min-width: 768px)
-    font-size: 1.3vw
+	@media (min-width: 768px)
+		font-size: 1.3vw
 =fz23
-  font-size: 2rem
-  @media (min-width: 768px)
-    font-size: 1.4vw
-  @media (min-width: 768px) and (max-width: 992px)
-    font-size: 2rem
+	font-size: 2rem
+	@media (min-width: 768px)
+		font-size: 1.4vw
+	@media (min-width: 768px) and (max-width: 992px)
+		font-size: 2rem
 =fz33
-  @media (min-width: 768px)
-    font-size: 2.4vw
+	@media (min-width: 768px)
+		font-size: 2.4vw
 =fz_title
-  @media (min-width: 768px)
-    font-size: 2.5vw
-  
+	@media (min-width: 768px)
+		font-size: 2.5vw
+	
 .worktabs.work-info
-  padding: 2vw 10vw
-  @media #{$mini-pc}
-    padding: 2vw 5vw
-    width: 100%
-  @media #{$pad}
-    padding: 2vw
-    width: 100%
-  @media #{$mobile}
-    padding: 1rem
-    width: 100%
-  >.row
-    border: 2px solid $color-b
-    padding: 4vw 0 3vw 3vw
-    background-image: url('../../dist/images/work-background.png')
-    display: flex
-    position: relative
-    @media #{$mobile}
-      flex-wrap: wrap
-      padding: 1rem
-      margin: 0
-  .col-sm-3
-    width: $width
-    @media #{$mobile}
-      width: 100%
-  .col-sm-9
-    width: calc(100% - #{$width})
-    @media #{$mobile}
-      width: 100%
-      // padding: 0
-    h2.title
-      +fz_title
-      margin-top: 0
-      margin-bottom: 1.5vw
-    ul
-      padding-left: 0
-      list-style: none
-      .list
-        +list_padding
-        +border_bottom
-        +list_padding_top
-        display: flex
-        align-items: flex-end
-        @media #{$mobile}
-          flex-wrap: wrap
-        svg
-            width: 1.1vw
-            height: 1.1vw
-            margin-right: 0.5vw
-            position: relative
-            top: 0px
-            @media #{$mobile}
-              width: 1.5rem
-              height: 1.5rem
-        .icon_text
-          display: inline-flex
-          align-items: flex-center
-          margin-right: 1.2vw
-          font-weight: 500
-          +fz14
-          @media #{$mobile}
-            display: block
-            width: 100%
-            margin: .5rem 0
-          &.work-contact
-            color: $color-b
-            font-weight: 400
-        .work-info-list
-          +fz14
-          margin-bottom: 0.8vw
-          line-height: 30px
-          @media #{$mobile}
-            letter-spacing: 0.1rem
-            line-height: 2rem
-        &.items-start
-          align-items: flex-start
-        h3.title
-          +fz23
-          margin-top: 0
-          margin-bottom: 0
-          margin-right: 0.8vw
-          display: flex
-          align-items: center
-          font-weight: 400
-          min-width: 85px
-          @media #{$mobile}
-            display: block
-            width: 100%
-            letter-spacing: 0.2rem
-          &::before
-            content: ''
-            display: inline-flex
-            width: 0.5vw
-            height: 0.5vw
-            margin-right: 0.8vw
-            background: $light-brown
-            border-radius: 50%
-            margin-left: -1.5vw
-            @media #{$mobile}
-              width: .5rem
-              height: .5rem
-              position: relative
-              top: -.5rem
-              margin-right: .5rem
-              margin-bottom: 1rem
-        p
-          +fz14
-          margin-bottom: 0
-          @media #{$mobile}
-            letter-spacing: 0.1rem
-            line-height: 2rem
-    header
-      +border_bottom
-      +list_padding
-      padding-right: 1vw
-      margin-bottom: 0vw
-      @media #{$mobile}
-        padding-bottom: 1rem
-      p
-        margin-bottom: .5vw
-      .tag
-        +fz14
-        margin: 0 .4vw
-        font-weight: 400
-        &:first-child
-          margin-left: 0
-      time
-        position: relative
-        top: 0.25vw
-        font-size: 0.7vw
-        @media #{$mobile}
-          display: block
-          float: inherit!important
-          font-size: 13px
-  .tab-content.server 
-    padding: 0 1vw
-    .row>[class*="layout"]
-      width: 283px
-      min-height: 415px
-      // width: 100%
-      // min-height: 380px
-      // min-height: 32vw
-      // @for $i from 1 through 3
-      //   @media (max-width: 1644px - $i * 144)
-      //     min-height: 32vw + $i * 1
-      // @for $i from 1 through 5
-      //   @media (max-width: 1366px - $i * 144)
-      //     min-height: 31vw + $i * 3
-      // @media #{$mobile}
-      //   min-height: 450px
-      //   max-width: 330px
-      //   margin-bottom: 2rem
-      &:last-child
-        margin-bottom: 0
-      .info-content .row.info-row
-        margin-bottom: 1vw
-        @media #{$mobile}
-          flex-wrap: nowrap
-        .col-sm-4,
-        .col-sm-8
-          // +fz14
-          font-size: 14px
-          @media #{$mobile}
-            font-size: 14px
-            margin-bottom: .5rem
-        .col-sm-4
-          min-width: 70px
-          @media #{$mobile}
-            width: 8rem
-        .col-sm-8
-          width: calc(100% - 100px)
-          @media #{$mobile}
-            width: calc(100% - 8rem)
-  .work-info-side
-    padding-left: 0px
-    padding-top: 3vw
-    @media #{$mobile}
-      padding: 0
-    .right-info
-      h3.pay,
-      h3.pay span
-        +fz33
-        @media (min-width: 1560px)
-          font-size: 1.5vw
-      small
-        +fz23
-        @media (min-width: 1560px)
-          font-size: 1.5vw
-      h3.pay
-        span
-          @media #{$mobile}
-            font-size: 24px
-          @media (min-width: 1560px)
-            font-size: 1.8vw
-      h4
-        margin-top: 1.2vw
-        +fz23
-        font-weight: 300
-      .btn-group
-        margin-top: 4vw
-        ul
-          list-style: none
-          padding-left: 0
-        .btn
-          +fz21
-          letter-spacing: 0.3vw
-          font-weight: 300
-          color: white
-          padding: .8vw 1.6vw
-          border-radius: .5vw
-          margin-bottom: 1vw
-          transition: .3s ease-in
-          &:hover
-            opacity: 0.7
-          @media #{$mobile}
-            margin-bottom: 1rem
-            padding: 1rem 3.5rem
-            font-weight: 400
-    .recommend
-      // padding-left: 10%
-      // position: absolute
-      bottom: 0
-      right: 0
-      margin-top: 4vw
-      padding: 0
-      @media #{$mobile}
-        position: static
-        padding-left: 0
-      header
-        .title
-          +fz23
-          +border_bottom
-          display: flex
-          align-items: center
-          font-weight: 400
-          margin-bottom: 2vw
-          padding-bottom: 2vw
-          @media #{$mobile}
-            font-weight: normal
-          &::before
-            content: ''
-            display: inline-flex
-            width: 0.5vw
-            height: 0.5vw
-            margin-right: 0.8vw
-            background: $light-brown
-            border-radius: 50%
-            @media #{$mobile}
-              width: .5rem
-              height: .5rem
-              position: relative
-              top: .5rem
-              margin-right: .5rem
-              margin-bottom: 1rem
+	padding: 2vw 10vw
+	@media #{$mini-pc}
+		padding: 2vw 5vw
+		width: 100%
+	@media #{$pad}
+		padding: 2vw
+		width: 100%
+	@media #{$mobile}
+		padding: 1rem
+		width: 100%
+	>.row
+		border: 2px solid $color-b
+		padding: 4vw 0 3vw 3vw
+		background-image: url('../../dist/images/work-background.png')
+		display: flex
+		position: relative
+		@media #{$mobile}
+			flex-wrap: wrap
+			padding: 1rem
+			margin: 0
+	.col-sm-3
+		width: $width
+		@media (min-width: 1800px)
+			width: 400px
+		@media #{$mobile}
+			width: 100%
+	.col-sm-9
+		width: calc(100% - #{$width})
+		@media (min-width: 1800px)
+			width: calc(100% - 400px)
+		@media #{$mobile}
+			width: 100%
+			// padding: 0
+		h2.title
+			+fz_title
+			margin-top: 0
+			margin-bottom: 1.5vw
+		ul
+			padding-left: 0
+			list-style: none
+			.list
+				+list_padding
+				+border_bottom
+				+list_padding_top
+				display: flex
+				align-items: flex-end
+				@media #{$mobile}
+					flex-wrap: wrap
+				svg
+						width: 1.1vw
+						height: 1.1vw
+						margin-right: 0.5vw
+						position: relative
+						top: 0px
+						@media #{$mobile}
+							width: 1.5rem
+							height: 1.5rem
+				.icon_text
+					display: inline-flex
+					align-items: flex-center
+					margin-right: 1.2vw
+					font-weight: 500
+					+fz14
+					@media #{$mobile}
+						display: block
+						width: 100%
+						margin: .5rem 0
+					&.work-contact
+						color: $color-b
+						font-weight: 400
+				.work-info-list
+					+fz14
+					margin-bottom: 0.8vw
+					line-height: 30px
+					@media #{$mobile}
+						letter-spacing: 0.1rem
+						line-height: 2rem
+				&.items-start
+					align-items: flex-start
+				h3.title
+					+fz23
+					margin-top: 0
+					margin-bottom: 0
+					margin-right: 0.8vw
+					display: flex
+					align-items: center
+					font-weight: 400
+					min-width: 85px
+					@media #{$mobile}
+						display: block
+						width: 100%
+						letter-spacing: 0.2rem
+					&::before
+						content: ''
+						display: inline-flex
+						width: 0.5vw
+						height: 0.5vw
+						margin-right: 0.8vw
+						background: $light-brown
+						border-radius: 50%
+						margin-left: -1.5vw
+						@media #{$mobile}
+							width: .5rem
+							height: .5rem
+							position: relative
+							top: -.5rem
+							margin-right: .5rem
+							margin-bottom: 1rem
+				p
+					+fz14
+					margin-bottom: 0
+					@media #{$mobile}
+						letter-spacing: 0.1rem
+						line-height: 2rem
+		header
+			+border_bottom
+			+list_padding
+			padding-right: 1vw
+			margin-bottom: 0vw
+			@media #{$mobile}
+				padding-bottom: 1rem
+			p
+				margin-bottom: .5vw
+			.tag
+				+fz14
+				margin: 0 .4vw
+				font-weight: 400
+				&:first-child
+					margin-left: 0
+			time
+				position: relative
+				top: 0.25vw
+				font-size: 0.7vw
+				@media #{$mobile}
+					display: block
+					float: inherit!important
+					font-size: 13px
+	.tab-content.server 
+		padding: 0 1vw
+		.row>[class*="layout"]
+			width: 283px
+			min-height: 415px
+			@media screen and (min-width: 1800px)
+				width: 339px
+				min-height: 535px
+			// width: 100%
+			// min-height: 380px
+			// min-height: 32vw
+			// @for $i from 1 through 3
+			//   @media (max-width: 1644px - $i * 144)
+			//     min-height: 32vw + $i * 1
+			// @for $i from 1 through 5
+			//   @media (max-width: 1366px - $i * 144)
+			//     min-height: 31vw + $i * 3
+			// @media #{$mobile}
+			//   min-height: 450px
+			//   max-width: 330px
+			//   margin-bottom: 2rem
+			&:last-child
+				margin-bottom: 0
+			.info-content .row.info-row
+				margin-bottom: 1vw
+				@media #{$mobile}
+					flex-wrap: nowrap
+				.col-sm-4,
+				.col-sm-8
+					// +fz14
+					font-size: 14px
+					@media #{$mobile}
+						font-size: 14px
+						margin-bottom: .5rem
+				.col-sm-4
+					min-width: 70px
+					@media #{$mobile}
+						width: 8rem
+				.col-sm-8
+					width: calc(100% - 100px)
+					@media #{$mobile}
+						width: calc(100% - 8rem)
+	.work-info-side
+		padding-left: 0px
+		padding-top: 3vw
+		@media #{$mobile}
+			padding: 0
+		.right-info
+			h3.pay,
+			h3.pay span
+				+fz33
+				@media (min-width: 1560px)
+					font-size: 1.5vw
+			small
+				+fz23
+				@media (min-width: 1560px)
+					font-size: 1.5vw
+			h3.pay
+				span
+					@media #{$mobile}
+						font-size: 24px
+					@media (min-width: 1560px)
+						font-size: 1.8vw
+			h4
+				margin-top: 1.2vw
+				+fz23
+				font-weight: 300
+			.btn-group
+				margin-top: 4vw
+				ul
+					list-style: none
+					padding-left: 0
+				.btn
+					+fz21
+					letter-spacing: 0.3vw
+					font-weight: 300
+					color: white
+					padding: .8vw 1.6vw
+					border-radius: .5vw
+					margin-bottom: 1vw
+					transition: .3s ease-in
+					&:hover
+						opacity: 0.7
+					@media #{$mobile}
+						margin-bottom: 1rem
+						padding: 1rem 3.5rem
+						font-weight: 400
+		.recommend
+			// padding-left: 10%
+			// position: absolute
+			bottom: 0
+			right: 0
+			margin-top: 4vw
+			padding: 0
+			@media #{$mobile}
+				position: static
+				padding-left: 0
+			header
+				.title
+					+fz23
+					+border_bottom
+					display: flex
+					align-items: center
+					font-weight: 400
+					margin-bottom: 2vw
+					padding-bottom: 2vw
+					@media #{$mobile}
+						font-weight: normal
+					&::before
+						content: ''
+						display: inline-flex
+						width: 0.5vw
+						height: 0.5vw
+						margin-right: 0.8vw
+						background: $light-brown
+						border-radius: 50%
+						@media #{$mobile}
+							width: .5rem
+							height: .5rem
+							position: relative
+							top: .5rem
+							margin-right: .5rem
+							margin-bottom: 1rem
 .work-detail-footer
-  p 
-    margin-bottom: 1vw
-    span
-      font-size: 1vw
-      @media #{$mobile}
-        font-size: 12px
-        display: block
+	p 
+		margin-bottom: 1vw
+		span
+			font-size: 1vw
+			@media #{$mobile}
+				font-size: 12px
+				display: block

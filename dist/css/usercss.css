@@ -2660,6 +2660,12 @@ body .wrapper.work .navbar {
   width: 350px;
 }
 
+@media (min-width: 1800px) {
+  .worktabs.work-info .col-sm-3 {
+    width: 400px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .worktabs.work-info .col-sm-3 {
     width: 100%;
@@ -2668,6 +2674,12 @@ body .wrapper.work .navbar {
 
 .worktabs.work-info .col-sm-9 {
   width: calc(100% - 350px);
+}
+
+@media (min-width: 1800px) {
+  .worktabs.work-info .col-sm-9 {
+    width: calc(100% - 400px);
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2934,6 +2946,13 @@ body .wrapper.work .navbar {
 .worktabs.work-info .tab-content.server .row > [class*="layout"] {
   width: 283px;
   min-height: 415px;
+}
+
+@media screen and (min-width: 1800px) {
+  .worktabs.work-info .tab-content.server .row > [class*="layout"] {
+    width: 339px;
+    min-height: 535px;
+  }
 }
 
 .worktabs.work-info .tab-content.server .row > [class*="layout"]:last-child {
@@ -3389,6 +3408,13 @@ body .wrapper.work .navbar {
   margin-bottom: 2vw;
 }
 
+@media screen and (max-width: 767px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li.title {
+    width: 100%;
+    float: left;
+  }
+}
+
 .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li {
   margin-bottom: 1.5vw;
   line-height: 2.5vw;
@@ -3411,6 +3437,8 @@ body .wrapper.work .navbar {
     line-height: 3rem;
     letter-spacing: 0.2rem;
     flex-wrap: wrap;
+    width: 100%;
+    float: left;
   }
 }
 
@@ -3997,6 +4025,12 @@ body .wrapper.work .navbar {
   margin-left: 2rem;
 }
 
+@media (min-width: 1560px) {
+  .worktabs.resume.resume > .row .form-group .flex.no-wrap input {
+    min-width: 22vw;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .worktabs.resume.resume > .row .form-group .flex.no-wrap input {
     width: 100%;
@@ -4008,6 +4042,12 @@ body .wrapper.work .navbar {
   max-width: initial;
   min-width: initial;
   max-width: 200px;
+}
+
+@media (min-width: 1560px) {
+  .worktabs.resume.resume > .row .form-group .flex.no-wrap input#pay_money {
+    max-width: 100%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -4050,6 +4090,19 @@ body .wrapper.work .navbar {
     width: 5rem;
     min-width: initial;
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.resume > .row .form-group.weight input[name="height"], .worktabs.resume.resume > .row .form-group.weight input[name="weight"] {
+    top: -7.5px;
+    margin-right: 7.5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .worktabs.resume.resume > .row .form-group.weight input[name="weight"] {
+    margin-left: 7.5px;
   }
 }
 
@@ -6201,12 +6254,6 @@ body .wrapper.work .navbar {
   letter-spacing: 0.1rem;
 }
 
-@media screen and (max-width: 767px) {
-  .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span:not(.glyphicon) {
-    display: none;
-  }
-}
-
 .worktabs.resume.release .worktabs.resume.work-info .row.release-content .col-sm-4 li span.glyphicon {
   display: inline-block;
   margin-right: 1rem;
@@ -6273,7 +6320,7 @@ body .wrapper.work .navbar {
   .worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span {
     line-height: initial;
     position: relative;
-    top: 0px !important;
+    line-height: 30px;
   }
 }
 
@@ -6300,6 +6347,7 @@ body .wrapper.work .navbar {
   .worktabs.resume.release .worktabs.resume.work-info .row.release-content .list span.title {
     width: 130px !important;
     min-width: 130px;
+    top: -1px;
   }
 }
 

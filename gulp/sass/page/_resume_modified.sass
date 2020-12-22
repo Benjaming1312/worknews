@@ -200,6 +200,8 @@
         input
           width: calc(100% - #{$select} - 2rem)
           margin-left: 2rem
+          @media (min-width: 1560px)
+            min-width: 22vw
           @media #{$mobile}
             width: 100%
             margin-left: 0
@@ -207,6 +209,8 @@
             max-width: initial
             min-width: initial
             max-width: 200px
+            @media (min-width: 1560px)
+              max-width: 100%
             @media #{$mobile}
               max-width: 100%
       .help-block.help-block.help-block
@@ -232,6 +236,14 @@
             width: 5rem
             min-width: initial
             display: inline-block
+          &[name="height"],
+          &[name="weight"]
+            @media #{$mobile}
+              top: -7.5px
+              margin-right: 7.5px
+          &[name="weight"]
+            @media #{$mobile}
+              margin-left: 7.5px
       input[type="mail"]
         width: 25vw
         @media #{$mobile}

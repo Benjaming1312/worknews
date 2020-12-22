@@ -16,15 +16,14 @@ function appendNav () {
 // focus nav link
 function focusNav () {
   $('.menu .nav.navbar-nav a').each(function () {
-    var target = $(this).attr('href').split('.')[0]
-    if (window.location.href.indexOf(target) > 0) {
+    var target = $(this).attr('href')
+    if (target.indexOf(window.location.pathname) > 0) {
       $(this).addClass('active')
     }
   })
   $('.menulist a').each(function () {
-    var mobileTarget = $(this).attr('href').split('.')[0]
-    console.log(mobileTarget)
-    if (window.location.href.indexOf(mobileTarget) > 0) {
+    var mobileTarget = $(this).attr('href')
+    if (mobileTarget.indexOf(window.location.pathname) > 0) {
       $(this).addClass('active')
     }
   })
