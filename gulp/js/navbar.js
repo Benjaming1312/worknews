@@ -16,14 +16,17 @@ function appendNav () {
 // focus nav link
 function focusNav () {
   $('.menu .nav.navbar-nav a').each(function () {
-    var target = $(this).attr('href')
-    if (target.indexOf(window.location.pathname) > 0) {
+		var target = $(this).attr('href')
+		var url = new URL(target)
+		console.log('%c (／‵Д′)／~ ╧╧ url : ', 'padding: .25rem; font-size: 14px; background: #12bdba; color: #fff', url.pathname)
+    if (window.location.pathname === url.pathname) {
       $(this).addClass('active')
     }
   })
   $('.menulist a').each(function () {
-    var mobileTarget = $(this).attr('href')
-    if (mobileTarget.indexOf(window.location.pathname) > 0) {
+		var mobileTarget = $(this).attr('href')
+		var url = new URL(mobileTarget)
+    if (window.location.pathname === url.pathname) {
       $(this).addClass('active')
     }
   })

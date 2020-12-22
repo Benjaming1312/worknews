@@ -9,6 +9,7 @@ var gulp = require('gulp'), //gulp主程式
     compass = require('gulp-compass') //compass
     gulpLivereload = require('gulp-livereload') //livereload
     connect = require('gulp-connect') //connect
+    plumber = require('gulp-plumber')
 
 // 監看JS
 gulp.task('watch',function(){
@@ -39,6 +40,7 @@ gulp.task('sass',['watch-sass','connect']) //gulp 直接執行
 gulp.task('scripts',function(){
     gulp.src('gulp/js/**') //輸入路徑 **代表路徑的所有檔案轉換
         .pipe(concat('userjs.js')) //合併所有JS
+        .pipe(plumber())
         .pipe(gulpUglify()) //最小化JS
         .pipe(gulp.dest('dist/js')) //輸出路徑
         // .pipe(connect.reload())
