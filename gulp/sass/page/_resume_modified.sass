@@ -92,6 +92,8 @@
           max-width: 100%
           @media (min-width: 1560px)
             min-width: 22vw
+            position: relative
+            top: 15px
           @media #{$mobile}
             min-width: 250px
             width: 100%
@@ -238,6 +240,10 @@
             display: inline-block
           &[name="height"],
           &[name="weight"]
+            @media (min-width: 1800px)
+              position: relative
+              top: 15px
+              margin: 0 15px
             @media #{$mobile}
               top: -7.5px
               margin-right: 7.5px

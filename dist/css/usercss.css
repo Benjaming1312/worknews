@@ -3469,6 +3469,34 @@ body .wrapper.work .navbar {
   }
 }
 
+@media (min-width: 1800px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li input[name="english_name"] {
+    position: relative;
+    top: 15px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li input[name="english_name"],
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li input[name="phone"],
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li input[name="address"],
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li input[name="special"],
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li input[name="license"],
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li input[name="traffic"] {
+    position: relative;
+    top: 15px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li select[name="year"],
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li select[name="month"],
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li select[name="day"] {
+    position: relative;
+    top: 12px;
+  }
+}
+
 .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li .help-block {
   width: 100%;
   color: #c30d23;
@@ -3490,6 +3518,13 @@ body .wrapper.work .navbar {
   letter-spacing: 0.1vw;
   min-width: 100px;
   margin-right: 0px;
+}
+
+@media (min-width: 1800px) {
+  .worktabs.resume.work-info .col-sm-9 .work-info-content article .sub-list li span {
+    position: relative;
+    top: 0px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1560px) {
@@ -3859,6 +3894,8 @@ body .wrapper.work .navbar {
   .worktabs.resume.resume > .row .form-group select#email,
   .worktabs.resume.resume > .row .form-group .select-group#email {
     min-width: 22vw;
+    position: relative;
+    top: 15px;
   }
 }
 
@@ -4108,6 +4145,14 @@ body .wrapper.work .navbar {
     width: 5rem;
     min-width: initial;
     display: inline-block;
+  }
+}
+
+@media (min-width: 1800px) {
+  .worktabs.resume.resume > .row .form-group.weight input[name="height"], .worktabs.resume.resume > .row .form-group.weight input[name="weight"] {
+    position: relative;
+    top: 15px;
+    margin: 0 15px;
   }
 }
 
@@ -5017,9 +5062,22 @@ body .wrapper.work .navbar {
 }
 
 .list-group .list-group-item a small {
-  font-size: 12px;
-  display: inline-block;
+  font-size: 16px;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   margin-left: .5rem;
+  position: relative;
+  top: 1px;
+  background: #c30d23;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  color: white;
+  letter-spacing: 0;
 }
 
 .list-group .list-group-item.active {

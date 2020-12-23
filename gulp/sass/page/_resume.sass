@@ -154,6 +154,25 @@
 										@media #{$mobile}
 											min-width: 250px
 											width: 100%
+							input[name="english_name"]
+								@media (min-width: 1800px)
+									position: relative
+									top: 15px
+							input[name="english_name"],
+							input[name="phone"],
+							input[name="address"],
+							input[name="special"],
+							input[name="license"],
+							input[name="traffic"]
+								@media (min-width: 1800px)
+									position: relative
+									top: 15px
+							select[name="year"],
+							select[name="month"],
+							select[name="day"]
+								@media (min-width: 1800px)
+									position: relative
+									top: 12px
 							.help-block
 								width: 100%
 								color: $color-red
@@ -170,6 +189,9 @@
 								// width: 100px!important
 								min-width: 100px
 								margin-right: 0px
+								@media (min-width: 1800px)
+									position: relative
+									top: 0px
 								@media #{$pad-pc}
 									font-size: 1.5rem
 									letter-spacing: 0.2rem

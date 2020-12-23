@@ -146,9 +146,19 @@
       @media #{$mobile}
         padding: 1.5rem 2rem
       small
-        font-size: 12px
-        display: inline-block
+        font-size: 16px
+        display: inline-flex
+        align-items: center
+        justify-content: center
         margin-left: .5rem
+        position: relative
+        top: 1px
+        background: $color-red
+        width: 17px
+        height: 17px
+        border-radius: 50%
+        color: white
+        letter-spacing: 0
     &.active
       background: rgba(#ccc, .5)
 .chat-content
